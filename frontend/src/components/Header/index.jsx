@@ -7,8 +7,10 @@ import styled from 'styled-components';
 
 const StyledDiv = styled.div`
 
+  margin: 0 auto;
+  width: 80%;
+
   nav {
-    width: 80%;
 
     ul {
       display: flex;
