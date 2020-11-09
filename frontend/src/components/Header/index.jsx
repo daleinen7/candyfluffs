@@ -6,16 +6,36 @@ import logo from './logo.png'
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
+
+  nav {
+    width: 80%;
+
+    ul {
+      display: flex;
+      width: 100%;
+      padding: 0;
+      margin-top: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      list-style-type: none;
+    }
+    li {
+      padding: 1rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: #4bccc3;
+      &:hover {
+        color: #44e9de;
+      }
+    }
+  }
+
   img {
     width: 400px;
   }
-  ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: space-between;    
-  }
-  
 `;
 
 export default function Header() {
