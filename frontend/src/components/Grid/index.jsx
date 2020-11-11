@@ -24,6 +24,10 @@ export default function Grid() {
                 id
                 name
                 price
+                image {
+                  absolutePath
+                  relativePath
+                }
               }
             }
           }
@@ -36,6 +40,7 @@ export default function Grid() {
               key={node.id} 
               title={node.name} 
               price={node.price}
+              image={node.image}
             />
           </StyledDiv>
         ))

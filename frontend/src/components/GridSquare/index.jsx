@@ -18,8 +18,20 @@ const StyledDiv = styled.div`
 export default function GridSquare(props) {
   return(
     <StyledDiv>
-      <h3 className="title">{props.title}</h3>
-      <p className="price">${props.price}</p>
+      <a href=".cache/gatsby-source-filesystem/62715eac4465f02879831bb180d8d15c.jpg">
+        {/* <div class="product"> */}
+          {/* https://www.w3schools.com/css/tryit.asp?filename=trycss_css_image_overlay_fade */}
+          <img
+            class="product_image"
+            src=".cache/gatsby-source-filesystem/62715eac4465f02879831bb180d8d15c.jpg"
+            alt="testing yo"
+          />
+          <div class="overlay text">
+            <h2>{props.name}</h2>
+            <h3>${props.price}</h3>
+          </div>
+        {/* </div> */}
+      </a>
     </StyledDiv>
   )
 }
