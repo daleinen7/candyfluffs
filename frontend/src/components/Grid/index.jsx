@@ -31,11 +31,13 @@ export default function Grid() {
       `}
       render={data => (
         data.allStrapiProduct.edges.map(({node}) => (
-          <GridSquare 
-            key={node.id} 
-            title={node.name} 
-            price={node.price}
-          />
+          <StyledDiv>
+            <GridSquare 
+              key={node.id} 
+              title={node.name} 
+              price={node.price}
+            />
+          </StyledDiv>
         ))
       )}
     />

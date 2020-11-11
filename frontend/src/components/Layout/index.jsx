@@ -11,7 +11,7 @@ const StyledDiv = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   main {
     margin: 0 auto;
     width: 80%;
