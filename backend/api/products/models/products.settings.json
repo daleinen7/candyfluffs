@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "products",
   "info": {
-    "name": "Products",
+    "name": "products",
     "description": ""
   },
   "options": {
@@ -11,22 +11,63 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
+    "title": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
-    },
     "price": {
-      "type": "float"
+      "type": "decimal",
+      "required": true,
+      "min": 0
     },
-    "image": {
-      "model": "file",
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "images": {
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images"
       ],
       "plugin": "upload",
+      "required": false
+    },
+    "fandom": {
+      "model": "fandoms"
+    },
+    "variants": {
+      "type": "component",
+      "repeatable": true,
+      "component": "variations.variations"
+    },
+    "productType": {
+      "type": "enumeration",
+      "enum": [
+        "Book",
+        "Button",
+        "Charm",
+        "Print",
+        "Sticker"
+      ],
+      "required": false,
+      "default": "Book"
+    },
+    "stock": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "sku": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "weight_oz": {
+      "type": "integer",
+      "required": false
+    },
+    "size_HxW": {
+      "type": "string",
       "required": false
     }
   }

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "orderTotal": {
+      "type": "decimal",
+      "min": 0
+    },
+    "shippingAddress": {
+      "type": "dynamiczone",
+      "components": [
+        "address.address"
+      ]
+    },
+    "billingAddress": {
+      "type": "dynamiczone",
+      "components": [
+        "address.address"
+      ]
+    },
+    "orderEmail": {
+      "type": "email"
+    },
+    "orderDate": {
+      "type": "datetime"
+    },
+    "orderStatus": {
+      "type": "enumeration",
+      "enum": [
+        "confirmed",
+        "processed",
+        "shipped",
+        "delivered",
+        "canceled",
+        "returned"
+      ]
+    },
+    "notes": {
+      "type": "richtext"
+    }
+  }
+}

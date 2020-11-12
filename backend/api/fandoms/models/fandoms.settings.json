@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fandoms",
+  "info": {
+    "name": "fandoms",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "franchiseName": {
+      "type": "string"
+    }
+  }
+}
