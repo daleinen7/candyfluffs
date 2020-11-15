@@ -18,15 +18,14 @@ export default function Grid() {
     <StaticQuery 
       query={graphql`
         query ProductsQuery {
-          allStrapiProduct {
+          allStrapiProducts {
             edges {
               node {
                 id
-                name
+                title
                 price
-                image {
-                  absolutePath
-                  relativePath
+                images {
+                  url
                 }
               }
             }
@@ -34,7 +33,7 @@ export default function Grid() {
         }
       `}
       render={data => (
-        data.allStrapiProduct.edges.map(({node}) => (
+        data.allStrapiProducts.edges.map(({node}) => (
           <StyledDiv>
             <GridSquare 
               key={node.id} 
