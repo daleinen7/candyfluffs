@@ -17,15 +17,17 @@ export default function Grid() {
   return(
     <StaticQuery 
       query={graphql`
-        query ProductsQuery {
+        query allPRoductsQuery {
           allStrapiProducts {
             edges {
               node {
                 id
-                title
-                price
                 images {
-                  url
+                  childImageSharp {
+                    fluid {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
                 }
               }
             }
@@ -36,10 +38,10 @@ export default function Grid() {
         data.allStrapiProducts.edges.map(({node}) => (
           <StyledDiv>
             <GridSquare 
-              key={node.id} 
               title={node.name} 
               price={node.price}
-              image={node.image}
+              images={node.images}
+              key={node.id} 
             />
           </StyledDiv>
         ))
