@@ -14,25 +14,43 @@ const StyledDiv = styled.div`
     width: 25vw;
     height: auto;
   }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color:  #f58f89;
+  }
+  &:hover .overlay {
+    opacity: 1;
+  }
+  .text {
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    text-align: center;
+  }
 `;
 
 export default function GridSquare(props) {
   return(
-    <StyledDiv>
-      <Link to="{/product}">
-        {/* <div class="product"> */}
-          {/* https://www.w3schools.com/css/tryit.asp?filename=trycss_css_image_overlay_fade */}
+    <Link to="{/product}">
+      <StyledDiv>
           <Img
             className="product_image"
             fluid={props.images.childImageSharp.fluid}
-            alt="testing yo"
+            alt={props.name + " thumbnail"}
           />
           <div className="overlay text">
-            <h2>{props.name}</h2>
+            <h2>{props.title}</h2>
             <h3>${props.price}</h3>
           </div>
-        {/* </div> */}
-      </ Link>
-    </StyledDiv>
+      </StyledDiv>
+    </ Link>
   )
 }
