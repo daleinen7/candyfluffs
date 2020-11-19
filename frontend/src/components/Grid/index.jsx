@@ -22,6 +22,8 @@ export default function Grid() {
             edges {
               node {
                 id
+                title
+                price
                 images {
                   childImageSharp {
                     fluid {
@@ -38,7 +40,7 @@ export default function Grid() {
         data.allStrapiProducts.edges.map(({node}) => (
           <StyledDiv>
             <GridSquare 
-              title={node.name} 
+              title={node.title} 
               price={node.price}
               images={node.images}
               key={node.id} 
