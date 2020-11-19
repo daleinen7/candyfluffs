@@ -16,14 +16,7 @@ module.exports = {
     description: "just a girl who likes drawing",
   },
   plugins: [
-    // {
-    //   resolve: `gatsby-source-datocms`,
-    //   options: {
-    //     apiToken: `f1c41492095c2a4b8c49581c53baae`,
-    //     preview: false,
-    //     disableLiveReload: false,
-    //   },
-    // },
+    `gatsby-plugin-sharp`, `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-source-strapi",
       options: {

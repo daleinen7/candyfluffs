@@ -1,6 +1,7 @@
 import React from 'react';
-
+import { Link } from 'gatsby';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 const StyledDiv = styled.div`
   position: relative;
@@ -18,20 +19,20 @@ const StyledDiv = styled.div`
 export default function GridSquare(props) {
   return(
     <StyledDiv>
-      <a href=".cache/gatsby-source-filesystem/62715eac4465f02879831bb180d8d15c.jpg">
+      <Link to="{/product}">
         {/* <div class="product"> */}
           {/* https://www.w3schools.com/css/tryit.asp?filename=trycss_css_image_overlay_fade */}
-          <img
-            class="product_image"
-            src=".cache/gatsby-source-filesystem/62715eac4465f02879831bb180d8d15c.jpg"
+          <Img
+            className="product_image"
+            fluid={props.images.childImageSharp.fluid}
             alt="testing yo"
           />
-          <div class="overlay text">
+          <div className="overlay text">
             <h2>{props.name}</h2>
             <h3>${props.price}</h3>
           </div>
         {/* </div> */}
-      </a>
+      </ Link>
     </StyledDiv>
   )
 }

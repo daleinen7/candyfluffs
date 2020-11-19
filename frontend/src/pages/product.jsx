@@ -1,11 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Grid from '../components/Grid';
 
 export default function Shop() {
   return (
     <Layout>
-      <Grid />
+      Product Page
     </Layout>
   )
 }
