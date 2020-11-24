@@ -18,14 +18,11 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sharp`, `gatsby-transformer-sharp`,
     {
-      resolve: "gatsby-source-strapi",
+      resolve: `gatsby-source-datocms`,
       options: {
-        apiURL: process.env.API_URL || "http://localhost:1337",
-        contentTypes: [
-          // List of the Content Types you want to be able to request from Gatsby.
-          "products"
-        ],
-        queryLimit: 1000,
+        apiToken: process.env.API_TOKEN,
+        preview: false,
+        disableLiveReload: false,
       },
     },
   ],
