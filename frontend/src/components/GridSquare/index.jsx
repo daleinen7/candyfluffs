@@ -30,7 +30,7 @@ const StyledDiv = styled.div`
     opacity: 1;
   }
   .text {
-    color: white;
+    color: purple;
     font-size: 1.5em;
     position: absolute;
     text-align: center;
@@ -41,11 +41,7 @@ export default function GridSquare(props) {
   return(
     <Link to="{/product}">
       <StyledDiv>
-          <Img
-            className="product_image"
-            fluid={props.images.childImageSharp.fluid}
-            alt={props.name + " thumbnail"}
-          />
+          <Img fluid={props.image.fluid} />
           <div className="overlay text">
             <h2>{props.title}</h2>
             <h3>${props.price}</h3>
