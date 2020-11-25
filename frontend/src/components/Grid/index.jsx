@@ -22,14 +22,12 @@ export default function Grid() {
             edges {
               node {
                 id
-                price
                 title
-                children {
-                  ... on ImageSharp {
-                    id
-                    fluid(maxWidth: 200, traceSVG: {}) {
-                      tracedSVG
-                    }
+                price
+                image {
+                  fluid(maxWidth: 200) {
+                    src
+                    ...GatsbyDatoCmsFluid
                   }
                 }
               }
@@ -43,7 +41,7 @@ export default function Grid() {
             <GridSquare 
               title={node.title} 
               price={node.price}
-              image={node.image}
+              image={node.image[0]}
               key={node.id} 
             />
           </StyledDiv>
