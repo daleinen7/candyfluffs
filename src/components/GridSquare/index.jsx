@@ -5,15 +5,10 @@ import Img from 'gatsby-image';
 
 const StyledDiv = styled.div`
   position: relative;
-  width: 25vw;
-  height: auto;
+  /* height: auto; */
   border: 2px solid  #f58f89;
+  box-sizing: border-box;
   border-radius: 2px;
-  img {
-    display: block;
-    width: 25vw;
-    height: auto;
-  }
   .overlay {
     position: absolute;
     top: 0;
@@ -39,7 +34,7 @@ const StyledDiv = styled.div`
 
 export default function GridSquare(props) {
   return(
-    <Link to="{/product}">
+    <Link to={`../${props.slug}`}>
       <StyledDiv>
           <Img fluid={props.image.fluid} />
           <div className="overlay text">

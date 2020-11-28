@@ -5,7 +5,6 @@ import Footer from '../Footer';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-  width: 80%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,7 +14,6 @@ const StyledDiv = styled.div`
   main {
     margin: 0 auto;
     width: 80%;
-    flex-grow: 1;
   }
 `;
 
