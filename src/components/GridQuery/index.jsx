@@ -13,6 +13,7 @@ export default function Grid() {
                 id
                 title
                 price
+                slug
                 image {
                   fluid(maxWidth: 200) {
                     src
@@ -30,6 +31,7 @@ export default function Grid() {
             title={node.title} 
             price={node.price}
             image={node.image[0]}
+            slug={node.slug}
             key={node.id} 
           />
         ))

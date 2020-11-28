@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-pages-product-product-details-jsx","path":"/product/product-details/","result":{"errors":[{"message":"Variable \"$slug\" of required type \"String!\" was not provided.","locations":[{"line":1,"column":83}]}],"pageContext":{}},"staticQueryHashes":[]}

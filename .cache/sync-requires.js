@@ -8,7 +8,8 @@ exports.components = {
   "component---cache-dev-404-page-js": hot(preferDefault(require("/Users/douglasleinen/code/candyfluffs/.cache/dev-404-page.js"))),
   "component---src-pages-index-jsx": hot(preferDefault(require("/Users/douglasleinen/code/candyfluffs/src/pages/index.jsx"))),
   "component---src-pages-necahual-jsx": hot(preferDefault(require("/Users/douglasleinen/code/candyfluffs/src/pages/necahual.jsx"))),
-  "component---src-pages-product-index-jsx": hot(preferDefault(require("/Users/douglasleinen/code/candyfluffs/src/pages/product/index.jsx"))),
+  "component---src-pages-product-jsx": hot(preferDefault(require("/Users/douglasleinen/code/candyfluffs/src/pages/product.jsx"))),
+  "component---src-pages-product-product-details-jsx": hot(preferDefault(require("/Users/douglasleinen/code/candyfluffs/src/pages/product/product-details.jsx"))),
   "component---src-pages-shop-jsx": hot(preferDefault(require("/Users/douglasleinen/code/candyfluffs/src/pages/shop.jsx")))
 }
 
