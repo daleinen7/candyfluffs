@@ -5,15 +5,10 @@ import Img from 'gatsby-image';
 
 const StyledDiv = styled.div`
   position: relative;
-  width: 25vw;
-  height: auto;
+  /* height: auto; */
   border: 2px solid  #f58f89;
+  box-sizing: border-box;
   border-radius: 2px;
-  img {
-    display: block;
-    width: 25vw;
-    height: auto;
-  }
   .overlay {
     position: absolute;
     top: 0;
