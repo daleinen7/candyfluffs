@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 const StyledDiv = styled.div`
+  .gatsby-image-wrapper {
+    width: 100%;
+  }
   position: relative;
   /* height: auto; */
   border: 2px solid  #f58f89;

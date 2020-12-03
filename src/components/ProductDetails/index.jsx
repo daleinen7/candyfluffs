@@ -20,7 +20,7 @@ export default function ProductDetails({ data }) {
       <StyledDiv>
         <h2>{product.title}</h2>
         <div className="details">
-          <Img fluid={product.image[0].fluid}/>
+          <Img style={{width:'100%'}} fluid={product.image[0].fluid} />
           <p>{product.description}</p>
         </div>  
       </StyledDiv>
