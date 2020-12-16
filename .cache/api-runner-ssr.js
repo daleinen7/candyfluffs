@@ -1,4 +1,7 @@
-var plugins = []
+var plugins = [{
+      plugin: require('/Users/douglasleinen/code/candyfluffs/node_modules/gatsby-plugin-snipcart/gatsby-ssr'),
+      options: {"plugins":[],"apiKey":"sk_test_51HwaWaEtvc5flkSS0JQcjidbofNHcJjLbUOeUTpNns7IWrnIKpQTmHsbPq8B9LIIDIGmvllMVVnjLrtJyhk7BYF800ad1KNebf"},
+    }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
