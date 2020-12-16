@@ -23,6 +23,16 @@ export default function ProductDetails({ data }) {
           <Img style={{width:'100%'}} fluid={product.image[0].fluid} />
           <p>{product.description}</p>
         </div>  
+        <button 
+          className="snipcart-add-item"
+          data-item-id={product.id}
+          data-item-price={product.price}
+          data-item-image={product.image.url}
+          data-item-name={product.title}
+          data-item-url={`/`}
+        >
+          Add to Cart
+        </button>
       </StyledDiv>
     </Layout>
   )
