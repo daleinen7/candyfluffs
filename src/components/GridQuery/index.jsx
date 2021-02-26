@@ -5,7 +5,7 @@ import GridSquare from '../GridSquare';
 export default function Grid() {
   return(
     <StaticQuery 
-      query={`
+      query={graphql`
         query AllProductsGridQuery {
           allDatoCmsProduct {
             edges {
