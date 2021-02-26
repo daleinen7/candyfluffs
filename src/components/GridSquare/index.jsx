@@ -25,7 +25,7 @@ const StyledDiv = styled.div`
     background-color:  #f58f89;
   }
   &:hover .overlay {
-    opacity: 1;
+    opacity: 0.75;
   }
   .text {
     color: purple;

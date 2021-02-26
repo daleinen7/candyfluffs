@@ -29,7 +29,7 @@ export default function ProductDetails({ data }) {
           data-item-price={product.price}
           data-item-image={product.image.url}
           data-item-name={product.title}
-          data-item-url={`/`}
+          data-item-url={``}
         >
           Add to Cart
         </button>
