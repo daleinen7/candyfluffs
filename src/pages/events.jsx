@@ -10,13 +10,11 @@ const StyledDiv = styled.div`
   margin: 0 auto; 
 `
 
-export default function Contact() {
+export default function Events() {
 	return (
 		<Layout>
       <StyledDiv>
-        <form action="">
-          <p>Form goes here</p>
-        </form>
+        <p>Events go here</p>
       </StyledDiv>
       
     </Layout>
