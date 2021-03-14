@@ -51,11 +51,11 @@ const StyledDiv = styled.div`
   }
 `;
 
-export default function Header() {
+export default function Header(props) {
   return(
     <StyledDiv>
       <h1><Link to='/'><img src={logo} alt="Candy Fluffs Logo"/></Link></h1>
-      <p className="subheading">Sub Heading ( •⌄• ू )✧</p>
+      <p className="subheading">{props.heading} ( •⌄• ू )✧</p>
       <nav>
         <ul>
           <li>
@@ -77,7 +77,7 @@ export default function Header() {
             <Link to='/necahual'>Stickeres</Link>
           </li>
           <li>
-            <Link to='/necahual'>Conventions/Expos</Link>
+            <Link to='/events'>Conventions/Expos</Link>
           </li>
         </ul>
       </nav>

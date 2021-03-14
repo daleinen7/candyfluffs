@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
 
 export default function About() {
 	return (
-		<Layout>
+		<Layout heading = {"About Candyfluffs"} >
       <StyledDiv>
         <StaticImage src="../images/cjoy.png" alt="C Joy" />
 

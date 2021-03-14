@@ -20,7 +20,7 @@ const StyledDiv = styled.div`
 export default function Layout(props) {
   return(
     <StyledDiv>
-        <Header />
+        <Header heading = {props.heading} />
         <main>
             {props.children}
         </main>
