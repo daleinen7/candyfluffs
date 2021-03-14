@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
 
 export default function Events() {
 	return (
-		<Layout>
+		<Layout heading = {"Events"}>
       <StyledDiv>
         <p>Events go here</p>
       </StyledDiv>

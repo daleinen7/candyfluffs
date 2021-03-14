@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
 
 export default function Contact() {
 	return (
-		<Layout>
+		<Layout heading = {"Contact Candyfluffs"}>
       <StyledDiv>
         <form action="">
           <p>Form goes here</p>
