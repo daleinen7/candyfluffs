@@ -15,7 +15,7 @@ module.exports = {
     description: "just a girl who likes drawing",
   },
   plugins: [
-    `gatsby-plugin-sharp`, `gatsby-transformer-sharp`, `gatsby-plugin-netlify`,
+    `gatsby-plugin-image`,`gatsby-plugin-sharp`, `gatsby-transformer-sharp`, `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-datocms`,
       options: {

@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/Users/douglasleinen/code/candyfluffs/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
+		module.exports = factory(require("/Users/douglasleinen/code/candyfluffs/node_modules/common-tags/lib/index.js"), require("/Users/douglasleinen/code/candyfluffs/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/Users/douglasleinen/code/candyfluffs/node_modules/lodash/merge.js", "react", "react-dom/server"], factory);
+		define("lib", ["/Users/douglasleinen/code/candyfluffs/node_modules/common-tags/lib/index.js", "/Users/douglasleinen/code/candyfluffs/node_modules/lodash/merge.js", "react", "react-dom/server"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/Users/douglasleinen/code/candyfluffs/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
+		exports["lib"] = factory(require("/Users/douglasleinen/code/candyfluffs/node_modules/common-tags/lib/index.js"), require("/Users/douglasleinen/code/candyfluffs/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"));
 	else
-		root["lib"] = factory(root["/Users/douglasleinen/code/candyfluffs/node_modules/lodash/merge.js"], root["react"], root["react-dom/server"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__) {
+		root["lib"] = factory(root["/Users/douglasleinen/code/candyfluffs/node_modules/common-tags/lib/index.js"], root["/Users/douglasleinen/code/candyfluffs/node_modules/lodash/merge.js"], root["react"], root["react-dom/server"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_common_tags__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -104,6 +104,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 var plugins = [{
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-image/gatsby-ssr */ "./node_modules/gatsby-plugin-image/gatsby-ssr.js"),
+  options: {
+    "plugins": []
+  }
+}, {
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-snipcart/gatsby-ssr */ "./node_modules/gatsby-plugin-snipcart/gatsby-ssr.js"),
   options: {
     "plugins": [],
@@ -558,6 +563,42 @@ Html = Html && Html.__esModule ? Html.default : Html;
   htmlStr = `<!DOCTYPE html>${htmlStr}`;
   callback(null, htmlStr);
 });
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-image/gatsby-ssr.js":
+/*!********************************************************!*\
+  !*** ./node_modules/gatsby-plugin-image/gatsby-ssr.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(/*! react */ "react");
+
+var commonTags = __webpack_require__(/*! common-tags */ "common-tags");
+
+var generateHtml = function generateHtml(str) {
+  return {
+    __html: commonTags.oneLine(str)
+  };
+};
+
+function onRenderBody(_ref) {
+  var setHeadComponents = _ref.setHeadComponents;
+  setHeadComponents([React.createElement("style", {
+    key: "gatsby-image-style",
+    dangerouslySetInnerHTML: generateHtml(".gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper img{all:inherit;bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block}")
+  }), React.createElement("noscript", {
+    key: "gatsby-image-style-noscript",
+    dangerouslySetInnerHTML: generateHtml("<style>" + ".gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}" + "</style>")
+  }), React.createElement("script", {
+    key: "gatsby-image-style-script",
+    type: "module",
+    dangerouslySetInnerHTML: generateHtml("const e=\"undefined\"!=typeof HTMLImageElement&&\"loading\"in HTMLImageElement.prototype;e&&document.body.addEventListener(\"load\",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector(\"[data-placeholder-image]\"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition=\"opacity 500ms linear\")}))}),!0);")
+  })]);
+}
+
+exports.onRenderBody = onRenderBody;
 
 /***/ }),
 
@@ -1717,6 +1758,17 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
 }
 
+
+/***/ }),
+
+/***/ "common-tags":
+/*!**********************************************************************************************!*\
+  !*** external "/Users/douglasleinen/code/candyfluffs/node_modules/common-tags/lib/index.js" ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_common_tags__;
 
 /***/ }),
 
