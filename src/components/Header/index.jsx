@@ -24,15 +24,15 @@ const StyledDiv = styled.div`
 
     ul {
       display: flex;
-      width: 100%;
+      width: 80%;
       padding: 0;
-      margin-top: 0;
+      margin: 0 auto;
       flex-direction: row;
       justify-content: space-between;
       list-style-type: none;
     }
     li {
-      padding: 1rem;
+      padding: .5rem;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
@@ -46,15 +46,19 @@ const StyledDiv = styled.div`
     }
   }
 
-  img {
+  ${'' /* img {
     width: 400px;
-  }
+  } */}
 `;
+
+const Image = styled.img`
+    width: 300px;
+`
 
 export default function Header(props) {
   return(
     <StyledDiv>
-      <h1><Link to='/'><img src={logo} alt="Candy Fluffs Logo"/></Link></h1>
+      <h1><Link to='/'><Image src={logo} alt="Candy Fluffs Logo"/></Link></h1>
       <p className="subheading">{props.heading} ( •⌄• ू )✧</p>
       <nav>
         <ul>
@@ -74,7 +78,7 @@ export default function Header(props) {
             <Link to='/necahual'>Necahual</Link>
           </li>
           <li>
-            <Link to='/necahual'>Stickeres</Link>
+            <Link to='/necahual'>Stickers</Link>
           </li>
           <li>
             <Link to='/events'>Conventions/Expos</Link>
