@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../Layout"
 import { graphql } from "gatsby";
+import Layout from "../../components/Layout"
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
@@ -12,23 +12,21 @@ const StyledDiv = styled.div`
   }
 `;
 
-export default function ProductDetails({ data }) {
-  const product = data.datoCmsProduct
-  console.log(product);
+export default function Product({ data }) {
 	return(
     <Layout>
       <StyledDiv>
-        <h2>{product.title}</h2>
+        <h2>{data.datoCmsProduct.title}</h2>
         <div className="details">
-          <Img style={{width:'100%'}} fluid={product.image[0].fluid} />
-          <p>{product.description}</p>
+          <Img style={{width:'100%'}} fluid={data.datoCmsProduct.image[0].fluid} />
+          <p>{data.datoCmsProduct.description}</p>
         </div>  
         <button 
           className="snipcart-add-item"
-          data-item-id={product.id}
-          data-item-price={product.price}
-          data-item-image={product.image.url}
-          data-item-name={product.title}
+          data-item-id={data.datoCmsProduct.id}
+          data-item-price={data.datoCmsProduct.price}
+          data-item-image={data.datoCmsProduct.image.url}
+          data-item-name={data.datoCmsProduct.title}
           data-item-url={``}
         >
           Add to Cart
