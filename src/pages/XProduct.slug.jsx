@@ -14,7 +14,7 @@ const StyledDiv = styled.div`
 
 export default function Product({ props }) {
 	return(
-    <Layout><h1>Hi fuckface.</h1></Layout>
+    <Layout><h1>Why is this so broken?</h1></Layout>
     // props.params.slug + props.data.title
     // <Layout>
     //   <StyledDiv>
