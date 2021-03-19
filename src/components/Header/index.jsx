@@ -105,19 +105,19 @@ export default function Header(props) {
         <hr></hr>
         <ul>
           <li>
-            <Link to='/books'>Books</Link>
+            <Link to='/book'>Books</Link>
           </li>
           <li>
-            <Link to='/prints'>Prints</Link>
+            <Link to='/print'>Prints</Link>
           </li>
           <li>
-            <Link to='/charms'>Charms</Link>
+            <Link to='/charm'>Charms</Link>
           </li>
           <li>
-            <Link to='/buttons'>Buttons</Link>
+            <Link to='/button'>Buttons</Link>
           </li>
           <li>
-            <Link to='/stickers'>Stickers</Link>
+            <Link to='/sticker'>Stickers</Link>
           </li>
           <li>
             <Link to='/necahual'>Necahual</Link>

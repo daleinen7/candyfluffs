@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/Layout";
+import Layout from "../components/Layout";
 import styled from 'styled-components';
-import GridSquare from '../../components/GridSquare';
+import GridSquare from '../components/GridSquare';
 import Img from 'gatsby-image';
 
 const StyledDiv = styled.div`
@@ -15,7 +15,8 @@ const StyledDiv = styled.div`
 
 export default function Product({ data }) {
 	return(
-    <Layout>
+    // don't forget to dynamically set product type 
+    <Layout heading={"Sort by product type"}>
       <StyledDiv>
         {data.allDatoCmsProduct.edges.map(({node}) => (
           <GridSquare 
