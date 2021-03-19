@@ -50,7 +50,7 @@ const NavDiv = styled.div `
       padding: 0;
       margin: 0 auto;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       list-style-type: none;
     }
     li {
@@ -86,7 +86,7 @@ const Image = styled.img`
 export default function Header(props) {
   return (
     
-    <>
+  <>
     <HeaderDiv>
         <h1><Link to='/'><Image src={logo} alt="Candy Fluffs Logo" /></Link></h1>
         <SubHead>
@@ -105,29 +105,29 @@ export default function Header(props) {
         <hr></hr>
         <ul>
           <li>
-            <Link to='/'>Books</Link>
+            <Link to='/book'>Books</Link>
           </li>
           <li>
-            <Link to='/shop'>Prints</Link>
+            <Link to='/print'>Prints</Link>
           </li>
           <li>
-            <Link to='/necahual'>Charms</Link>
+            <Link to='/charm'>Charms</Link>
           </li>
           <li>
-            <Link to='/necahual'>Buttons</Link>
+            <Link to='/button'>Buttons</Link>
+          </li>
+          <li>
+            <Link to='/sticker'>Stickers</Link>
           </li>
           <li>
             <Link to='/necahual'>Necahual</Link>
           </li>
           <li>
-            <Link to='/necahual'>Stickers</Link>
-          </li>
-          <li>
             <Link to='/events'>Conventions/Expos</Link>
           </li>
         </ul>
-        </nav>
-      </NavDiv>
-    </>
+      </nav>
+    </NavDiv>
+  </>
   )
 }

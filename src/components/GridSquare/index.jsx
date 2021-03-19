@@ -37,7 +37,7 @@ const StyledDiv = styled.div`
 
 export default function GridSquare(props) {
   return(
-    <Link to={`../${props.slug}`}>
+    <Link to={`../../products/${props.slug}`}>
       <StyledDiv>
           <Img fluid={props.image.fluid} />
           <div className="overlay text">
