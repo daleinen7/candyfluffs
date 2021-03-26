@@ -9,6 +9,11 @@ const StyledDiv = styled.div`
   }
   position: relative;
   /* height: auto; */
+
+
+  width: 80px;
+
+
   border: 2px solid  #f58f89;
   box-sizing: border-box;
   border-radius: 2px;
