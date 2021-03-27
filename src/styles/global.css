@@ -1,7 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-html, body, * {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
     background-color: #fff8f5;
     font-family: 'Lato', sans-serif;
     font-style: normal;
+}
+
+.grid-container {
+  display: grid;
+  height: 100vh; 
+  width: 100%; 
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "social-links logo-area contact-links"
+    "navbar navbar navbar"
+    ". product-grid ."
+    "footer footer footer";
+}
+.social-links { 
+    grid-area: social-links; 
+    display: flex; 
+    justify-content: center;
+    align-items: flex-end;
+    /* width: 30%; */
+}
+
+hr { 
+    border: 2px solid #FFE2D6;
+}
+
+.logo-area { 
+    grid-area: logo-area;
+    text-align: center;
+    color: #F58F89;
+    font-size: 1.125rem;
+
+ }
+
+.contact-links { 
+    grid-area: contact-links;
+    display: flex; 
+    justify-content: space-around;
+    align-items: flex-end;
+    /* width: 30%; */
+ }
+
+.navbar { 
+    grid-area: navbar;
+ }
+
+.product-grid { 
+    grid-area: product-grid;
+ }
+
+.footer { 
+    grid-area: footer; 
 }
