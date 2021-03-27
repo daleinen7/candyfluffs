@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-* {
+*,
+*:after,
+*:before{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -11,18 +15,20 @@ html, body {
 }
 
 .grid-container {
-  display: grid;
-  height: 100vh; 
-  width: 100%; 
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
+    height: 100vh; 
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
     "social-links logo-area contact-links"
     "navbar navbar navbar"
-    ". product-grid ."
+    "product-grid product-grid product-grid"
     "footer footer footer";
 }
+
 .social-links { 
     grid-area: social-links; 
     display: flex; 
@@ -31,17 +37,13 @@ html, body {
     /* width: 30%; */
 }
 
-hr { 
-    border: 2px solid #FFE2D6;
-}
-
 .logo-area { 
     grid-area: logo-area;
     text-align: center;
     color: #F58F89;
     font-size: 1.125rem;
-
- }
+    
+}
 
 .contact-links { 
     grid-area: contact-links;
@@ -49,14 +51,56 @@ hr {
     justify-content: space-around;
     align-items: flex-end;
     /* width: 30%; */
- }
+}
+
+hr { 
+    border: 2px solid #FFE2D6;
+}
 
 .navbar { 
     grid-area: navbar;
  }
 
+ .navbar ul { 
+    display: flex;
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+ }
+
+ .navbar li {
+    padding: .5rem; 
+ }
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 1.8rem; 
+    color: #5C5C5C;
+}
+
+.navbar a:hover {
+    color: #F58F89;
+    cursor: pointer; 
+}
+
 .product-grid { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+    ". . ."
+    ". . .";
     grid-area: product-grid;
+    grid-column: 3; 
+ }
+
+ .product-item { 
+     width: 200px; 
  }
 
 .footer { 
