@@ -87,18 +87,24 @@ export default function Header(props) {
   return (
   <>
       {/* <HeaderDiv> */}
-        {/* <SubHead> */}
+      {/* <SubHead> */}
+      <div className="header">
           <div className="social-links">
             <TwitterLogo color="#C4C4C4" size={24} weight="fill" /> &nbsp; 
             <InstagramLogo color="#C4C4C4" size={24} weight="fill" /> 
           </div>
-      <div className="logo-area">
-        <h1><Link to='/'><img src={logo} alt="Candy Fluffs Logo" style={{ width: "300px" }} /></Link></h1>
-          {props.heading} ( •⌄• ू )✧
+        <div className="logo-area">
+          <div className="logo">
+            <h1><Link to='/'><img src={logo} alt="Candy Fluffs Logo" style={{ width: "300px" }} /></Link></h1>
+          </div>
+          <div className="subheading">
+            {props.heading} ( •⌄• ू )✧
+          </div>
         </div>
           <div className="contact-links">
-        A &nbsp; C
+          A &nbsp; C
           </div>
+        </div>
         {/* </SubHead> */}
     {/* </HeaderDiv> */}
     {/* <NavDiv> */}

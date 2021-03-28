@@ -14,18 +14,17 @@ html, body {
     font-style: normal;
 }
 
-.grid-container {
+/* Grid layout - comment out to use Flexbox layout */
+/* .grid-container {
     height: 100vh; 
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr; */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(3, 1fr));
     grid-template-rows: repeat(4, 1fr);
     gap: 0px 0px;
     grid-template-areas:
     "social-links logo-area contact-links"
     "navbar navbar navbar"
-    "product-grid product-grid product-grid"
+    ". product-grid ."
     "footer footer footer";
 }
 
@@ -34,7 +33,6 @@ html, body {
     display: flex; 
     justify-content: center;
     align-items: flex-end;
-    /* width: 30%; */
 }
 
 .logo-area { 
@@ -50,7 +48,6 @@ html, body {
     display: flex; 
     justify-content: space-around;
     align-items: flex-end;
-    /* width: 30%; */
 }
 
 hr { 
@@ -106,3 +103,103 @@ hr {
 .footer { 
     grid-area: footer; 
 }
+ */
+
+
+ /* FLEXBOX */
+
+ .container { 
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100vw; 
+    height: 100vh; 
+    margin: auto; 
+    align-items: center;
+    justify-content: center;
+ }
+
+ .header { 
+     display: flex; 
+     flex-direction: row;
+     width: 100%; 
+ }
+
+ .social-links { 
+     width: 25%; 
+     display: flex; 
+     align-items: flex-end;
+     justify-content: center;
+
+ }
+
+ .logo-area { 
+    width: 50%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+ }
+
+.subheading {
+    text-align: center;
+    color: #F58F89;
+    font-size: 1.125rem;
+}
+
+ .contact-links { 
+     width: 25%; 
+     display: flex; 
+     align-items: flex-end;
+     justify-content: center;
+ }
+
+hr { 
+    border: 2px solid #FFE2D6;
+}
+
+ .navbar ul { 
+    display: flex;
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+ }
+
+ .navbar li {
+    padding: .5rem; 
+ }
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 1.8rem; 
+    color: #5C5C5C;
+}
+
+.navbar a:hover {
+    color: #F58F89;
+    cursor: pointer; 
+}
+
+ .product-grid { 
+    width: 100%; 
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px; 
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; 
+ }
+
+ .product-item { 
+     padding: 10px; 
+     margin: 10px; 
+ }
+
+ .footer { 
+    width: 100%; 
+ }
