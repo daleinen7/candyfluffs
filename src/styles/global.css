@@ -18,33 +18,37 @@ html, body {
 .grid-container {
     height: 100vh; 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(3, 1fr));
-    grid-template-rows: repeat(4, 1fr);
-    gap: 0px 0px;
+    /* grid-template-columns: repeat(auto-fill, minmax(3, 1fr));
+    grid-template-rows: repeat(4, 1fr); */
+    /* gap: 0px 0px; */
     grid-template-areas:
-    "social-links logo-area contact-links"
-    "navbar navbar navbar"
-    ". product-grid ."
-    "footer footer footer";
+    "header "
+    "navbar"
+    "product-grid"
+    " footer";
 }
 
-.social-links { 
-    grid-area: social-links; 
-    display: flex; 
-    justify-content: center;
-    align-items: flex-end;
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
 }
-
 .logo-area { 
-    grid-area: logo-area;
+    /* grid-area: header; */
     text-align: center;
     color: #F58F89;
     font-size: 1.125rem;
     
 }
 
+.social-links { 
+    /* grid-area: header;  */
+    display: flex; 
+    justify-content: start;
+    align-items: flex-end;
+}
 .contact-links { 
-    grid-area: contact-links;
+    /* grid-area: header; */
     display: flex; 
     justify-content: space-around;
     align-items: flex-end;
@@ -85,15 +89,16 @@ hr {
 }
 
 .product-grid { 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px 10px;
-    grid-template-areas:
-    ". . ."
-    ". . .";
     grid-area: product-grid;
-    grid-column: 3; 
+    width: 100%; 
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px; 
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; 
+
  }
 
  .product-item { 
