@@ -98,7 +98,7 @@ export default function Header(props) {
             <h1><Link to='/'><img src={logo} alt="Candy Fluffs Logo" style={{ width: "300px" }} /></Link></h1>
           </div>
           <div className="subheading">
-            {props.heading} ( •⌄• ू )✧
+            {props.heading} (ㆁᴗㆁ✿)
           </div>
         </div>
           <div className="contact-links">

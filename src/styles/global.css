@@ -15,7 +15,7 @@ html, body {
 }
 
 /* Grid layout - comment out to use Flexbox layout */
-/* .grid-container {
+.grid-container {
     height: 100vh; 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(3, 1fr));
@@ -103,12 +103,12 @@ hr {
 .footer { 
     grid-area: footer; 
 }
- */
+
 
 
  /* FLEXBOX */
 
- .container { 
+ /* .container { 
     display: flex; 
     flex-direction: column;
     flex-wrap: nowrap;
@@ -202,4 +202,4 @@ hr {
 
  .footer { 
     width: 100%; 
- }
+ } */
