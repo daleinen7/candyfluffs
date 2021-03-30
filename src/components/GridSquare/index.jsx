@@ -8,7 +8,8 @@ const StyledDiv = styled.div`
     width: 100%;
   }
   position: relative;
-  /* height: auto; */
+  height: 200px;
+  width: 200px;
   border: 2px solid  #f58f89;
   box-sizing: border-box;
   border-radius: 2px;
@@ -36,15 +37,17 @@ const StyledDiv = styled.div`
 `;
 
 export default function GridSquare(props) {
-  return(
-    <Link to={`../../products/${props.slug}`}>
-      <StyledDiv>
-          <Img fluid={props.image.fluid} />
-          <div className="overlay text">
-            <h2>{props.title}</h2>
-            <h3>${props.price}</h3>
-          </div>
+  return (
+  <div className="product-item">
+    <StyledDiv>
+      <Link to={`../../products/${props.slug}`}>
+            <img fluid={props.image.fluid} />
+            <div className="overlay text">
+              <h2>{props.title}</h2>
+              <h3>${props.price}</h3>
+            </div>
+        </Link>
       </StyledDiv>
-    </ Link>
+    </div>
   )
 }
