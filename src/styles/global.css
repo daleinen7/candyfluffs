@@ -22,10 +22,11 @@ html, body {
     grid-template-rows: repeat(4, 1fr); */
     /* gap: 0px 0px; */
     grid-template-areas:
-    "header "
+    "header"
     "navbar"
+    "slider"
     "product-grid"
-    " footer";
+    "footer";
 }
 
 .header{
@@ -33,6 +34,14 @@ html, body {
     display: flex;
     justify-content: space-around;
 }
+
+.slider{
+    grid-area: slider;
+    display: flex;
+    margin-top: 10px; 
+    justify-content: space-around;
+}
+
 .logo-area { 
     /* grid-area: header; */
     text-align: center;
@@ -94,7 +103,6 @@ hr {
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 50px; 
     align-items: center;
     justify-content: center;
     margin: 0 auto; 
@@ -102,7 +110,9 @@ hr {
  }
 
  .product-item { 
-     width: 200px; 
+     width: 400px; 
+     height: 400px; 
+     margin: 40px; 
  }
 
 .footer { 
