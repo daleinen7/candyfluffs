@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
-import logo from './logo.png'
-
-
-import { TwitterLogo, InstagramLogo,  } from "phosphor-react";
+import logo from './logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faTwitter, faTumblr } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Header(props) {
@@ -12,8 +10,10 @@ export default function Header(props) {
   <>
       <div className="header">
           <div className="social-links">
-            <TwitterLogo color="#C4C4C4" size={24} weight="fill" /> &nbsp; 
-            <InstagramLogo color="#C4C4C4" size={24} weight="fill" /> 
+          <Link to="http://https://candy-fluffs.tumblr.com/"><FontAwesomeIcon icon={faTumblr} size="md" style={{ color: "#C4C4C4", marginRight: 20 }}/></Link>
+          <Link to="http://instagram.com/candy_fluffs"><FontAwesomeIcon icon={faInstagram} size="md" style={{ color: "#C4C4C4", marginRight: 20 }}/></Link>
+          <Link to="http://twitter.com/candy_fluffs"><FontAwesomeIcon icon={faTwitter} size="md" style={{ color: "#C4C4C4" }}/></Link>
+          
           </div>
         <div className="logo-area">
           <div className="logo">
@@ -24,7 +24,8 @@ export default function Header(props) {
           </div>
         </div>
           <div className="contact-links">
-          A &nbsp; C
+          <Link to="/" style={{ marginRight: 20}}>About</Link>
+          <Link to="/">Contact</Link>
           </div>
         </div>
       <div className="navbar">
