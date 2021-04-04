@@ -116,7 +116,11 @@ hr {
     margin: 0 auto; 
 }
 
-git s
+.sliderimg {
+  object-fit: cover;
+  width: 100%; 
+  height: 100%; 
+}
 
 .product-grid { 
     grid-area: product-grid;
