@@ -6,10 +6,12 @@ import Img from 'gatsby-image';
 const StyledDiv = styled.div`
   .gatsby-image-wrapper {
     width: 100%;
+    height: 100%;
   }
+  
   position: relative;
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
   border: 2px solid  #f58f89;
   box-sizing: border-box;
   border-radius: 2px;
@@ -41,7 +43,11 @@ export default function GridSquare(props) {
   <div className="product-item">
     <StyledDiv>
       <Link to={`../../products/${props.slug}`}>
-            <img fluid={props.image.fluid} />
+          <Img
+            objectFit="cover"
+            fluid={props.image.fluid}
+            alt={props.title}
+            />
             <div className="overlay text">
               <h2>{props.title}</h2>
               <h3>${props.price}</h3>

@@ -15,7 +15,7 @@ export default function Grid() {
                 price
                 slug
                 image {
-                  fluid(maxWidth: 200) {
+                  fluid(maxWidth: 400) {
                     src
                     ...GatsbyDatoCmsFluid
                   }

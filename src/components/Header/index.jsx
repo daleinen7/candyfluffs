@@ -1,97 +1,19 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import logo from './logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faTwitter, faTumblr } from '@fortawesome/free-brands-svg-icons';
 
-import logo from './logo.png'
-
-import styled from 'styled-components';
-
-import { TwitterLogo, InstagramLogo,  } from "phosphor-react";
-
-// const HeaderDiv = styled.div`
-
-//   margin: 0 auto;
-//   width: 80%;
-
-//   h1 {
-//     text-align: center;
-//   }
-
-// `
-// const SubHead = styled.div`
-
-//   width: 100%;
-//   display: flex;
-//   flex-direction: row;
-//   align-content: center;
-//   justify-content: space-between;
-//   vertical-align: center; 
-  
-//   .social-links {
-//     float: left; 
-//   }
-
-//   .subheading {
-    // text-align: center;
-    // color: #F58F89;
-    // font-size: 1.125rem;
-// }
-
-//   .other-links {
-//     float: right; 
-//   }
-//   `
-
-// const NavDiv = styled.div `
-
-//   nav {
-//     ul {
-//       display: flex;
-//       width: 80%;
-//       padding: 0;
-//       margin: 0 auto;
-//       flex-direction: row;
-//       justify-content: space-around;
-//       list-style-type: none;
-//     }
-//     li {
-//       padding: .5rem; 
-//     }
-
-//     a {
-//       text-decoration: none;
-//       font-size: 1.5rem;
-//       line-height: 1.8rem; 
-//       color: #5C5C5C;
-//       &:hover {
-//         color: #F58F89;
-//         cursor: pointer; 
-//       }
-//     }
-//   }
-
-//   hr {
-//     border: 2px solid #FFE2D6;
-//     width: 100vw;
-//     left: 0;
-//     margin: 15px; 
-//   }
-
-// `;
-
-// const Image = styled.img`
-//     width: 247px;
-//     ${'' /* height: 156.14px;  */}
-// `
 
 export default function Header(props) {
   return (
   <>
-      {/* <HeaderDiv> */}
-      {/* <SubHead> */}
       <div className="header">
           <div className="social-links">
-            <TwitterLogo color="#C4C4C4" size={24} weight="fill" /> &nbsp; 
-            <InstagramLogo color="#C4C4C4" size={24} weight="fill" /> 
+          <Link to="http://https://candy-fluffs.tumblr.com/"><FontAwesomeIcon icon={faTumblr} size="md" style={{ color: "#C4C4C4", marginRight: 20 }}/></Link>
+          <Link to="http://instagram.com/candy_fluffs"><FontAwesomeIcon icon={faInstagram} size="md" style={{ color: "#C4C4C4", marginRight: 20 }}/></Link>
+          <Link to="http://twitter.com/candy_fluffs"><FontAwesomeIcon icon={faTwitter} size="md" style={{ color: "#C4C4C4" }}/></Link>
+          
           </div>
         <div className="logo-area">
           <div className="logo">
@@ -102,12 +24,10 @@ export default function Header(props) {
           </div>
         </div>
           <div className="contact-links">
-          A &nbsp; C
+          <Link to="/" style={{ marginRight: 20}}>About</Link>
+          <Link to="/">Contact</Link>
           </div>
         </div>
-        {/* </SubHead> */}
-    {/* </HeaderDiv> */}
-    {/* <NavDiv> */}
       <div className="navbar">
         <hr></hr>
         <ul>
@@ -134,7 +54,7 @@ export default function Header(props) {
           </li>
         </ul>
       </div>
-    {/* </NavDiv> */}
+
     </>
   )
 }
