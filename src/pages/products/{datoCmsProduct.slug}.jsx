@@ -19,7 +19,7 @@ export default function Product({ data }) {
         <h2>{data.datoCmsProduct.title}</h2>
         <div className="details">
           <Img style={{width:'100%'}} fluid={data.datoCmsProduct.image[0].fluid} />
-          <p>{data.datoCmsProduct.description}</p>
+          <div dangerouslySetInnerHTML={{__html: data.datoCmsProduct.descriptionNode.childMarkdownRemark.html}} />;
         </div>  
         <button 
           className="snipcart-add-item"
@@ -41,7 +41,11 @@ export const query = graphql`
     datoCmsProduct( slug: { eq: $slug } ) {
       id
       title
-      description
+      descriptionNode {
+        childMarkdownRemark {
+          html
+        }
+      }
       image {
         fluid(maxWidth: 200) {
           src
