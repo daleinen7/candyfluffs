@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import styled from 'styled-components';
 import GridSquare from '../components/GridSquare';
+import { Link } from 'gatsby';
 // import Img from 'gatsby-image';
 import '../styles/global.css'; 
 
@@ -17,8 +18,8 @@ import '../styles/global.css';
 export default function Product({ data }) {
   let fandomList = []
   data.allDatoCmsProduct.edges.forEach(({node}) => {
-    if (!fandomList.includes(node.fandoms)) {
-      fandomList.push(node.fandoms)
+    if (!fandomList.includes(node.fandoms.replace(/\s/g, '-').toLowerCase())) {
+      fandomList.push(node.fandoms.replace(/\s/g, '-').toLowerCase())
     }
   })
 
@@ -29,7 +30,7 @@ export default function Product({ data }) {
 
         {/* <ul>
           {fandomList.map(fandom => {
-            return <li>{fandom}</li>
+            return <li><Link to={`${fandom}`}>{fandom}</Link></li>
           })}
         </ul> */}
 
