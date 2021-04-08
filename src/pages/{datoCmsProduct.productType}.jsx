@@ -15,10 +15,24 @@ import '../styles/global.css';
 // `;
 
 export default function Product({ data }) {
+  let fandomList = []
+  data.allDatoCmsProduct.edges.forEach(({node}) => {
+    if (!fandomList.includes(node.fandoms)) {
+      fandomList.push(node.fandoms)
+    }
+  })
+
 	return(
     // don't forget to dynamically set product type 
     <Layout heading={"Sort by product type"}>
       <div className="product-grid">
+
+        {/* <ul>
+          {fandomList.map(fandom => {
+            return <li>{fandom}</li>
+          })}
+        </ul> */}
+
         {data.allDatoCmsProduct.edges.map(({node}) => (
           <GridSquare 
             title={node.title} 
@@ -42,6 +56,7 @@ export const query = graphql`
         id
         title
         price
+        fandoms
         slug
         image {
           fluid(maxWidth: 200) {
