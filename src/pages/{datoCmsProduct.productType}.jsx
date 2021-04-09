@@ -20,10 +20,11 @@ export default function Product({ data }) {
     // don't forget to dynamically set product type 
     <Layout heading={"Sort by product type"}>
 
-      <DropDown
-        className="fandom-dropdown"
-        fandomList = {fandomList}
-      />
+      <div className="fandom-dropdown">
+        <DropDown
+          fandomList = {fandomList}
+        />
+      </div>
 
       <div className="product-grid">
         {data.allDatoCmsProduct.edges.map(({node}) => (
