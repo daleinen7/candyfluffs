@@ -8,8 +8,15 @@
   box-sizing: border-box;
 }
 
+:root {
+    --highlight: #F58F89;
+    --background: #fff8f5;
+    --gray: #5C5C5C;
+    --faded-highlight: #FFE2D6;
+}
+
 html, body {
-    background-color: #fff8f5;
+    background-color: var(--background);
     font-family: 'Lato', sans-serif;
     font-style: normal;
 }
@@ -34,7 +41,7 @@ html, body {
 .logo-area { 
     /* grid-area: header; */
     text-align: center;
-    color: #F58F89;
+    color: var(--highlight);
     font-size: 1.125rem;
     width: 50%; 
 }
@@ -74,7 +81,7 @@ html, body {
 }
 
 hr { 
-    border: 2px solid #FFE2D6;
+    border: 2px solid var(--faded-highlight);
 }
 
 .navbar { 
@@ -99,11 +106,11 @@ hr {
     text-decoration: none;
     font-size: 1.5rem;
     line-height: 1.8rem; 
-    color: #5C5C5C;
+    color: var(--gray);
 }
 
 .navbar a:hover {
-    color: #F58F89;
+    color: var(--highlight);
     cursor: pointer; 
 }
 

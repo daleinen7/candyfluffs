@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
   position: relative;
   height: 400px;
   width: 400px;
-  border: 2px solid  #f58f89;
+  border: 2px solid  var(--highlight);
   box-sizing: border-box;
   border-radius: 2px;
   .overlay {
@@ -25,7 +25,7 @@ const StyledDiv = styled.div`
     width: 100%;
     opacity: 0;
     transition: 0.5s ease;
-    background-color:  #f58f89;
+    background-color: var(--highlight);
   }
   &:hover .overlay {
     opacity: 0.75;

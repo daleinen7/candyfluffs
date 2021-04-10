@@ -5,32 +5,50 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 const StyledDiv = styled.div`
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  
   .details {
-    display:flex;
-    flex-direction:row;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    width: 575px;
+    margin-left: 40px;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 3rem;
+      color: var(--highlight);
+    }
+
+    p {
+      font-size: 1.15rem;
+    }
   }
 `;
 
 export default function Product({ data }) {
+  console.log(data);
 	return(
     <Layout>
       <StyledDiv>
-        <h2>{data.datoCmsProduct.title}</h2>
+        <Img style={{width:575}} fluid={data.datoCmsProduct.image[0].fluid} />
         <div className="details">
-          <Img style={{width:'100%'}} fluid={data.datoCmsProduct.image[0].fluid} />
-          <div dangerouslySetInnerHTML={{__html: data.datoCmsProduct.descriptionNode.childMarkdownRemark.html}} />;
-        </div>  
-        <button 
-          className="snipcart-add-item"
-          data-item-id={data.datoCmsProduct.id}
-          data-item-price={data.datoCmsProduct.price}
-          data-item-image={data.datoCmsProduct.image.url}
-          data-item-name={data.datoCmsProduct.title}
-          data-item-url={``}
-        >
-          Add to Cart
-        </button>
+          <h2>{data.datoCmsProduct.title}</h2>
+          <p>${data.datoCmsProduct.price}</p>
+          <div dangerouslySetInnerHTML={{__html: data.datoCmsProduct.descriptionNode.childMarkdownRemark.html}} />
+          <button 
+            className="snipcart-add-item"
+            data-item-id={data.datoCmsProduct.id}
+            data-item-price={data.datoCmsProduct.price}
+            data-item-image={data.datoCmsProduct.image.url}
+            data-item-name={data.datoCmsProduct.title}
+            data-item-url={``}
+          >
+            Add to Cart
+          </button>
+        </div>
       </StyledDiv>
     </Layout>
   )
@@ -41,6 +59,7 @@ export const query = graphql`
     datoCmsProduct( slug: { eq: $slug } ) {
       id
       title
+      price
       descriptionNode {
         childMarkdownRemark {
           html
