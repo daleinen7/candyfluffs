@@ -17,6 +17,7 @@ const StyledDiv = styled.div`
 
     h2 {
       margin-top: 0;
+      margin-bottom: 0;
       font-size: 3rem;
       color: var(--highlight);
     }
