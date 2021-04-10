@@ -4,7 +4,6 @@ import logo from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faTumblr } from '@fortawesome/free-brands-svg-icons';
 
-
 export default function Header(props) {
   return (
   <>
@@ -24,8 +23,8 @@ export default function Header(props) {
           </div>
         </div>
           <div className="contact-links">
-          <Link to="/" style={{ marginRight: 20}}>About</Link>
-          <Link to="/">Contact</Link>
+            <Link to="/" style={{ marginRight: 20}}>Account</Link>
+            <button className="snipcart-checkout">View Cart</button>
           </div>
         </div>
       <div className="navbar">
