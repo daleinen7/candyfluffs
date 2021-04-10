@@ -25,6 +25,18 @@ const StyledDiv = styled.div`
     p {
       font-size: 1.15rem;
     }
+
+    button {
+      border: 3px solid var(--gray);
+      width: 200px;
+      background: var(--background);
+      padding: 20px 30px;
+
+      &:hover {
+        cursor: pointer;
+        border: 3px solid var(--highlight);
+      }
+    }
   }
 `;
 
