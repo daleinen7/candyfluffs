@@ -1,23 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import styled from 'styled-components';
 import GridSquare from '../components/GridSquare';
+import DropDown from '../components/DropDown';
 // import Img from 'gatsby-image';
 import '../styles/global.css'; 
 
-// const StyledDiv = styled.div`
-//   .details {
-//     display:flex;
-//     flex-direction:row;
-//     flex-wrap: nowrap;
-//   }
-// `;
-
 export default function Product({ data }) {
+
+  let fandomList = []
+  data.allDatoCmsProduct.edges.forEach(({node}) => {
+    if (!fandomList.includes(node.fandoms.replace(/\s/g, '-').toLowerCase())) {
+      fandomList.push(node.fandoms.replace(/\s/g, '-').toLowerCase())
+    }
+  })
+
 	return(
     // don't forget to dynamically set product type 
     <Layout heading={"Sort by product type"}>
+
+      <div className="fandom-dropdown">
+        <DropDown
+          fandomList = {fandomList}
+        />
+      </div>
+
       <div className="product-grid">
         {data.allDatoCmsProduct.edges.map(({node}) => (
           <GridSquare 
@@ -42,6 +50,7 @@ export const query = graphql`
         id
         title
         price
+        fandoms
         slug
         image {
           fluid(maxWidth: 200) {
