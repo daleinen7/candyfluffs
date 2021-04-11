@@ -19,6 +19,8 @@ html, body {
     background-color: var(--background);
     font-family: 'Lato', sans-serif;
     font-style: normal;
+    width: 100vw; 
+    overflow-x: hidden;
 }
 
 .grid-container {
@@ -28,6 +30,7 @@ html, body {
     "header"
     "navbar"
     "slider"
+    "fandom-dropdown"
     "product-grid"
     "footer";
 }
@@ -129,6 +132,17 @@ hr {
   height: 100%; 
 }
 
+.fandom-dropdown { 
+    grid-area: fandom-dropdown; 
+    width: 100vw; 
+    position: relative; 
+    display: flex;
+    margin-top: 30px; 
+    justify-content: center;
+    min-height: 100px; 
+}
+
+
 .product-grid { 
     grid-area: product-grid;
     width: 100vw; 
@@ -138,7 +152,6 @@ hr {
     align-items: center;
     justify-content: center;
     margin: 0 auto; 
-
  }
 
  .product-item { 

@@ -24,7 +24,6 @@ export default function Slider(props) {
         <div className="slider">
             <AliceCarousel
               autoPlay autoPlayInterval="3000"
-              autoHeight
               autoWidth>
               {data.allDatoCmsBanner.nodes.map(node => {
                 return (
