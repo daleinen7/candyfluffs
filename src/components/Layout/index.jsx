@@ -6,10 +6,10 @@ export default function Layout(props) {
   return(
     <div className="grid-container">
       <Header heading={props.heading} />
-        <main>
-            {props.children}
-        </main>
-        <Footer />   
+      <main>
+          {props.children}
+      </main>
+      <Footer />   
   </div>
   )
 }

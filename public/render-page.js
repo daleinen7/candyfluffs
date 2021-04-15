@@ -112,7 +112,8 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-snipcart/gatsby-ssr */ "./node_modules/gatsby-plugin-snipcart/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "apiKey": "sk_test_51HwaWaEtvc5flkSS0JQcjidbofNHcJjLbUOeUTpNns7IWrnIKpQTmHsbPq8B9LIIDIGmvllMVVnjLrtJyhk7BYF800ad1KNebf"
+    "apiKey": "ST_OTZhNTMwODktNzlmOC00NmNlLWFlYmYtMTdlOWYwM2RhYjAyNjM3NTQwNDY4NDg3NDQwMTc1",
+    "autopop": true
   }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
