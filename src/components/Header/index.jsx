@@ -34,9 +34,12 @@ export default function Header(props) {
         </div>
           <div className="contact-links">
             <Link to="/" style={{ marginRight: 20}}>Account</Link>
-            <span class="snipcart-items-count"></span>
-            <button className="snipcart-checkout"><FontAwesomeIcon icon={faShoppingBag} size="lg" style={{ color: "#C4C4C4" }}/></button>
-            <span class="snipcart-total-price"></span>
+            <button className="snipcart-checkout"><FontAwesomeIcon icon={faShoppingBag} size="lg" style={{ color: "#C4C4C4" }}/>
+            </button>
+            <div class="snipcart-summary">
+              <span className="snipcart-total-price">$0.00</span>
+              (<span className="snipcart-total-items">0</span>)
+            </div>
           </div>
         </div>
       <div className="navbar">
