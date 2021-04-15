@@ -55,7 +55,6 @@ export default function Product({ data }) {
             data-item-price={data.datoCmsProduct.price}
             data-item-image={data.datoCmsProduct.image.url}
             data-item-name={data.datoCmsProduct.title}
-            // data-item-url={`/product/`}
             data-item-url={`/products/${data.datoCmsProduct.slug}`}
           >
             Add to Cart

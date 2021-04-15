@@ -3,10 +3,20 @@ import { Link } from 'gatsby';
 import logo from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faTumblr } from '@fortawesome/free-brands-svg-icons';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+  button.snipcart-checkout{
+    background: transparent;
+    border: none;
+  }
+`;
 
 export default function Header(props) {
   return (
-  <>
+  <StyledDiv>
       <div className="header">
           <div className="social-links">
           <Link to="https://candy-fluffs.tumblr.com/"><FontAwesomeIcon icon={faTumblr} size="md" style={{ color: "#C4C4C4", marginRight: 20 }}/></Link>
@@ -24,7 +34,9 @@ export default function Header(props) {
         </div>
           <div className="contact-links">
             <Link to="/" style={{ marginRight: 20}}>Account</Link>
-            <button className="snipcart-checkout">View Cart</button>
+            <span class="snipcart-items-count"></span>
+            <button className="snipcart-checkout"><FontAwesomeIcon icon={faShoppingBag} size="lg" style={{ color: "#C4C4C4" }}/></button>
+            <span class="snipcart-total-price"></span>
           </div>
         </div>
       <div className="navbar">
@@ -54,6 +66,6 @@ export default function Header(props) {
         </ul>
       </div>
 
-    </>
+    </StyledDiv>
   )
 }
