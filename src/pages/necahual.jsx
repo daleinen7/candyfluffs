@@ -38,7 +38,7 @@ export default function Necahual({ data }) {
       <StyledDiv>
         <h2>NECAHUAL</h2>
         <div className='info'>
-          <StaticImage style={{width:575}} src="../images/necahual.png" alt="Necahual"/>
+          <StaticImage style={{width:575}} src="../images/necahualImg.jpeg" alt="Necahual"/>
           <div className="links">
             <h3>Read it on <a href="https://www.webtoons.com/en/challenge/necahual/list?title_no=216820">WEBTOONS</a>!</h3>
             <p>Support us on:</p>
