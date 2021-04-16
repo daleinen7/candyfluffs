@@ -4,7 +4,7 @@ import GridSquare from '../components/GridSquare';
 
 export default function productTypeFilter({pageContext}) {
   return (
-    <Layout heading = {"just a girl who likes to draw manga"}>
+    <Layout heading = {"Just a girl who likes to draw manga"}>
 
       {pageContext.pageContext.map(product => {
         return (
