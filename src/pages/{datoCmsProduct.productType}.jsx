@@ -1,10 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import styled from 'styled-components';
 import GridSquare from '../components/GridSquare';
 import DropDown from '../components/DropDown';
-// import Img from 'gatsby-image';
 import '../styles/global.css'; 
 
 export default function Product({ data }) {
@@ -35,8 +33,7 @@ export default function Product({ data }) {
             slug={node.slug}
             key={node.id} 
           />
-        ))}
-        
+        ))}  
       </div>
     </Layout>
   )
