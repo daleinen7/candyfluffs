@@ -15,7 +15,7 @@ export default function About() {
 	return (
 		<Layout heading = {"Just a girl who likes to draw manga"} >
       <StyledDiv>
-        <StaticImage src="../images/cjoy.png" alt="C Joy" />
+        <img src={`../cjoy.png`} alt="C Joy" />
 
         <p>Hello my lovelies~ </p>
 
