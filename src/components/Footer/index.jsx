@@ -4,6 +4,7 @@ import ContactForm from '../ContactForm';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
+  margin: 0; 
   display: flex; 
   flex-direction: column;
   align-items: center;
