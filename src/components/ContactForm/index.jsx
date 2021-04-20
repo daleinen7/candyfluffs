@@ -42,7 +42,10 @@ const StyledDiv = styled.div`
     color: #5C5C5C;
     width: 200px;
     height: 50px; 
+  }
 
+  p {
+    text-align: center; 
   }
 `;
 
