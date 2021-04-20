@@ -2,7 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
   
+  h2 {
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 10px; 
+  }
 `;
 
 export default function ContactForm() {
