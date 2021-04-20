@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import styled from 'styled-components';
@@ -9,6 +9,23 @@ const StyledDiv = styled.div`
   flex-wrap: nowrap;
   justify-content: center;
   
+  .images-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-array {
+    display: flex;
+    justify-content: space-evenly;
+
+    .preview {
+      cursor: pointer;
+      &:hover {
+        outline: 1px solid var(--highlight);
+      }
+    }
+  }
+
   .details {
     display: flex;
     flex-direction: column;
@@ -41,10 +58,25 @@ const StyledDiv = styled.div`
 `;
 
 export default function Product({ data }) {
+  const [displayImg, setDisplayImage] = useState(0);
+  console.log(displayImg);
+
 	return(
     <Layout>
       <StyledDiv>
-        <Img style={{width:575}} fluid={data.datoCmsProduct.image[0].fluid} />
+        <div className="images-section">
+          <Img style={{width:575}} fluid={data.datoCmsProduct.image[displayImg].fluid} />
+          <div className="img-array">
+            {data.datoCmsProduct.image.map((img, idx) => {
+              return (
+                <div onClick={() => setDisplayImage(idx)} >
+                  <Img className="preview" style={{width: 110}} fluid={img.fluid} key={idx}/>
+                </div>
+              )
+                      
+            })}
+          </div>
+        </div>
         <div className="details">
           <h2>{data.datoCmsProduct.title}</h2>
           <p>${data.datoCmsProduct.price}</p>
