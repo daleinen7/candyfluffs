@@ -10,13 +10,33 @@ const StyledDiv = styled.div`
   margin: 0 auto; 
 `
 
-export default function Events() {
+export default function Events({data}) {
 	return (
 		<Layout heading = {"Catch me outside! "}>
       <StyledDiv>
-        <p>Events go here</p>
+        {data.allDatoCmsLiveEvent.nodes.map(liveEvent => {
+          return (
+            <article className="event">
+              <h3>{liveEvent.eventName}</h3>
+              <time> {liveEvent.startDate} - {liveEvent.endDate} </time>
+              <address>{liveEvent.website}</address>
+            </article>
+          )
+        })}
       </StyledDiv>
-      
     </Layout>
 	)
 }
+
+export const query = graphql`
+  query events {
+    allDatoCmsLiveEvent {
+      nodes {
+        eventName
+        startDate
+        endDate
+        website
+      }
+    }
+  }
+`
