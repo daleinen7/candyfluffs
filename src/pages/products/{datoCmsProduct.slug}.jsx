@@ -45,6 +45,11 @@ export default function Product({ data }) {
     <Layout>
       <StyledDiv>
         <Img style={{width:575}} fluid={data.datoCmsProduct.image[0].fluid} />
+        <div className="img-array">
+          {data.datoCmsProduct.image.map((img) => {
+            return <Img style={{width: 110}} fluid={img.fluid}/>
+          })}
+        </div>
         <div className="details">
           <h2>{data.datoCmsProduct.title}</h2>
           <p>${data.datoCmsProduct.price}</p>
