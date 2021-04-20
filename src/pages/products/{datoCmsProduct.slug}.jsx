@@ -9,6 +9,16 @@ const StyledDiv = styled.div`
   flex-wrap: nowrap;
   justify-content: center;
   
+  .images-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-array {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
   .details {
     display: flex;
     flex-direction: column;
@@ -44,11 +54,13 @@ export default function Product({ data }) {
 	return(
     <Layout>
       <StyledDiv>
-        <Img style={{width:575}} fluid={data.datoCmsProduct.image[0].fluid} />
-        <div className="img-array">
-          {data.datoCmsProduct.image.map((img) => {
-            return <Img style={{width: 110}} fluid={img.fluid}/>
-          })}
+        <div className="images-section">
+          <Img style={{width:575}} fluid={data.datoCmsProduct.image[0].fluid} />
+          <div className="img-array">
+            {data.datoCmsProduct.image.map((img) => {
+              return <Img style={{width: 110}} fluid={img.fluid}/>
+            })}
+          </div>
         </div>
         <div className="details">
           <h2>{data.datoCmsProduct.title}</h2>
