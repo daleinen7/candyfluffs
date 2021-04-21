@@ -47,6 +47,13 @@ const StyledDiv = styled.div`
   p {
     text-align: center; 
   }
+
+  label {
+    color: #000;
+    padding-right: 10px;
+    display: none;
+    visibility: hidden; 
+  }
 `;
 
 export default function ContactForm() {
@@ -57,11 +64,11 @@ export default function ContactForm() {
       <p>Sign up to get updates about new products and when I’ll be at anime conventions!</p>
       <div className="form">
       <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" >
-        {/* <label htmlFor="firstName">First Name</label> */}
+        <label htmlFor="firstName">First Name</label>
         <input type="text" name="firstName" placeholder="First Name"/>
-        {/* <label htmlFor="lastName">Last Name</label> */}
+        <label htmlFor="lastName">Last Name</label>
         <input type="text" name="lastName" placeholder="Last Name"/>
-        {/* <label htmlFor="email">Email</label> */}
+        <label htmlFor="email">Email</label>
         <input type="text" name="email" placeholder="E-mail address"/>
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" placeholder="contact" />
