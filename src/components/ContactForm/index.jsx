@@ -58,13 +58,13 @@ export default function ContactForm() {
       <div className="form">
       <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" >
         {/* <label htmlFor="firstName">First Name</label> */}
-        <input type="text" name="firstName" value="First Name"/>
+        <input type="text" name="firstName" placeholder="First Name"/>
         {/* <label htmlFor="lastName">Last Name</label> */}
-        <input type="text" name="lastName" value="Last Name"/>
+        <input type="text" name="lastName" placeholder="Last Name"/>
         {/* <label htmlFor="email">Email</label> */}
-        <input type="text" name="email" value="E-mail address"/>
+        <input type="text" name="email" placeholder="E-mail address"/>
         <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" placeholder="contact" />
         <input className="submitButton" type="submit" value="SIGN UP"/>
       </form>
         <p>We never share any information with 3rd parties.</p>
