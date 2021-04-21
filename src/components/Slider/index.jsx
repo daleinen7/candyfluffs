@@ -24,8 +24,8 @@ export default function Slider(props) {
         <div className="slider">
             <AliceCarousel
               autoPlay autoPlayInterval="3000"
-              // autoHeight
-              autoWidth>
+              width="90vw"
+          >
               {data.allDatoCmsBanner.nodes.map(node => {
                 return (
                   <img src={node.banner[0].fluid.src} alt={node.banner[0].title} className="sliderimg"/>

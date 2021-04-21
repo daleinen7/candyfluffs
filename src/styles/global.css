@@ -19,6 +19,11 @@ html, body {
     background-color: var(--background);
     font-family: 'Lato', sans-serif;
     font-style: normal;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
 }
 
 .grid-container {
@@ -158,9 +163,50 @@ hr {
      margin: 40px; 
  }
 
+.gatsby-image-wrapper {
+    width: 100%;
+     height: 100%;
+}
+
+ .product-square {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border: 2px solid  var(--highlight);
+    box-sizing: border-box;
+    border-radius: 2px; } 
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: var(--highlight);
+  }
+
+.overlay:hover {
+    opacity: 0.75;
+  }
+
+.text {
+    color: purple;
+    font-size: 1.5em;
+    position: absolute;
+    text-align: center;
+}
+
 .footer { 
     grid-area: footer; 
-}
+    width: 100%; 
+    margin: 0; 
+} 
+
+
 
 @media only screen and (max-width: 600px){
 

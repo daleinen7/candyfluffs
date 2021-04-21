@@ -4,10 +4,19 @@ import ContactForm from '../ContactForm';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-  display: flex;
+  margin: 0; 
+  display: flex; 
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  color: #5C5C5C;
 
+  a {
+    color: #5C5C5C;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+  
   h2 {
     font-size: 2.25rem;
   }
@@ -16,7 +25,8 @@ const StyledDiv = styled.div`
     ul {
       display: flex;
       justify-content: center;
-      list-style-type: none;
+      list-style: none;
+      padding-left: 0;
 
       li {
         margin: 0 70px;
