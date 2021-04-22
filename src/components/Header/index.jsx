@@ -16,14 +16,13 @@ const StyledDiv = styled.div`
 
 export default function Header(props) {
   return (
-  <StyledDiv>
+    <StyledDiv>
       <div className="header">
-          <div className="social-links">
+        <div className="social-links">
           <Link to="https://candy-fluffs.tumblr.com/"><FontAwesomeIcon icon={faTumblr} size="md" style={{ color: "#C4C4C4", marginRight: 20 }}/></Link>
           <Link to="http://instagram.com/candy_fluffs"><FontAwesomeIcon icon={faInstagram} size="md" style={{ color: "#C4C4C4", marginRight: 20 }}/></Link>
-          <Link to="http://twitter.com/candy_fluffs"><FontAwesomeIcon icon={faTwitter} size="md" style={{ color: "#C4C4C4" }}/></Link>
-          
-          </div>
+          <Link to="http://twitter.com/candy_fluffs"><FontAwesomeIcon icon={faTwitter} size="md" style={{ color: "#C4C4C4" }}/></Link> 
+        </div>
         <div className="logo-area">
           <div className="logo">
             <h1><Link to='/'><img src={logo} alt="Candy Fluffs Logo" style={{ width: "300px" }} /></Link></h1>
@@ -32,17 +31,17 @@ export default function Header(props) {
             {props.heading} (ㆁᴗㆁ✿)
           </div>
         </div>
-          <div className="contact-links">
-            <Link to="/" style={{ marginRight: 20}}>Account</Link>
-            <button className="snipcart-checkout"><FontAwesomeIcon icon={faShoppingBag} size="lg" style={{ color: "#C4C4C4" }}/>
-            </button>
-            <div class="snipcart-summary">
-              <span className="snipcart-total-price">$0.00</span>
-              (<span className="snipcart-total-items">0</span>)
-            </div>
+        <div className="contact-links">
+          <Link to="/" style={{ marginRight: 20}}>Account</Link>
+          <button className="snipcart-checkout"><FontAwesomeIcon icon={faShoppingBag} size="lg" style={{ color: "#C4C4C4" }}/>
+          </button>
+          <div class="snipcart-summary">
+            <span className="snipcart-total-price">$0.00</span>
+            (<span className="snipcart-total-items">0</span>)
           </div>
         </div>
-      <div className="navbar">
+      </div>
+      <nav className="navbar">
         <hr></hr>
         <ul>
           <li>
@@ -67,8 +66,7 @@ export default function Header(props) {
             <Link to='/events'>Conventions/Expos</Link>
           </li>
         </ul>
-      </div>
-
+      </nav>
     </StyledDiv>
   )
 }
