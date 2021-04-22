@@ -61,21 +61,30 @@ export default function Product({ data }) {
   const [displayImg, setDisplayImage] = useState(0);
   console.log(displayImg);
 
+  let previewImgs
+  
+  if (data.datoCmsProduct.image[1]) {
+    previewImgs = (
+      <div className="img-array">
+        {data.datoCmsProduct.image.map((img, idx) => {
+          return (
+            <div onClick={() => setDisplayImage(idx)} >
+              <Img className="preview" style={{width: 110}} fluid={img.fluid} key={idx}/>
+            </div>
+          )     
+        })}
+      </div>
+    )
+  } else {
+    previewImgs = false;
+  }
+
 	return(
     <Layout>
       <StyledDiv>
         <div className="images-section">
           <Img style={{width:575}} fluid={data.datoCmsProduct.image[displayImg].fluid} />
-          <div className="img-array">
-            {data.datoCmsProduct.image.map((img, idx) => {
-              return (
-                <div onClick={() => setDisplayImage(idx)} >
-                  <Img className="preview" style={{width: 110}} fluid={img.fluid} key={idx}/>
-                </div>
-              )
-                      
-            })}
-          </div>
+          {previewImgs}
         </div>
         <div className="details">
           <h2>{data.datoCmsProduct.title}</h2>

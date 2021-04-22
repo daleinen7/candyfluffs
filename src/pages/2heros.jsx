@@ -30,7 +30,8 @@ const StyledDiv = styled.div`
         text-decoration: underline;
       }
     }
-`;
+  }
+`
 
 export default function Necahual({ data }) {
   return (
