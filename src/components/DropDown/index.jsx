@@ -63,7 +63,6 @@ export default function DropDown(props) {
   const onOptionClicked = value => () => {
     setSelectedOption(value);
     setIsOpen(false);
-    console.log(selectedOption);
   };
 
   return(

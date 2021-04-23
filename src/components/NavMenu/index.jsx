@@ -1,23 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import hamburgerIcon from './hamburger.svg';
 
-const DropDownContainer = styled("div")`
-  width: 300px;
-  margin: 0 auto;
-  position: absolute;
-  z-index: 1; 
+const Nav = styled("nav")`
+  @media(max-width: 800px) {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1; 
+  }
 `;
 
-const DropDownHeader = styled("div")`
-  margin-bottom: 0.8em;
-  padding: 0.4em 2em 0.4em 1em;
-  ${'' /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); */}
-  font-weight: 500;
-  font-size: 1.3rem;
-  color: #000;
-  background: #fff8f5;
-  text-align: center; 
+const Hamburger = styled("button")`
+  display: none;
+  @media(max-width: 800px) {
+    display: inline;
+    margin-bottom: 0.8em;
+    padding: 0.4em 2em 0.4em 1em;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #000;
+    background: #fff8f5;
+    text-align: center; 
+  }
 `;
 
 const DropDownListContainer = styled("div")``;
@@ -52,9 +58,15 @@ const ListItem = styled("li")`
 `;
 
 export default function NavMenu() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggling = () => setIsOpen(!isOpen);
+  
   return(
-    <nav className="navbar">
+    <Nav className="navbar">
       <hr></hr>
+      <Hamburger><img src={hamburgerIcon} alt="hamburger menu"/></Hamburger>
       <ul>
         <li>
           <Link to='/book'>Books</Link>
@@ -72,12 +84,12 @@ export default function NavMenu() {
           <Link to='/sticker'>Stickers</Link>
         </li>
         <li>
-          <Link to='/necahual'>Necahual</Link>
+          <Link to='/2heros'>Necahual</Link>
         </li>
         <li>
           <Link to='/events'>Conventions/Expos</Link>
         </li>
       </ul>
-    </nav>
+    </Nav>
   )
 }
