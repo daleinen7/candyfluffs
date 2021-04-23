@@ -21,7 +21,7 @@ const StyledDiv = styled.div`
     font-size: 2.25rem;
   }
 
-  nav {
+  footer {
     ul {
       display: flex;
       justify-content: center;
@@ -38,13 +38,13 @@ const StyledDiv = styled.div`
 export default function Footer() {
   return(
     <StyledDiv>
-      <nav>
+      <footer>
         <ul>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
-      </nav>
       <ContactForm/>
+      </footer>
     </StyledDiv>
   )
 }
