@@ -12,6 +12,7 @@ const StyledDiv = styled.div`
     background: transparent;
     border: none;
   }
+  margin-bottom: 8px;
 `;
 
 export default function Header(props) {

@@ -38,7 +38,6 @@ html, body {
 }
 
 .logo-area { 
-    /* grid-area: header; */
     text-align: center;
     color: var(--highlight);
     font-size: 1.125rem;
@@ -46,7 +45,6 @@ html, body {
 }
 
 .social-links { 
-    /* grid-area: header;  */
     display: flex; 
     justify-content: center;
     align-items: flex-end;
@@ -62,7 +60,6 @@ html, body {
 }
 
 .contact-links { 
-    /* grid-area: header; */
     display: flex; 
     justify-content: center;
     align-items: flex-end;
@@ -83,35 +80,7 @@ hr {
     border: 2px solid var(--faded-highlight);
 }
 
- .navbar ul { 
-    display: flex;
-    width: 80%;
-    padding: 0;
-    margin: 0 auto;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style-type: none;
- }
-
- .navbar li {
-    padding: .5rem; 
- }
-
-.navbar a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    line-height: 1.8rem; 
-    color: var(--gray);
-}
-
-.navbar a:hover {
-    color: var(--highlight);
-    cursor: pointer; 
-}
-
-
 .slider{
-    grid-area: slider;
     width: 90vw; 
     margin-top: 10px; 
     padding: 20px; 

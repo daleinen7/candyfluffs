@@ -6,6 +6,32 @@ import hamburgerIcon from './hamburger.svg';
 
 const Nav = styled("nav")`
 
+  ul { 
+    display: flex;
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+  }
+  
+  li {
+    padding: .5rem; 
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 1.8rem; 
+    color: var(--gray);
+  }
+
+  a:hover {
+    color: var(--highlight);
+    cursor: pointer; 
+  }
+
   hr {
     margin-top: 0;
   }
@@ -31,14 +57,11 @@ const Hamburger = styled("button")`
   }
 `;
 
-const DropDownListContainer = styled("div")``;
-
-const DropDownList = styled("ul")`
+const NavList = styled("ul")`
   padding: 100;
   margin: 0;
   padding-left: 1em;
   background: #fff8f5;
-  ${'' /* border: 2px solid #e5e5e5; */}
   box-sizing: border-box;
   color: #3faffa;
   font-size: 1.3rem;
@@ -52,34 +75,22 @@ const DropDownList = styled("ul")`
     text-decoration: none; 
   }
 
-  a:hover {
-    border-bottom: 3px solid #F58F89; 
-  }
-`;
-
-const ListItem = styled("li")`
-  list-style: none;
-  margin-bottom: 0.8em;
 `;
 
 export default function NavMenu() {
 
   const [isOpen, setIsOpen] = useState(false);
 
-
-
   const isMobile = useMediaQuery({query: `(max-width: 800px)`});
-
-
 
   const toggling = () => setIsOpen(!isOpen);
   
   return(
-    <Nav className="navbar">
-      <hr></hr>
-      <Hamburger><img src={hamburgerIcon} alt="hamburger menu"/></Hamburger>
+    <Nav>
+      <hr/>
+      <Hamburger onClick={toggling}><img src={hamburgerIcon} alt="hamburger menu"/></Hamburger>
       {(isOpen || !isMobile) && (
-        <ul>
+        <NavList>
           <li>
             <Link to='/book'>Books</Link>
           </li>
@@ -101,7 +112,7 @@ export default function NavMenu() {
           <li>
             <Link to='/events'>Conventions/Expos</Link>
           </li>
-        </ul>
+        </NavList>
       )}
     </Nav>
   )
