@@ -4,24 +4,28 @@ import styled from 'styled-components';
 import hamburgerIcon from './hamburger.svg';
 
 const Nav = styled("nav")`
+
+  hr {
+    margin-top: 0;
+  }
+
   @media(max-width: 800px) {
     width: 100%;
-    margin: 0 auto;
-    position: absolute;
+    bottom: 0; 
+    position: fixed;
+    background: var(--background);
     z-index: 1; 
   }
 `;
 
 const Hamburger = styled("button")`
   display: none;
+  cursor: pointer;
   @media(max-width: 800px) {
     display: inline;
-    margin-bottom: 0.8em;
-    padding: 0.4em 2em 0.4em 1em;
-    font-weight: 500;
-    font-size: 1.3rem;
-    color: #000;
-    background: #fff8f5;
+    border: none;
+    padding: 16px;
+    background: none;
     text-align: center; 
   }
 `;

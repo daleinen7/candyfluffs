@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import logo from './logo.png';
-import NavMenu from '../NavMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faTumblr } from '@fortawesome/free-brands-svg-icons';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
@@ -42,7 +41,6 @@ export default function Header(props) {
           </div>
         </div>
       </div>
-      <NavMenu/>
     </StyledDiv>
   )
 }

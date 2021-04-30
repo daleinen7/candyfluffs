@@ -26,16 +26,9 @@ html, body {
     /* overflow-x: hidden;  */
 }
 
-.grid-container {
-    height: 100vh; 
-    display: grid;
-    grid-template-areas:
-    "header"
-    "navbar"
-    "slider"
-    "fandom-dropdown"
-    "product-grid"
-    "footer";
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
 .header{
@@ -89,10 +82,6 @@ html, body {
 hr { 
     border: 2px solid var(--faded-highlight);
 }
-
-.navbar { 
-    grid-area: navbar;
- }
 
  .navbar ul { 
     display: flex;
@@ -212,21 +201,3 @@ hr {
     width: 100%; 
     margin: 0; 
 } 
-
-
-
-@media only screen and (max-width: 600px){
-
-    .grid-container {
-        width: 100vw; 
-        height: 100vh; 
-        display: grid;
-        grid-template-areas:
-        "header"
-        "navbar"
-        "slider"
-        "product-grid"
-        "footer";
-    }
-
-}
