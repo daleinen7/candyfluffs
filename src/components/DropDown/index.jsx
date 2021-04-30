@@ -73,8 +73,8 @@ export default function DropDown(props) {
       {isOpen && (
         <DropDownListContainer>
           <DropDownList>
-            {props.fandomList.map(option => (
-              <ListItem onClick={onOptionClicked(option)} key={Math.random()}>
+            {props.fandomList.map((option, idx) => (
+              <ListItem onClick={onOptionClicked(option)} key={idx}>
                 <Link to={`${option}`}>{option}</Link>
               </ListItem>
             ))}
