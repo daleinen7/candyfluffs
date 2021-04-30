@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useMediaQuery} from 'react-responsive';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import hamburgerIcon from './hamburger.svg';
@@ -65,35 +66,43 @@ export default function NavMenu() {
 
   const [isOpen, setIsOpen] = useState(false);
 
+
+
+  const isMobile = useMediaQuery({query: `(max-width: 800px)`});
+
+
+
   const toggling = () => setIsOpen(!isOpen);
   
   return(
     <Nav className="navbar">
       <hr></hr>
       <Hamburger><img src={hamburgerIcon} alt="hamburger menu"/></Hamburger>
-      <ul>
-        <li>
-          <Link to='/book'>Books</Link>
-        </li>
-        <li>
-          <Link to='/print'>Prints</Link>
-        </li>
-        <li>
-          <Link to='/charm'>Charms</Link>
-        </li>
-        <li>
-          <Link to='/button'>Buttons</Link>
-        </li>
-        <li>
-          <Link to='/sticker'>Stickers</Link>
-        </li>
-        <li>
-          <Link to='/2heros'>Necahual</Link>
-        </li>
-        <li>
-          <Link to='/events'>Conventions/Expos</Link>
-        </li>
-      </ul>
+      {(isOpen || !isMobile) && (
+        <ul>
+          <li>
+            <Link to='/book'>Books</Link>
+          </li>
+          <li>
+            <Link to='/print'>Prints</Link>
+          </li>
+          <li>
+            <Link to='/charm'>Charms</Link>
+          </li>
+          <li>
+            <Link to='/button'>Buttons</Link>
+          </li>
+          <li>
+            <Link to='/sticker'>Stickers</Link>
+          </li>
+          <li>
+            <Link to='/2heros'>Necahual</Link>
+          </li>
+          <li>
+            <Link to='/events'>Conventions/Expos</Link>
+          </li>
+        </ul>
+      )}
     </Nav>
   )
 }
