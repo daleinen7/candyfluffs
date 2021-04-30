@@ -6,14 +6,9 @@ import hamburgerIcon from './hamburger.svg';
 
 const Nav = styled("nav")`
 
-  ul { 
-    display: flex;
-    width: 80%;
-    padding: 0;
-    margin: 0 auto;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style-type: none;
+  ul.mobile { 
+    flex-direction: column;
+    align-items: center;
   }
   
   li {
@@ -58,14 +53,20 @@ const Hamburger = styled("button")`
 `;
 
 const NavList = styled("ul")`
-  padding: 100;
-  margin: 0;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
   padding-left: 1em;
-  background: #fff8f5;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  background: var(--background);
   box-sizing: border-box;
   color: #3faffa;
   font-size: 1.3rem;
   font-weight: 500;
+
   &:first-child {
     padding-top: 0.8em;
   }
@@ -88,9 +89,8 @@ export default function NavMenu() {
   return(
     <Nav>
       <hr/>
-      <Hamburger onClick={toggling}><img src={hamburgerIcon} alt="hamburger menu"/></Hamburger>
       {(isOpen || !isMobile) && (
-        <NavList>
+        <NavList className={isMobile && 'mobile'}>
           <li>
             <Link to='/book'>Books</Link>
           </li>
@@ -114,6 +114,7 @@ export default function NavMenu() {
           </li>
         </NavList>
       )}
+      <Hamburger onClick={toggling}><img src={hamburgerIcon} alt="hamburger menu"/></Hamburger>
     </Nav>
   )
 }
