@@ -5,43 +5,62 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: column; 
   align-items: center;
-  
+  width: 80%;
+
+  @media(max-width: 1100px) {
+    width: 90%;
+  }
+
+  @media(max-width: 800px) {
+    margin-bottom: 80px;
+  }
+
   h2 {
     color: #000000;
     font-size: 2rem;
     margin-bottom: 10px; 
   }
 
-  .form {
-    width: 100%; 
+  form {
+    width: 100%;
     display: flex;
-    flex-direction: column; 
-    align-items: space-between;
     justify-content: space-around; 
+    flex-wrap: wrap;
+
+    @media(max-width: 680px) {
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   input[type=text] {
+    margin-top: 20px;
     padding: 12px 20px;
-    margin: 8px 0;
     height: 50px;
     width: 200px;
     box-sizing: border-box;
-    margin-right: 30px;
     background-color: #C4C4C4;
     color: #000;
     border: 0px;
-}
+    @media(max-width: 680px) {
+      width: 100%;
+    }
+  }
 
   input[type=text]:focus {
    border: 3px solid #555;
   }
   
   .submitButton {
+    margin-top: 20px;
     background-color: #FFF8F5;
     border: 3px solid #5C5C5C;
     color: #5C5C5C;
     width: 200px;
     height: 50px; 
+    @media(max-width: 680px) {
+      width: 100%;
+    }
   }
 
   p {
@@ -62,7 +81,6 @@ export default function ContactForm() {
     <StyledDiv>
       <h2>Candy Fluffs Updates!</h2>
       <p>Sign up to get updates about new products and when I’ll be at anime conventions!</p>
-      <div className="form">
       <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" >
         <label htmlFor="firstName">First Name</label>
         <input type="text" name="firstName" placeholder="First Name"/>
@@ -74,8 +92,7 @@ export default function ContactForm() {
         <input type="hidden" name="form-name" placeholder="contact" />
         <input className="submitButton" type="submit" value="SIGN UP"/>
       </form>
-        <p>We never share any information with 3rd parties.</p>
-      </div>
+      <p>We never share any information with 3rd parties.</p>
     </StyledDiv>
   )
 }
