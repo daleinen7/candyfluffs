@@ -2,9 +2,9 @@
 An e-shop built with Gatsby JS for a talented [Illustrator](https://www.instagram.com/candy_fluffs/)
 
 ## Team
-[Doug](https://github.com/daleinen7): Lead
-[Stephanie](https://github.com/mlisdev): Front-end
-[Brittney](https://sleepygallows.com/): Designer
+- [Doug](https://github.com/daleinen7): Lead
+- [Stephanie](https://github.com/mlisdev): Front-end
+- [Brittney](https://sleepygallows.com/): Designer
 
 ## Tech Used
 - Gatsby
