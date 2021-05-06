@@ -53,13 +53,10 @@ exports.createPages = async function({actions, graphql}) {
     })
   }
 
-  // console.log(JSON.parse(JSON.stringify(organizedObjects)));
-  
   for (const productType in organizedObjects) {
     let lowerProductType = productType.toLowerCase();
     for (const fandom in organizedObjects[productType]) {
       let lowerFandom = fandom.replace(/\s/g, '-').toLowerCase()
-      // console.log("Context being passed to " + fandom, organizedObjects[productType][fandom]);
       actions.createPage({
         path: `/${lowerProductType}/${lowerFandom}`,
         component: require.resolve(`./src/templates/productTypeFilter.jsx`),
