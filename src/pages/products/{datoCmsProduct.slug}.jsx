@@ -8,6 +8,11 @@ const StyledDiv = styled.div`
   display:flex;
   flex-wrap: nowrap;
   justify-content: center;
+
+  @media(max-width: 850px) {
+    flex-direction: column;
+    align-items: center;
+  }
   
   .images-section {
     display: flex;
