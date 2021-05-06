@@ -64,7 +64,6 @@ const StyledDiv = styled.div`
 
 export default function Product({ data }) {
   const [displayImg, setDisplayImage] = useState(0);
-  console.log(displayImg);
 
   let previewImgs
   
@@ -113,8 +112,8 @@ export default function Product({ data }) {
 };
 
 export const query = graphql`
-  query($slug: String!) {
-    datoCmsProduct( slug: { eq: $slug } ) {
+  query ($slug: String!) {
+    datoCmsProduct(slug: {eq: $slug}) {
       id
       title
       price
@@ -129,6 +128,15 @@ export const query = graphql`
           src
           ...GatsbyDatoCmsFluid
         }
+      }
+      variation {
+        id
+        price
+        weight
+        title
+        stock
+        size
+        originalId
       }
     }
   }
