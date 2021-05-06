@@ -38,9 +38,11 @@ export default function Header(props) {
           </div>
         </div>
         <div className="contact-links">
-        <a href="#" class="snipcart-user-email snipcart-user-profile">
-          Account
-        </a>
+          <div class="snipcart-summary">
+              <a href="#" class="snipcart-user-email snipcart-user-profile">
+                  Account
+              </a>
+          </div>
           <button className="snipcart-checkout">
               <FontAwesomeIcon icon={faShoppingBag} size="lg" style={{ color: "#C4C4C4" }}/>
           </button>
