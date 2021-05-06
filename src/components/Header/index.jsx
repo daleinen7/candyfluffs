@@ -11,6 +11,11 @@ const StyledDiv = styled.div`
   button.snipcart-checkout{
     background: transparent;
     border: none;
+    cursor: pointer;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
   margin-bottom: 8px;
 `;
@@ -33,8 +38,11 @@ export default function Header(props) {
           </div>
         </div>
         <div className="contact-links">
-          <Link to="/" style={{ marginRight: 20}}>Account</Link>
-          <button className="snipcart-checkout"><FontAwesomeIcon icon={faShoppingBag} size="lg" style={{ color: "#C4C4C4" }}/>
+        <a href="#" class="snipcart-user-email snipcart-user-profile">
+          Account
+        </a>
+          <button className="snipcart-checkout">
+              <FontAwesomeIcon icon={faShoppingBag} size="lg" style={{ color: "#C4C4C4" }}/>
           </button>
           <div class="snipcart-summary">
             <span className="snipcart-total-price">$0.00</span>
