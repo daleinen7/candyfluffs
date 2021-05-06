@@ -50,7 +50,7 @@ export default function Necahual({ data }) {
             <ul>
               <li><a href="https://www.patreon.com/2heroes">Patreon</a></li>
               <li><a href="https://www.instagram.com/2.heroes/">Instagram</a></li>
-              <li><a href="">Twitter (not real link please fix)</a></li>
+              <li><a href="https://twitter.com/2Heroes1/">Twitter </a></li>
             </ul>
           </div>
         </div>
