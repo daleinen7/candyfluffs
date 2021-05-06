@@ -13,6 +13,10 @@ const StyledDiv = styled.div`
 
   .info {
     display: flex;
+    @media(max-width: 850px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   .links {
     margin-left: 70px;
