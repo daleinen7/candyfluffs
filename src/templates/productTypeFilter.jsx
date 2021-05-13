@@ -12,7 +12,7 @@ export default function productTypeFilter({pageContext}) {
           <GridSquare 
             title={product.title} 
             price={product.price}
-            image={product.image}
+            image={product.image[0]}
             slug={product.slug}
             key={product.id} 
           /> 
