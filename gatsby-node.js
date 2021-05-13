@@ -7,6 +7,7 @@ exports.createPages = async function({actions, graphql}) {
     query ProuctTypeFilter {
       allDatoCmsProduct {
         nodes {
+          id
           title
           price
           productType
