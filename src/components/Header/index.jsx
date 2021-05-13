@@ -25,9 +25,9 @@ export default function Header(props) {
     <StyledDiv>
       <div className="header">
         <div className="social-links">
-          <Link to="https://candy-fluffs.tumblr.com/"><FontAwesomeIcon icon={faTumblr} size="md" style={{ color: "#C4C4C4", marginRight: 20 }}/></Link>
-          <Link to="http://instagram.com/candy_fluffs"><FontAwesomeIcon icon={faInstagram} size="md" style={{ color: "#C4C4C4", marginRight: 20 }}/></Link>
-          <Link to="http://twitter.com/candy_fluffs"><FontAwesomeIcon icon={faTwitter} size="md" style={{ color: "#C4C4C4" }}/></Link> 
+          <a href="https://candy-fluffs.tumblr.com/"><FontAwesomeIcon icon={faTumblr} size="lg" style={{ color: "#C4C4C4", marginRight: 20 }}/></a>
+          <a href="http://instagram.com/candy_fluffs"><FontAwesomeIcon icon={faInstagram} size="lg" style={{ color: "#C4C4C4", marginRight: 20 }}/></a>
+          <a href="http://twitter.com/candy_fluffs"><FontAwesomeIcon icon={faTwitter} size="lg" style={{ color: "#C4C4C4" }}/></a> 
         </div>
         <div className="logo-area">
           <div className="logo">
@@ -38,15 +38,15 @@ export default function Header(props) {
           </div>
         </div>
         <div className="contact-links">
-          <div class="snipcart-summary">
-              <a href="#" class="snipcart-user-email snipcart-user-profile">
+          <div className="snipcart-summary">
+              <a href="#" className="snipcart-user-email snipcart-user-profile">
                   Account
               </a>
           </div>
           <button className="snipcart-checkout">
               <FontAwesomeIcon icon={faShoppingBag} size="lg" style={{ color: "#C4C4C4" }}/>
           </button>
-          <div class="snipcart-summary">
+          <div className="snipcart-summary">
             <span className="snipcart-total-price">$0.00</span>
             (<span className="snipcart-total-items">0</span>)
           </div>
