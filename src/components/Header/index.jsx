@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import logo from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,6 +21,38 @@ const StyledDiv = styled.div`
 `;
 
 export default function Header(props) {
+
+  const [cartCount, setCartCount] = useState('');
+  const [cartTotal, setCartTotal] = useState('');
+  
+  useEffect(()=> {
+    if (window.Snipcart) {
+      //this allows it to work when switching pages
+      var count = window.Snipcart.api.items.count();
+      var cart = window.Snipcart.api.cart.get();
+
+      console.log("That cart: ", cart);
+      
+      setCartCount(count)
+      setCartTotal(cart);
+
+      //this allows it to work when you add or change items
+      window.Snipcart.subscribe('cart.closed', () => {
+          var count = window.Snipcart.api.items.count();
+          var cart = window.Snipcart.api.cart.get();
+          setCartCount(count)
+          setCartTotal(cart)
+      });
+
+      //this allows it to work on refreshing the page
+      window.Snipcart.subscribe('cart.ready', (data) => {
+          var count = window.Snipcart.api.items.count();
+          var cart = window.Snipcart.api.cart.get();
+          setCartCount(count)
+          setCartTotal(cart)
+      })
+    }
+  }, [])
   return (
     <StyledDiv>
       <div className="header">
@@ -47,8 +79,8 @@ export default function Header(props) {
               <FontAwesomeIcon icon={faShoppingBag} size="lg" style={{ color: "#C4C4C4" }}/>
           </button>
           <div className="snipcart-summary">
-            <span className="snipcart-total-price">$0.00</span>
-            (<span className="snipcart-total-items">0</span>)
+            <span className="snipcart-total-price">${cartTotal ? cartTotal.total: "0.00"}</span>
+            (<span className="snipcart-total-items">{cartCount}</span>)
           </div>
         </div>
       </div>
