@@ -33,7 +33,6 @@ html, body {
 }
 
 .header{
-    grid-area: header;
     display: flex;
     justify-content: space-around;
 }
@@ -102,7 +101,7 @@ hr {
 }
 
 .fandom-dropdown { 
-    grid-area: fandom-dropdown; 
+
     width: 100vw; 
     position: relative; 
     display: flex;
@@ -113,14 +112,14 @@ hr {
 
 
 .product-grid { 
-    grid-area: product-grid;
-    width: 100vw; 
+
+    width: 80vw; 
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /* margin: 0 auto;  */
+    margin: 0 auto; 
  }
 
  .product-item { 
@@ -138,7 +137,6 @@ hr {
     position: relative;
     height: 400px;
     width: 400px;
-    border: 2px solid  var(--highlight);
     box-sizing: border-box;
     border-radius: 2px; } 
 
@@ -152,22 +150,22 @@ hr {
     width: 100%;
     opacity: 0;
     transition: 0.5s ease;
-    background-color: var(--highlight);
+    background-color: white;
   }
 
 .overlay:hover {
-    opacity: 0.75;
+    opacity: 0.85;
   }
 
 .text {
-    color: purple;
-    font-size: 1.5em;
+    color: #333;
+    font-size: 1em;
     position: absolute;
+   padding-top: 37%;
     text-align: center;
 }
 
 .footer { 
-    grid-area: footer; 
     width: 100%; 
     margin: 0; 
 } 
