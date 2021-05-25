@@ -37,6 +37,11 @@ const StyledDiv = styled.div`
     width: 575px;
     margin-left: 40px;
 
+    .selected {
+      /* visibility: visible; */
+      display: inherit;
+    }
+
     h2 {
       margin-top: 0;
       margin-bottom: 0;
@@ -44,11 +49,18 @@ const StyledDiv = styled.div`
       color: var(--highlight);
     }
 
+    h3 {
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+    }
+
     p {
       font-size: 1.15rem;
     }
 
     button {
+      /* visibility: collapse; */
+      display: none;
       border: 3px solid var(--gray);
       width: 200px;
       background: var(--background);
@@ -86,6 +98,7 @@ export default function Product({ data }) {
 
   const selectVariant = (e) => {
     setVariant(e.target.value)
+    
   }
 
 	return(
@@ -96,7 +109,8 @@ export default function Product({ data }) {
           {previewImgs}
         </div>
         <div className="details">
-          <h2>{variant === "OG" ? data.datoCmsProduct.title : data.datoCmsProduct.variation[variant].title}</h2>
+          <h2>{data.datoCmsProduct.title}</h2>
+          <h3>{variant === "OG" ? "" : data.datoCmsProduct.variation[variant].title}</h3>
           <p>${data.datoCmsProduct.price}</p>
           <div dangerouslySetInnerHTML={{__html: data.datoCmsProduct.descriptionNode.childMarkdownRemark.html}} />
 
@@ -110,7 +124,7 @@ export default function Product({ data }) {
           }
           
           <button 
-            className="snipcart-add-item"
+            className={variant==="OG" ? "snipcart-add-item selected":"snipcart-add-item"}
             data-item-id={data.datoCmsProduct.id}
             data-item-price={data.datoCmsProduct.price}
             data-item-description={data.datoCmsProduct.descriptionNode.childMarkdownRemark.html}
@@ -120,6 +134,25 @@ export default function Product({ data }) {
           >
             Add to Cart
           </button>
+
+          {/* if there is a variant, map and add a button to page for each */}
+          {data.datoCmsProduct.variation.length > 0 &&
+            data.datoCmsProduct.variation.map((vari, idx)=>{
+              return <button 
+                className={variant==idx ? "snipcart-add-item selected":"snipcart-add-item"}
+                data-item-id={vari.id}
+                data-item-price={vari.price}
+                data-item-description={data.datoCmsProduct.descriptionNode.childMarkdownRemark.html + " " + vari.title}
+                data-item-image={data.datoCmsProduct.image.url}
+                data-item-name={vari.title}
+                data-item-url={`/products/${data.datoCmsProduct.slug}`}
+                key={idx}
+              >
+                Add to Cart
+              </button>
+            })
+          }
+          
         </div>
       </StyledDiv>
     </Layout>
