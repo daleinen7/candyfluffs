@@ -64,6 +64,7 @@ const StyledDiv = styled.div`
 
 export default function Product({ data }) {
   const [displayImg, setDisplayImage] = useState(0);
+  const [variant, setVariant] = useState(0)
 
   let previewImgs
   
@@ -83,6 +84,10 @@ export default function Product({ data }) {
     previewImgs = false;
   }
 
+  const selectVariant = (e) => {
+    setVariant(e.target.value)
+  }
+
 	return(
     <Layout>
       <StyledDiv>
@@ -94,6 +99,16 @@ export default function Product({ data }) {
           <h2>{data.datoCmsProduct.title}</h2>
           <p>${data.datoCmsProduct.price}</p>
           <div dangerouslySetInnerHTML={{__html: data.datoCmsProduct.descriptionNode.childMarkdownRemark.html}} />
+
+          {data.datoCmsProduct.variation.length &&
+            <select value={variant} onChange={selectVariant}>
+              <option value={0}>{data.datoCmsProduct.title}</option>
+              {data.datoCmsProduct.variation.map((variant, idx)=>{
+                return <option value={idx + 1} key={idx + 1}>{variant.title}</option>
+              })}
+            </select>
+          }
+          
           <button 
             className="snipcart-add-item"
             data-item-id={data.datoCmsProduct.id}
