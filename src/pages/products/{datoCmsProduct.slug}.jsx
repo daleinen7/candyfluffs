@@ -64,7 +64,7 @@ const StyledDiv = styled.div`
 
 export default function Product({ data }) {
   const [displayImg, setDisplayImage] = useState(0);
-  const [variant, setVariant] = useState(0)
+  const [variant, setVariant] = useState("OG")
 
   let previewImgs
   
@@ -96,15 +96,15 @@ export default function Product({ data }) {
           {previewImgs}
         </div>
         <div className="details">
-          <h2>{data.datoCmsProduct.title}</h2>
+          <h2>{variant === "OG" ? data.datoCmsProduct.title : data.datoCmsProduct.variation[variant].title}</h2>
           <p>${data.datoCmsProduct.price}</p>
           <div dangerouslySetInnerHTML={{__html: data.datoCmsProduct.descriptionNode.childMarkdownRemark.html}} />
 
-          {data.datoCmsProduct.variation.length &&
+          {data.datoCmsProduct.variation.length > 0 &&
             <select value={variant} onChange={selectVariant}>
-              <option value={0}>{data.datoCmsProduct.title}</option>
+              <option value={"OG"}>{data.datoCmsProduct.title}</option>
               {data.datoCmsProduct.variation.map((variant, idx)=>{
-                return <option value={idx + 1} key={idx + 1}>{variant.title}</option>
+                return <option value={idx} key={idx}>{variant.title}</option>
               })}
             </select>
           }
