@@ -125,6 +125,7 @@ export default function Product({ data }) {
           
           <button 
             className={variant==="OG" ? "snipcart-add-item selected":"snipcart-add-item"}
+            aria-hidden={variant=="OG" ? "true":"false"}
             data-item-id={data.datoCmsProduct.id}
             data-item-price={data.datoCmsProduct.price}
             data-item-description={data.datoCmsProduct.descriptionNode.childMarkdownRemark.html}
@@ -140,6 +141,7 @@ export default function Product({ data }) {
             data.datoCmsProduct.variation.map((vari, idx)=>{
               return <button 
                 className={variant==idx ? "snipcart-add-item selected":"snipcart-add-item"}
+                aria-hidden={variant==idx ? "true":"false"}
                 data-item-id={vari.id}
                 data-item-price={vari.price}
                 data-item-description={data.datoCmsProduct.descriptionNode.childMarkdownRemark.html + " " + vari.title}
