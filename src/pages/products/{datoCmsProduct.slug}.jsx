@@ -111,7 +111,7 @@ export default function Product({ data }) {
         <div className="details">
           <h2>{data.datoCmsProduct.title}</h2>
           <h3>{variant === "OG" ? "" : data.datoCmsProduct.variation[variant].title}</h3>
-          <p>${data.datoCmsProduct.price}</p>
+          <p>${variant === "OG" ? data.datoCmsProduct.price : data.datoCmsProduct.variation[variant].price}</p>
           <div dangerouslySetInnerHTML={{__html: data.datoCmsProduct.descriptionNode.childMarkdownRemark.html}} />
 
           {data.datoCmsProduct.variation.length > 0 &&
