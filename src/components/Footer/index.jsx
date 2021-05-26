@@ -22,6 +22,10 @@ const StyledDiv = styled.div`
   }
 
   footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     ul {
       display: flex;
       justify-content: center;
