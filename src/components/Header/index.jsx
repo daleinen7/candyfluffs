@@ -31,8 +31,6 @@ export default function Header(props) {
       var count = window.Snipcart.api.items.count();
       var cart = window.Snipcart.api.cart.get();
 
-      console.log("That cart: ", cart);
-      
       setCartCount(count)
       setCartTotal(cart);
 
