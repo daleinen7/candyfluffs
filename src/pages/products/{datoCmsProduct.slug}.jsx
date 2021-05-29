@@ -71,6 +71,19 @@ const StyledDiv = styled.div`
         border: 3px solid var(--highlight);
       }
     }
+
+    select {
+      background-color: transparent;
+      border: 3px solid var(--gray);
+      width: 300px; 
+      padding: 20px;
+      margin-bottom: 20px; 
+    }
+
+    select > option {
+      background-color: transparent;
+    }
+
   }
 `;
 
