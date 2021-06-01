@@ -58,6 +58,22 @@ const StyledDiv = styled.div`
       font-size: 1.15rem;
     }
 
+    select {
+      margin-bottom: 2em;
+      padding: 4px;
+      width: 300px;
+      font-size: 1.1rem;
+      background: var(--faded-highlight);
+      border-color: var(--highlight);
+      border-width: 2px;
+
+    }
+
+    select option {
+      background: var(--faded-highlight);
+      border-color: var(--highlight);
+    }
+    
     button {
       /* visibility: collapse; */
       display: none;
