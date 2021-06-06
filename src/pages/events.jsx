@@ -20,6 +20,7 @@ export default function Events({data}) {
               <h3>{liveEvent.eventName}</h3>
               <time> {liveEvent.startDate} - {liveEvent.endDate} </time>
               <address>{liveEvent.website}</address>
+              <address>{liveEvent.address}</address>
             </article>
           )
         })}
@@ -36,6 +37,7 @@ export const query = graphql`
         startDate
         endDate
         website
+        address
       }
     }
   }
