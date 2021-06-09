@@ -146,7 +146,6 @@ hr {
 
 .product-grid { 
 
-    width: 80vw; 
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
