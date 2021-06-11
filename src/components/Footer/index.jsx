@@ -9,7 +9,12 @@ const StyledDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #5C5C5C;
+  color: var(--gray);
+  border-top: 2px solid var(--faded-highlight);
+
+  @media(max-width: 800px) {
+    border-top: 1px solid var(--faded-highlight);
+  }
 
   a {
     color: #5C5C5C;
@@ -26,6 +31,7 @@ const StyledDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     ul {
       display: flex;
       justify-content: center;

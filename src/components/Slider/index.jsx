@@ -22,16 +22,15 @@ export default function Slider(props) {
       `}
       render={data => (
         <div className="slider">
-            <AliceCarousel
-              autoPlay autoPlayInterval="3000"
-              width="90vw"
-          >
-              {data.allDatoCmsBanner.nodes.map((node, idx) => {
-                return (
-                  <img src={node.banner[0].fluid.src} alt={node.banner[0].title} className="sliderimg" key={idx}/>
-                )
-              })}
-            </AliceCarousel>
+          <AliceCarousel
+            autoPlay autoPlayInterval="3000"
+            width="90vw"
+            items={data.allDatoCmsBanner.nodes.map((node, idx) => {
+              return (
+                <img src={node.banner[0].fluid.src} alt={node.banner[0].title} className="sliderimg" key={idx}/>
+              )
+            })}
+          />
         </div>
       )}
     />

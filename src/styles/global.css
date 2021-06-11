@@ -101,7 +101,6 @@ hr {
 }
 
 .fandom-dropdown { 
-
     width: 100vw; 
     position: relative; 
     display: flex;
@@ -112,7 +111,6 @@ hr {
 
 
 .product-grid { 
-
     width: 80vw; 
     display: flex; 
     flex-direction: row;
