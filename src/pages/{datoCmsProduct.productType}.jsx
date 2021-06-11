@@ -15,8 +15,7 @@ export default function Product({ data }) {
   })
 
 	return(
-    // don't forget to dynamically set product type 
-    <Layout heading={"Sort by product type"}>
+    <Layout heading={`Sort by ${data.allDatoCmsProduct.edges[0].node.productType}`}>
 
       <div className="fandom-dropdown">
         <DropDown
@@ -49,6 +48,7 @@ export const query = graphql`
         price
         fandoms
         slug
+        productType
         image {
           fluid(maxWidth: 200) {
             src
