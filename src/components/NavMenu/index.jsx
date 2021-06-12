@@ -89,8 +89,7 @@ export default function NavMenu() {
   const toggling = () => setIsOpen(!isOpen);
   
   return(
-    <Nav>
-    
+    <Nav aria-label='Main'>
       {(isOpen || !isMobile) && (
         <NavList className={isMobile && 'mobile'}>
           <li>
