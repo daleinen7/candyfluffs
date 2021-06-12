@@ -73,7 +73,7 @@ export default function DropDown(props) {
           <DropDownList>
             {props.fandomList.map((option, idx) => (
               <ListItem onClick={onOptionClicked(option)} key={idx}>
-                <Link to={`${option}`}>{option}</Link>
+                <Link to={`/${props.productType}/${option}`}>{option}</Link>
               </ListItem>
             ))}
           </DropDownList>

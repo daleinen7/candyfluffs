@@ -32,6 +32,7 @@ exports.createPages = async function({actions, graphql}) {
     if (filteredObjects.hasOwnProperty(node.productType)) {
       filteredObjects[node.productType].push(node)
     } else {
+
       filteredObjects[node.productType] = []
       filteredObjects[node.productType].push(node)
     }
@@ -54,14 +55,18 @@ exports.createPages = async function({actions, graphql}) {
     })
   }
 
+  // for each product type
   for (const productType in organizedObjects) {
     let lowerProductType = productType.toLowerCase();
+    let fandomList = Object.keys(organizedObjects[productType]);
+    
+    // for each item in each product type
     for (const fandom in organizedObjects[productType]) {
       let lowerFandom = fandom.replace(/\s/g, '-').toLowerCase()
       actions.createPage({
         path: `/${lowerProductType}/${lowerFandom}`,
         component: require.resolve(`./src/templates/productTypeFilter.jsx`),
-        context: { pageContext: organizedObjects[productType][fandom] }
+        context: { pageContext: organizedObjects[productType][fandom], productType: productType, fandomList: fandomList }
       })
     }
   }

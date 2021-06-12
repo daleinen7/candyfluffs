@@ -1,11 +1,25 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from 'react'
+import Layout from '../components/Layout'
+import DropDown from '../components/DropDown';
 import GridSquare from '../components/GridSquare';
 
 export default function productTypeFilter({pageContext}) {
+
+  let fandomList = pageContext.fandomList.map(fandom => {
+    return fandom.replace(/\s/g, '-').toLowerCase();
+  })
+  console.log(fandomList);
   return (
     <Layout heading = {"Just a girl who likes to draw manga"}>
-      <div className="product-grid">
+
+      <div className="fandom-dropdown">
+        <DropDown
+          fandomList = {fandomList}
+          productType = {pageContext.productType.toLowerCase()}
+        />
+      </div>
+
+      <div className='product-grid'>
       {pageContext.pageContext.map(product => {
         return (
           <GridSquare 
