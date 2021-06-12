@@ -15,7 +15,7 @@ export default function Product({ data }) {
   })
 
 	return(
-    <Layout heading={`Sort by ${data.allDatoCmsProduct.edges[0].node.productType}`}>
+    <Layout heading={`${data.allDatoCmsProduct.edges[0].node.productType}s`}>
 
       <div className="fandom-dropdown">
         <DropDown
