@@ -20,7 +20,7 @@ const DropDownHeader = styled("div")`
   cursor: pointer;
 `;
 
-const DropDownListContainer = styled("div")``;
+const DropDownListContainer = styled("nav")``;
 
 const DropDownList = styled("ul")`
   padding: 3.5rem;
@@ -42,8 +42,6 @@ const DropDownList = styled("ul")`
   a:hover {
     color: var(--highlight);
   }
-
-
 `;
 
 const ListItem = styled("li")`
@@ -61,6 +59,7 @@ export default function DropDown(props) {
   const onOptionClicked = value => () => {
     setSelectedOption(value);
     setIsOpen(false);
+
   };
 
   return(
@@ -69,8 +68,8 @@ export default function DropDown(props) {
         {selectedOption || "Fandoms ▾ " } 
       </DropDownHeader>
       {isOpen && (
-        <DropDownListContainer>
-          <DropDownList>
+        <DropDownListContainer aria-label='Fandom Filter'>
+          <DropDownList aria-expanded={isOpen}>
             {props.fandomList.map((option, idx) => (
               <ListItem onClick={onOptionClicked(option)} key={idx}>
                 <Link to={`/${props.productType}/${option}`}>{option}</Link>
