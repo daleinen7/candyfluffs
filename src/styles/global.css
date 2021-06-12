@@ -60,6 +60,7 @@ html, body {
     /* overflow-x: hidden;  */
 }
 
+.product-item { border-radius: 10px; overflow: hidden;}
 .container {
     display: flex;
     flex-direction: column;
@@ -109,9 +110,7 @@ html, body {
     transform: scale(1.2);
 }
 
-hr { 
-    border: 2px solid var(--faded-highlight);
-}
+
 
 .slider{
     width: 90vw; 
