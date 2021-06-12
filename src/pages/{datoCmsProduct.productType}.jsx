@@ -20,6 +20,7 @@ export default function Product({ data }) {
       <div className="fandom-dropdown">
         <DropDown
           fandomList = {fandomList}
+          productType = {data.allDatoCmsProduct.edges[0].node.productType.toLowerCase()}
         />
       </div>
 
