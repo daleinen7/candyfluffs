@@ -32,7 +32,7 @@ const StyledDiv = styled.div`
     color: var(--gray);
   }
 
-  margin-bottom: 8px;
+  margin-bottom: 1rem;
 `;
 
 export default function Header(props) {

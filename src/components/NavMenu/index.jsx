@@ -5,6 +5,9 @@ import styled from 'styled-components';
 import hamburgerIcon from './hamburger.svg';
 
 const Nav = styled("nav")`
+  border-top:2px solid var(--faded-highlight);
+
+  border-bottom:1px solid var(--faded-highlight);
 
   ul.mobile { 
     flex-direction: column;
@@ -13,6 +16,7 @@ const Nav = styled("nav")`
   
   li {
     padding: .5rem; 
+   
   }
 
   a {
@@ -27,9 +31,6 @@ const Nav = styled("nav")`
     cursor: pointer; 
   }
 
-  hr {
-    margin-top: 0;
-  }
 
   @media(max-width: 800px) {
     width: 100%;
@@ -68,7 +69,8 @@ const NavList = styled("ul")`
   font-weight: 500;
 
   &:first-child {
-    padding-top: 0.8em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
 
   a {
@@ -88,7 +90,7 @@ export default function NavMenu() {
   
   return(
     <Nav>
-      <hr/>
+    
       {(isOpen || !isMobile) && (
         <NavList className={isMobile && 'mobile'}>
           <li>
