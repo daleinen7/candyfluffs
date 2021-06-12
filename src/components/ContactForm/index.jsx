@@ -5,9 +5,10 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: column; 
   justify-content: center;
+  line-height:4rem;
 
   align-items: center;
-  width: 80%;
+  width: 100%;
 
   @media(max-width: 1100px) {
     width: 90%;
@@ -24,7 +25,7 @@ const StyledDiv = styled.div`
   }
 
   form {
-    width: 100%;
+   
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap;
@@ -36,7 +37,7 @@ const StyledDiv = styled.div`
   }
 
   input[type=text] {
-    margin-top: 20px;
+    margin: 1rem;
     padding: 12px 20px;
     height: 50px;
     width: 200px;
@@ -54,7 +55,7 @@ const StyledDiv = styled.div`
   }
   
   .submitButton {
-    margin-top: 20px;
+    margin-top: 1rem;
     background-color: #FFF8F5;
     border: 3px solid #5C5C5C;
     color: #5C5C5C;
@@ -65,7 +66,7 @@ const StyledDiv = styled.div`
     }
   }
 
-  p {
+  small {
     text-align: center; 
   }
 
@@ -94,7 +95,7 @@ export default function ContactForm() {
         <input type="hidden" name="form-name" placeholder="contact" />
         <input className="submitButton" type="submit" value="SIGN UP"/>
       </form>
-      <p>We never share any information with 3rd parties.</p>
+      <small>We never share any information with 3rd parties.</small>
     </StyledDiv>
   )
 }
