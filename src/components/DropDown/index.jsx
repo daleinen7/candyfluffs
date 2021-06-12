@@ -17,6 +17,7 @@ const DropDownHeader = styled("div")`
   color: #000;
   background: #fff8f5;
   text-align: center; 
+  cursor: pointer;
 `;
 
 const DropDownListContainer = styled("div")``;
