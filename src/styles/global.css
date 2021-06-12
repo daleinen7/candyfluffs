@@ -60,6 +60,7 @@ html, body {
     /* overflow-x: hidden;  */
 }
 
+.product-item { border-radius: 10px; overflow: hidden;}
 .container {
     display: flex;
     flex-direction: column;
@@ -109,9 +110,7 @@ html, body {
     transform: scale(1.2);
 }
 
-hr { 
-    border: 2px solid var(--faded-highlight);
-}
+
 
 .slider{
     width: 90vw; 
@@ -134,7 +133,6 @@ hr {
 }
 
 .fandom-dropdown { 
-
     width: 100vw; 
     position: relative; 
     display: flex;
@@ -146,7 +144,6 @@ hr {
 
 .product-grid { 
 
-    width: 80vw; 
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap;

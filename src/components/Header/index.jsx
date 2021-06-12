@@ -8,16 +8,31 @@ import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
+  .social-links {
+    a {
+      color: var(--form-gray);
+      margin-right: 20px;
+      &:hover {color: var(--highlight);}
+    }
+  }
+
   button.snipcart-checkout{
     background: transparent;
     border: none;
     cursor: pointer;
+    color: var(--form-gray);
     transition: transform .2s;
     &:hover {
       transform: scale(1.2);
+      color: var(--highlight);
     }
   }
-  margin-bottom: 8px;
+
+  .snipcart-summary {
+    color: var(--gray);
+  }
+
+  margin-bottom: 1rem;
 `;
 
 export default function Header(props) {
@@ -55,9 +70,9 @@ export default function Header(props) {
     <StyledDiv>
       <div className="header">
         <div className="social-links">
-          <a href="https://candy-fluffs.tumblr.com/"><FontAwesomeIcon icon={faTumblr} size="lg" style={{ color: "#C4C4C4", marginRight: 20 }}/></a>
-          <a href="http://instagram.com/candy_fluffs"><FontAwesomeIcon icon={faInstagram} size="lg" style={{ color: "#C4C4C4", marginRight: 20 }}/></a>
-          <a href="http://twitter.com/candy_fluffs"><FontAwesomeIcon icon={faTwitter} size="lg" style={{ color: "#C4C4C4" }}/></a> 
+          <a href="https://candy-fluffs.tumblr.com/"><FontAwesomeIcon icon={faTumblr} size="lg"/></a>
+          <a href="http://instagram.com/candy_fluffs"><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
+          <a href="http://twitter.com/candy_fluffs"><FontAwesomeIcon icon={faTwitter} size="lg"/></a> 
         </div>
         <div className="logo-area">
           <div className="logo">
@@ -74,7 +89,7 @@ export default function Header(props) {
               </a>
           </div>
           <button className="snipcart-checkout">
-              <FontAwesomeIcon icon={faShoppingBag} size="lg" style={{ color: "#C4C4C4" }}/>
+              <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
           </button>
           <div className="snipcart-summary">
             <span className="snipcart-total-price">${cartTotal ? cartTotal.total: "0.00"}</span>
