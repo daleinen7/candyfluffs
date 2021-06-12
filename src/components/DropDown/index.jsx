@@ -39,7 +39,7 @@ const DropDownList = styled("ul")`
   }
 
   a:hover {
-    border-bottom: 3px solid #F58F89; 
+    color: var(--highlight);
   }
 
 
