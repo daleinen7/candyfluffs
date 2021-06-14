@@ -84,7 +84,7 @@ export default function ContactForm() {
     <StyledDiv>
       <h2>Candy Fluffs Updates!</h2>
       <p>Sign up to get updates about new products and when I’ll be at anime conventions!</p>
-      <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" >
+      <form action="/success" method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" >
         <label htmlFor="firstName">First Name</label>
         <input type="text" name="firstName" placeholder="First Name"/>
         <label htmlFor="lastName">Last Name</label>

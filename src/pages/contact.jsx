@@ -106,7 +106,7 @@ export default function Contact() {
 	return (
 		<Layout heading = {"Feel free to contact me!"}>
       <StyledDiv>
-        <form action="">
+        <form action="/success">
           <h2>Candy Fluffs Updates!</h2>
           <p>Sign up to get updates about new products and when I’ll be at anime conventions!</p>
           <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="message" >
