@@ -106,10 +106,9 @@ export default function Contact() {
 	return (
 		<Layout heading = {"Feel free to contact me!"}>
       <StyledDiv>
-        <form action="/success">
           <h2>Candy Fluffs Updates!</h2>
           <p>Sign up to get updates about new products and when I’ll be at anime conventions!</p>
-          <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="message" >
+          <form action="/success" method="post" netlify-honeypot="bot-field" data-netlify="true" name="message" >
             <div className="nameDiv">
               <label htmlFor="firstName">First Name</label>
               <input type="text" name="firstName" placeholder="First Name"/>
@@ -127,7 +126,6 @@ export default function Contact() {
             <input className="submitButton" type="submit" value="SUBMIT"/>
           </form>
           <p>We never share any information with 3rd parties.</p>
-        </form>
       </StyledDiv>
       
     </Layout>
