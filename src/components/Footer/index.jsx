@@ -1,6 +1,9 @@
 import React from 'react';
+import {useMediaQuery} from 'react-responsive';
 import { Link } from 'gatsby';
 import ContactForm from '../ContactForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faTwitter, faTumblr } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
@@ -12,7 +15,7 @@ const StyledDiv = styled.div`
   color: var(--gray);
   border-top: 2px solid var(--faded-highlight);
 
-  @media(max-width: 800px) {
+  @media(max-width: 830px) {
     border-top: 1px solid var(--faded-highlight);
   }
 
@@ -49,17 +52,34 @@ const StyledDiv = styled.div`
       }
     } 
   }
+
+  .social-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
 `;
 
 export default function Footer() {
+  const isMobile = useMediaQuery({query: `(max-width: 830px)`});
   return(
     <StyledDiv>
       <footer>
-        <ul>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      <ContactForm/>
+        {(isMobile) ?
+          <>
+            <div className="social-links">
+              <a href="https://candy-fluffs.tumblr.com/"><FontAwesomeIcon icon={faTumblr} size="lg"/></a>
+              <a href="http://instagram.com/candy_fluffs"><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
+              <a href="http://twitter.com/candy_fluffs"><FontAwesomeIcon icon={faTwitter} size="lg"/></a> 
+            </div>
+          </>
+          :
+          <ul>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        }
+        <ContactForm/>
       </footer>
     </StyledDiv>
   )

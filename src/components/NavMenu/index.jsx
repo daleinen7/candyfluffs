@@ -3,10 +3,11 @@ import {useMediaQuery} from 'react-responsive';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import hamburgerIcon from './hamburger.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = styled("nav")`
   border-top:2px solid var(--faded-highlight);
-
   border-bottom:1px solid var(--faded-highlight);
 
   ul.mobile { 
@@ -31,20 +32,42 @@ const Nav = styled("nav")`
     cursor: pointer; 
   }
 
+  .mobile-menu {
+    display: flex;
+    justify-content: space-between;
+  }
 
-  @media(max-width: 800px) {
+  @media(max-width: 830px) {
     width: 100%;
     bottom: 0; 
     position: fixed;
     background: var(--background);
     z-index: 1; 
   }
+
+  button.snipcart-checkout{
+    font-size: 1.4em;
+    margin-right: 0.4em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--form-gray);
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.2);
+      color: var(--highlight);
+    }
+  }
+
+  .snipcart-summary {
+    color: var(--gray);
+  }
 `;
 
 const Hamburger = styled("button")`
   display: none;
   cursor: pointer;
-  @media(max-width: 800px) {
+  @media(max-width: 830px) {
     display: inline;
     border: none;
     padding: 16px;
@@ -84,7 +107,7 @@ export default function NavMenu() {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const isMobile = useMediaQuery({query: `(max-width: 800px)`});
+  const isMobile = useMediaQuery({query: `(max-width: 830px)`});
 
   const toggling = () => setIsOpen(!isOpen);
   
@@ -113,9 +136,31 @@ export default function NavMenu() {
           <li>
             <Link to='/events'>Conventions/Expos</Link>
           </li>
+          {isMobile && 
+            <>
+              <li>
+                <Link to='/about'>About</Link>
+              </li>
+              <li>
+                <Link to='/contact'>Contact</Link>
+              </li>
+              <li className="snipcart-summary">
+                <a href="#" className="snipcart-user-email snipcart-user-profile">
+                    Account
+                </a>
+              </li>
+            </>
+          }
         </NavList>
       )}
-      <Hamburger onClick={toggling}><img src={hamburgerIcon} alt="hamburger menu"/></Hamburger>
+      <div className="mobile-menu">
+        <Hamburger onClick={toggling}><img src={hamburgerIcon} alt="hamburger menu"/></Hamburger>
+        {isMobile &&
+          <button className="snipcart-checkout">
+            <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
+          </button>
+        }
+      </div>
     </Nav>
   )
 }

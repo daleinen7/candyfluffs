@@ -5,6 +5,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
+  margin: 0 auto;
   .alice-carousel__dots-item.__active{
   background-color: var(--highlight);
   }
@@ -19,9 +20,6 @@ const StyledDiv = styled.div`
 `;
 
 export default function Slider(props) {
-
-
-  
   return(
     <StaticQuery
       query={graphql`
@@ -42,7 +40,6 @@ export default function Slider(props) {
         <StyledDiv className="slider">
           <AliceCarousel
             autoPlay autoPlayInterval="3000"
-            width="90vw"
             disableButtonsControls
             items={data.allDatoCmsBanner.nodes.map((node, idx) => {
               return (

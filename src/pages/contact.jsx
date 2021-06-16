@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
     width: 90%;
   }
 
-  @media(max-width: 800px) {
+  @media(max-width: 830px) {
     width: 95%;
     margin-bottom: 80px;
   }
