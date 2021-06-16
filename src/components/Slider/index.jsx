@@ -2,8 +2,23 @@ import React from 'react';
 import { StaticQuery, graphql } from "gatsby"
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+  .alice-carousel__dots-item{
+    width: 20px;
+    height: 20px;
+    background-color: var(--faded-highlight);
+    &:hover{
+      background-color: var(--highlight);
+    }
+  }
+`;
 
 export default function Slider(props) {
+
+
+  
   return(
     <StaticQuery
       query={graphql`
@@ -21,7 +36,7 @@ export default function Slider(props) {
         }
       `}
       render={data => (
-        <div className="slider">
+        <StyledDiv className="slider">
           <AliceCarousel
             autoPlay autoPlayInterval="3000"
             width="90vw"
@@ -32,7 +47,7 @@ export default function Slider(props) {
               )
             })}
           />
-        </div>
+        </StyledDiv>
       )}
     />
   )
