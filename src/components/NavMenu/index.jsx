@@ -3,10 +3,11 @@ import {useMediaQuery} from 'react-responsive';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import hamburgerIcon from './hamburger.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = styled("nav")`
   border-top:2px solid var(--faded-highlight);
-
   border-bottom:1px solid var(--faded-highlight);
 
   ul.mobile { 
@@ -31,6 +32,10 @@ const Nav = styled("nav")`
     cursor: pointer; 
   }
 
+  .mobile-menu {
+    display: flex;
+    justify-content: space-between;
+  }
 
   @media(max-width: 830px) {
     width: 100%;
@@ -38,6 +43,24 @@ const Nav = styled("nav")`
     position: fixed;
     background: var(--background);
     z-index: 1; 
+  }
+
+  button.snipcart-checkout{
+    font-size: 1.4em;
+    margin-right: 0.4em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--form-gray);
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.2);
+      color: var(--highlight);
+    }
+  }
+
+  .snipcart-summary {
+    color: var(--gray);
   }
 `;
 
@@ -115,7 +138,14 @@ export default function NavMenu() {
           </li>
         </NavList>
       )}
-      <Hamburger onClick={toggling}><img src={hamburgerIcon} alt="hamburger menu"/></Hamburger>
+      <div className="mobile-menu">
+        <Hamburger onClick={toggling}><img src={hamburgerIcon} alt="hamburger menu"/></Hamburger>
+        {isMobile &&
+          <button className="snipcart-checkout">
+            <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
+          </button>
+        }
+      </div>
     </Nav>
   )
 }

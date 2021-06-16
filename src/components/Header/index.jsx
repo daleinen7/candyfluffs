@@ -16,6 +16,12 @@ const StyledDiv = styled.div`
       &:hover {color: var(--highlight);}
     }
   }
+  
+  @media(max-width: 830px) {
+    .hidden {
+      display: none;
+    }
+  }
 
   button.snipcart-checkout{
     background: transparent;
@@ -70,7 +76,7 @@ export default function Header(props) {
   return (
     <StyledDiv>
       <div className="header">
-        <div className="social-links">
+        <div className="social-links hidden">
           <a href="https://candy-fluffs.tumblr.com/"><FontAwesomeIcon icon={faTumblr} size="lg"/></a>
           <a href="http://instagram.com/candy_fluffs"><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
           <a href="http://twitter.com/candy_fluffs"><FontAwesomeIcon icon={faTwitter} size="lg"/></a> 
@@ -83,7 +89,7 @@ export default function Header(props) {
             {props.heading} (ㆁᴗㆁ✿)
           </div>
         </div>
-        <div className="contact-links">
+        <div className="contact-links hidden">
           <div className="snipcart-summary">
               <a href="#" className="snipcart-user-email snipcart-user-profile">
                   Account
