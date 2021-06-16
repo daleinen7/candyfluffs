@@ -8,6 +8,7 @@ import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
+
   .social-links {
     a {
       color: var(--form-gray);

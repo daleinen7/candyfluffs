@@ -15,40 +15,42 @@
     --form-gray: #C4C4C4;
     --faded-highlight: #FFE2D6;
 }
+
 .snip-layout .snip-layout__main-container{
-    border-radius: 10px;
-    border: 10px solid white;
-  }
-  .snip-layout .snip-header{
-    color: var(--highlight); 
-    background: var(--background);
-    border-bottom: 1px solid var(--highlight);
-  }
-  .snip-layout .snip-header__total{
-    background: var(--faded-highlight);
-    color: var(--highlight);
-  }
-  .snip-layout .snip-header__total-label{
-    color: var(--gray);
-  }
-  .snip-layout .snip-footer{
-    background: var(--background);
-    border-top: 1px solid var(--highlight);
-  }
-  .snip-layout .snip-btn--highlight{
-    background: var(--highlight);
-    color: var(--background)
-  }
-  .snip-layout .snip-btn--highlight:hover{
-    background: var(--faded-highlight);
-    color: var(--highlight);
-  }
-  .snip-layout a, .snip-layout button{
-    color: var(--highlight);
-  }
-  .snip-layout .snip-ico--close:before{
-    color:#f33e4f;
-  }
+  border-radius: 10px !important;
+  border: 10px solid white !important;
+}
+.snip-layout .snip-header{
+  color: var(--highlight) !important; 
+  background: var(--background) !important;
+  border-bottom: 1px solid var(--highlight) !important;
+}
+.snip-layout .snip-header__total{
+  background: var(--faded-highlight) !important;
+  color: var(--highlight) !important;
+}
+.snip-layout .snip-header__total-label{
+  color: var(--gray) !important;
+}
+.snip-layout .snip-footer{
+  background: var(--background) !important;
+  border-top: 1px solid var(--highlight) !important;
+}
+.snip-layout .snip-btn--highlight{
+  background: var(--highlight) !important;
+  color: var(--background) !important;
+}
+.snip-layout .snip-btn--highlight:hover{
+  background: var(--faded-highlight) !important;
+  color: var(--highlight) !important;
+}
+.snip-layout a, .snip-layout button{
+  color: var(--highlight) !important;
+}
+.snip-layout .snip-ico--close:before{
+  color:#f33e4f !important;
+}
+
 html, body {
     background-color: var(--background);
     font-family: 'Lato', sans-serif;
@@ -122,16 +124,16 @@ border-radius: 25px;
 }
 
 .slider{
-    width: 90vw; 
+    width: 100%; 
     margin-top: 10px; 
     padding: 20px; 
     margin: 0 auto; 
 }
 
-@media(max-width: 800px) {
+@media(max-width: 830px) {
     .slider {
         margin: 0;
-        width: 100vw;
+        width: 95vw;
     }
 }
 
@@ -142,7 +144,6 @@ border-radius: 25px;
 }
 
 .fandom-dropdown { 
-    width: 100vw; 
     position: relative; 
     display: flex;
     margin-top: 30px; 

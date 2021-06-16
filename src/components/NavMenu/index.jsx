@@ -32,7 +32,7 @@ const Nav = styled("nav")`
   }
 
 
-  @media(max-width: 800px) {
+  @media(max-width: 830px) {
     width: 100%;
     bottom: 0; 
     position: fixed;
@@ -44,7 +44,7 @@ const Nav = styled("nav")`
 const Hamburger = styled("button")`
   display: none;
   cursor: pointer;
-  @media(max-width: 800px) {
+  @media(max-width: 830px) {
     display: inline;
     border: none;
     padding: 16px;
@@ -84,7 +84,7 @@ export default function NavMenu() {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const isMobile = useMediaQuery({query: `(max-width: 800px)`});
+  const isMobile = useMediaQuery({query: `(max-width: 830px)`});
 
   const toggling = () => setIsOpen(!isOpen);
   

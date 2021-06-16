@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
   color: var(--gray);
   border-top: 2px solid var(--faded-highlight);
 
-  @media(max-width: 800px) {
+  @media(max-width: 830px) {
     border-top: 1px solid var(--faded-highlight);
   }
 
