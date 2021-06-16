@@ -15,7 +15,7 @@ const DropDownHeader = styled("div")`
   font-weight: 500;
   font-size: 1.3rem;
   color: #000;
-  background: #fff8f5;
+  background: var(--background);
   text-align: center; 
   cursor: pointer;
 `;
@@ -26,12 +26,13 @@ const DropDownList = styled("ul")`
   padding: 3.5rem;
   margin: 0;
   text-align:center;
-  background: #fff8f5;
+  background: var(--background);
   box-sizing: border-box;
   color: #3faffa;
   font-size: 1.3rem;
   font-weight: 500;
-  filter:drop-shadow(5px 5px 5px #999);
+  border: 2px solid var(--highlight);
+  border-radius: 10px;
 
 
   a {
