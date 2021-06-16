@@ -136,6 +136,21 @@ export default function NavMenu() {
           <li>
             <Link to='/events'>Conventions/Expos</Link>
           </li>
+          {isMobile && 
+            <>
+              <li>
+                <Link to='/about'>About</Link>
+              </li>
+              <li>
+                <Link to='/contact'>Contact</Link>
+              </li>
+              <li className="snipcart-summary">
+                <a href="#" className="snipcart-user-email snipcart-user-profile">
+                    Account
+                </a>
+              </li>
+            </>
+          }
         </NavList>
       )}
       <div className="mobile-menu">
