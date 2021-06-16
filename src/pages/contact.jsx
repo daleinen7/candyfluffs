@@ -91,6 +91,9 @@ const StyledDiv = styled.div`
     color: #5C5C5C;
     width: 200px;
     height: 50px; 
+    &:hover{
+      cursor:pointer;
+      }
     @media(max-width: 680px) {
       width: 100%;
     }

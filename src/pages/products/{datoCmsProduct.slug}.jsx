@@ -31,7 +31,7 @@ const StyledDiv = styled.div`
     overflow-x: scroll;
     
     .preview {
-      margin-right: 1rem;
+      margin: 1rem 1rem 1rem .1rem;
       width: 110px;
       height:110px;
       cursor: pointer;
@@ -45,7 +45,7 @@ const StyledDiv = styled.div`
   }
   
   .img-array::-webkit-scrollbar-track {
-  background-color: #FFF8F5;
+  background-color: var(--background);
   }
   
   .img-array::-webkit-scrollbar-thumb {
