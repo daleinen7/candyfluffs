@@ -3,6 +3,8 @@ import Layout from "../components/Layout"
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
+  display: flex;
+  justify-content:center;
   width: 80%;
   margin: 0 auto;
 
@@ -14,20 +16,24 @@ const StyledDiv = styled.div`
     width: 95%;
     margin-bottom: 80px;
   }
-
-  h2 {
-    color: #000000;
-    font-size: 2rem;
-    margin-bottom: 10px; 
+  section{
+    margin-top: 4rem;
   }
+  // h2 {
+   
+  //   color: #000000;
+  //   font-size: 2rem;
+  //   margin-bottom: 10px; 
+  // }
 
   form {
-    width: 100%;
+    width: 50rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around; 
     flex-wrap: wrap;
+    margin: 2rem;
 
     @media(max-width: 680px) {
       align-items: center;
@@ -79,18 +85,21 @@ const StyledDiv = styled.div`
   }
   
   .submitButton {
-    margin-top: 20px;
-    background-color: #FFF8F5;
+    margin-top: 4rem;
+    background-color: var(--background);
     border: 3px solid #5C5C5C;
     color: #5C5C5C;
     width: 200px;
     height: 50px; 
+    &:hover{
+      cursor:pointer;
+      }
     @media(max-width: 680px) {
       width: 100%;
     }
   }
 
-  p {
+  p{
     text-align: center; 
   }
 
@@ -106,8 +115,9 @@ export default function Contact() {
 	return (
 		<Layout heading = {"Feel free to contact me!"}>
       <StyledDiv>
-          <h2>Candy Fluffs Updates!</h2>
-          <p>Sign up to get updates about new products and when I’ll be at anime conventions!</p>
+        <section>
+          
+          <p>I love to hear from people!</p>
           <form action="/success" method="post" netlify-honeypot="bot-field" data-netlify="true" name="message" >
             <div className="nameDiv">
               <label htmlFor="firstName">First Name</label>
@@ -125,7 +135,8 @@ export default function Contact() {
             <input type="hidden" name="form-name" value="contact" />
             <input className="submitButton" type="submit" value="SUBMIT"/>
           </form>
-          <p>We never share any information with 3rd parties.</p>
+          
+          </section>
       </StyledDiv>
       
     </Layout>

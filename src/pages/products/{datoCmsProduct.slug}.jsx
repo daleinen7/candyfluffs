@@ -5,30 +5,52 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 const StyledDiv = styled.div`
-  display:flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+ 
+  section { 
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 4rem;
 
   @media(max-width: 850px) {
     flex-direction: column;
     align-items: center;
+    }
   }
   
   .images-section {
     display: flex;
     flex-direction: column;
+  
   }
 
   .img-array {
     display: flex;
-    justify-content: space-evenly;
-
+    margin-top: 2rem;
+    width: 550px;
+    overflow-x: scroll;
+    
     .preview {
+      margin: 1rem 1rem 1rem .1rem;
+      width: 110px;
+      height:110px;
       cursor: pointer;
       &:hover {
         outline: 1px solid var(--highlight);
       }
     }
+  }
+  .img-array::-webkit-scrollbar {
+    width: 2px; 
+  }
+  
+  .img-array::-webkit-scrollbar-track {
+  background-color: var(--background);
+  }
+  
+  .img-array::-webkit-scrollbar-thumb {
+  background: var(--faded-highlight);
+  border-radius: 25px;
   }
 
   .details {
@@ -56,6 +78,13 @@ const StyledDiv = styled.div`
 
     p {
       font-size: 1.15rem;
+      a{
+        color: var(--highlight);
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
     }
 
     select {
@@ -63,20 +92,28 @@ const StyledDiv = styled.div`
       border: 3px solid var(--gray);
       width: 300px; 
       padding: 20px;
-      margin-bottom: 20px; 
+      margin: 2rem 0; 
+      &:hover{
+        cursor:pointer;
+      }
     }
     select > option {
       background-color: transparent;
     }
-
+    ul{
+      list-style: none;
+    }
+    li{
+      padding: 1rem 0
+    }
     button {
       /* visibility: collapse; */
       display: none;
       border: 3px solid var(--gray);
-      width: 200px;
+      width: fit-content;
       background: var(--background);
       padding: 20px 30px;
-
+      margin-top: 2rem;
       &:hover {
         cursor: pointer;
         border: 3px solid var(--highlight);
@@ -113,10 +150,11 @@ export default function Product({ data }) {
   }
 
 	return(
-    <Layout>
+    <Layout heading={`${data.datoCmsProduct.title}`}>
       <StyledDiv>
+        <section>
         <div className="images-section">
-          <Img style={{width:575}} fluid={data.datoCmsProduct.image[displayImg].fluid} />
+          <Img style={{width:550, height:550}} fluid={data.datoCmsProduct.image[displayImg].fluid} />
           {previewImgs}
         </div>
         <div className="details">
@@ -144,7 +182,7 @@ export default function Product({ data }) {
             data-item-name={data.datoCmsProduct.title}
             data-item-url={`/products/${data.datoCmsProduct.slug}`}
           >
-            Add to Cart
+            ADD TO CART
           </button>
 
           {/* if there is a variant, map and add a button to page for each */}
@@ -161,12 +199,13 @@ export default function Product({ data }) {
                 data-item-url={`/products/${data.datoCmsProduct.slug}`}
                 key={idx}
               >
-                Add to Cart
+                ADD TO CART
               </button>
             })
           }
           
         </div>
+        </section>
       </StyledDiv>
     </Layout>
   )

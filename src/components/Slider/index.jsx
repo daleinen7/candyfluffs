@@ -5,6 +5,9 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
+  .alice-carousel__dots-item.__active{
+  background-color: var(--highlight);
+  }
   .alice-carousel__dots-item{
     width: 20px;
     height: 20px;

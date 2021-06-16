@@ -56,11 +56,14 @@ const StyledDiv = styled.div`
   
   .submitButton {
     margin-top: 1rem;
-    background-color: #FFF8F5;
+    background-color: var(--background);
     border: 3px solid #5C5C5C;
     color: #5C5C5C;
     width: 200px;
     height: 50px; 
+    &:hover{
+    cursor:pointer;
+    }
     @media(max-width: 680px) {
       width: 100%;
     }
