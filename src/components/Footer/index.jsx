@@ -17,6 +17,11 @@ const StyledDiv = styled.div`
 
   @media(max-width: 830px) {
     border-top: 1px solid var(--faded-highlight);
+    width:100%;
+    h2 {
+      font-size: 1.25rem;
+    }
+  
   }
 
   a {

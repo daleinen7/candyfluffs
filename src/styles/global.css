@@ -50,7 +50,34 @@
 .snip-layout .snip-ico--close:before{
   color:#f33e4f !important;
 }
+.snip-layout .snip-btn{
+  background: var(--highlight) !important;
+  color: var(--background) !important;
+}
+.snip-layout .snip-btn:hover{
+  background: var(--faded-highlight) !important;
+  color: var(--highlight) !important;
+}
+.snip-layout .snip-quantity-trigger__btn--add:before{
+  background-color: white !important;
+  border: 1px solid var(--highlight)!important;
+  border-radius: 50%!important;
+  line-height:16px!important;
 
+}
+.snip-layout .snip-quantity-trigger__btn:hover{
+  background: var(--highlight)!important;
+
+  border: 1px solid var(--faded-highlight)!important;
+
+}
+.snip-layout .snip-quantity-trigger__btn--minus:before{
+  background: white !important;
+  border: 1px solid var(--highlight)!important;
+  border-radius: 50%!important;
+  line-height:12px!important;
+
+}
 html, body {
     background-color: var(--background);
     font-family: 'Lato', sans-serif;
@@ -60,6 +87,12 @@ html, body {
     margin: 0;
     padding: 0;
 }
+@media(max-width: 830px) {
+  html, body {
+ overflow-x: hidden;
+}
+}
+
 html::-webkit-scrollbar {
   width: 10px; 
 }
@@ -73,7 +106,7 @@ background: var(--highlight);
 border-radius: 25px;
 }
 
-.product-item { border-radius: 10px; overflow: hidden;}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -89,6 +122,15 @@ border-radius: 25px;
     color: var(--highlight);
     font-size: 1.125rem;
     width: 50%; 
+}
+  
+@media(max-width: 830px) {
+  .logo-area { 
+ 
+    width: 100%; 
+}
+
+  
 }
 
 .social-links { 
@@ -165,43 +207,69 @@ border-radius: 25px;
      width: 400px; 
      height: 400px; 
      margin: 40px; 
+     border-radius: 10px; 
+     overflow: hidden;
  }
-
-.gatsby-image-wrapper {
-    width: 100%;
-     height: 100%;
-}
-
- .product-square {
+ 
+ .gatsby-image-wrapper {
+   width: 100%;
+   height: 100%;
+  }
+  
+  .product-square {
     position: relative;
     height: 400px;
     width: 400px;
     box-sizing: border-box;
     border-radius: 2px; } 
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: white;
+    }
+    
+    .overlay:hover {
+      opacity: 0.85;
+    }
+    
+    @media(max-width: 960px){ /* 960px is the cut off before the layout gets weird*/
+     .product-item { 
+       width: 300px; 
+       height: 300px; 
+       margin: 20px; 
+       }
+       .product-square {
+        
+        height: 300px;
+        width: 300px;
+        } 
+        .text{
+          font-size: .75em!important;
+          padding-top: 0px!important;
+          text-align: justify;
+          opacity: 1;
+          position: relative;
+          background-color: white;
+          width: fit-content;
+          height: fit-content;
+          top: 200px;
 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.5s ease;
-    background-color: white;
-  }
-
-.overlay:hover {
-    opacity: 0.85;
-  }
-
-.text {
-    color: #333;
-    font-size: 1em;
-    position: absolute;
-   padding-top: 37%;
-    text-align: center;
+        }
+    }
+    .text {
+      color: #333;
+      font-size: 1em;
+      position: absolute;
+      padding-top: 37%;
+      text-align: center;
 }
 
 .footer { 

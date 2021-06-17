@@ -12,13 +12,17 @@ const StyledDiv = styled.div`
 
   @media(max-width: 1100px) {
     width: 90%;
+  
   }
 
   @media(max-width: 830px) {
     margin-bottom: 80px;
+    p{
+      line-height: 1.5rem;
+    }
   }
 
-  h2 {
+  #contactH2 {
     color: #000000;
     font-size: 2rem;
     margin-bottom: 10px; 
@@ -85,7 +89,7 @@ export default function ContactForm() {
 
   return(
     <StyledDiv>
-      <h2>Candy Fluffs Updates!</h2>
+      <h2 id="contactH2">Candy Fluffs Updates!</h2>
       <p>Sign up to get updates about new products and when I’ll be at anime conventions!</p>
       <form action="/success" method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" >
         <label htmlFor="firstName">First Name</label>

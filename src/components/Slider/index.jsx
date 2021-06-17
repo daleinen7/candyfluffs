@@ -17,6 +17,13 @@ const StyledDiv = styled.div`
       background-color: var(--highlight);
     }
   }
+  @media (max-width: 830px){
+    .alice-carousel__dots-item{
+      width: 10px;
+      height: 10px;
+     
+    }
+  }
 `;
 
 export default function Slider(props) {
