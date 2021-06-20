@@ -20,6 +20,7 @@ module.exports = {
     `gatsby-transformer-sharp`, 
     `gatsby-transformer-remark`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-datocms`,
       options: {
