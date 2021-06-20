@@ -14,11 +14,11 @@ const StyledDiv = styled.div`
     }
   }
   .links {
-    
+    margin-left: 4rem;
     ul {
       list-style-type: none;
       padding-left: 0;
-    }
+    }s
     li, p {
       font-size: 1.5rem;
     }
@@ -30,7 +30,9 @@ const StyledDiv = styled.div`
         text-decoration: underline;
       }
     }
+ 
   }
+
 `
 
 export default function Necahual({ data }) {
@@ -40,8 +42,8 @@ export default function Necahual({ data }) {
        
           <h2 style={{  fontSize:' 3rem',color: 'var(--highlight)',textAlign: 'center',padding:'2rem'}}>NECAHUAL</h2>
           <div className='info'style={{justifyContent:'center',lineHeight:'3rem'}}>
-            <StaticImage style={{width:600, height:600, marginRight:'6rem'}} src="../images/necahualImg.jpeg" alt="Necahual"/>
-            <div className="links"style={{marginRight:'4rem'}}>
+            <StaticImage layout="constrained"  aspectRatio={1} style={{maxWidth:600}} src="../images/necahualImg.jpeg" alt="Necahual"/>
+            <div className="links">
               <h3 style={{fontSize:'1.5rem'}}>Read it on <a style={{color: 'var(--highlight)'}} href="https://www.webtoons.com/en/challenge/necahual/list?title_no=216820">WEBTOONS</a>!</h3>
               <p style={{  color: 'var(--highlight)'}}>Support us on:</p>
               <ul>
@@ -49,6 +51,7 @@ export default function Necahual({ data }) {
                 <li><a href="https://www.instagram.com/2.heroes/">Instagram</a></li>
                 <li><a href="https://twitter.com/2Heroes1/">Twitter </a></li>
               </ul>
+              <small>Patreon Members get 15% off the entire order. Check the Patreon for the discount code! </small>
             </div>
           </div>
       

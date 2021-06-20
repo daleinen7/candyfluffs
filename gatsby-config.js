@@ -12,7 +12,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "Candy Fluffs",
-    description: "just a girl who likes drawing",
+    description: "Just a girl who likes to draw manga",
   },
   plugins: [
     `gatsby-plugin-image`,

@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
     justify-content: center;
     margin-top: 4rem;
 
-  @media(max-width: 850px) {
+  @media(max-width: 830px) {
     flex-direction: column;
     align-items: center;
     }
@@ -21,7 +21,9 @@ const StyledDiv = styled.div`
   .images-section {
     display: flex;
     flex-direction: column;
-  
+    @media(max-width: 430px) {
+      width: 80%;
+      }
   }
 
   .img-array {
@@ -29,12 +31,15 @@ const StyledDiv = styled.div`
     margin-top: 2rem;
     width: 550px;
     overflow-x: scroll;
-    
+    @media(max-width: 430px) {
+      width: 300px;
+      }
     .preview {
       margin: 1rem 1rem 1rem .1rem;
       width: 110px;
       height:110px;
       cursor: pointer;
+    
       &:hover {
         outline: 1px solid var(--highlight);
       }
@@ -58,7 +63,10 @@ const StyledDiv = styled.div`
     flex-direction: column;
     width: 575px;
     margin-left: 40px;
-
+    @media(max-width: 830px) {
+      width: 90%;
+      margin: 3rem;
+      }
     .selected {
       /* visibility: visible; */
       display: inherit;
@@ -134,7 +142,7 @@ export default function Product({ data }) {
         {data.datoCmsProduct.image.map((img, idx) => {
           return (
             <div onClick={() => setDisplayImage(idx)} >
-              <Img className="preview" style={{width: 110}} fluid={img.fluid} key={idx}/>
+              <Img className="preview"  fluid={img.fluid} key={idx}/>
             </div>
           )     
         })}
@@ -154,7 +162,8 @@ export default function Product({ data }) {
       <StyledDiv>
         <section>
         <div className="images-section">
-          <Img style={{width:550, height:550}} fluid={data.datoCmsProduct.image[displayImg].fluid} />
+          <Img style={{maxWidth:550}} fluid={{...data.datoCmsProduct.image[displayImg].fluid,
+    aspectRatio: 1}} />
           {previewImgs}
         </div>
         <div className="details">
@@ -224,7 +233,7 @@ export const query = graphql`
         }
       }
       image {
-        fluid(maxWidth: 200) {
+        fluid(maxWidth: 600) {
           src
           ...GatsbyDatoCmsFluid
         }

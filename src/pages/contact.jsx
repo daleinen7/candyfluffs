@@ -19,12 +19,7 @@ const StyledDiv = styled.div`
   section{
     margin-top: 4rem;
   }
-  // h2 {
-   
-  //   color: #000000;
-  //   font-size: 2rem;
-  //   margin-bottom: 10px; 
-  // }
+
 
   form {
     width: 50rem;
@@ -35,9 +30,9 @@ const StyledDiv = styled.div`
     flex-wrap: wrap;
     margin: 2rem;
 
-    @media(max-width: 680px) {
-      align-items: center;
-      flex-direction: column;
+    @media(max-width: 830px) {
+      width: 20rem;
+     
     }
   }
 

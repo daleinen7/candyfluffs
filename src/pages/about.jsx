@@ -9,13 +9,22 @@ const StyledDiv = styled.div`
   align-items: center;
   width: 600px;
   margin: 0 auto; 
+  margin: 0 auto; 
+  @media(max-width: 850px) {
+    width:450px;  
+  }
+  @media(max-width: 450px) {
+    width:250px;  
+  }
 `
 
 export default function About() {
 	return (
 		<Layout heading = {"I'm just a girl who likes to draw manga"} >
       <StyledDiv>
-        <StaticImage imgStyle={{'objectFit': 'contain'}} style={{margin: "4rem 0"}} src={`../images/cjoy.png`} alt="C Joy"/>
+        {/* <StaticImage style={{width:"600px", margin: "4rem 0", 'objectFit': 'contain'}} src={`../images/cjoy.png`} alt="C Joy"/> */}
+              <StaticImage layout="constrained"  aspectRatio={1} style={{maxWidth:600, margin: "4rem 0", padding:"1rem", objectFit: 'contain'}} src="../images/cjoy.png" alt="C Joy"/>
+
 
         <p>Hello my lovelies~ </p>
 

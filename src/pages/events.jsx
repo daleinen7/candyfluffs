@@ -9,7 +9,10 @@ const StyledDiv = styled.div`
   align-items: center;
   width: content-fit;
   margin-top: 2rem;
-
+  @media(max-width: 850px) {
+     
+    margin:2rem;
+  }
 
 `
 export default function Events({data}) {
@@ -18,7 +21,7 @@ export default function Events({data}) {
       <StyledDiv>
         {data.allDatoCmsLiveEvent.nodes.map(liveEvent => {
          const startDate=moment(liveEvent.startDate).utcOffset(1).format( "dddd, MMMM Do YYYY, h:mm a");
-         const endDate=moment(liveEvent.endDate).utcOffset(1).format( "dddd, MMMM Do YYYY, h:mm a");
+         const endDate=moment(liveEvent.endDate).format( "dddd, MMMM Do YYYY, h:mm a");
      
           return (
             <article  className="event">
