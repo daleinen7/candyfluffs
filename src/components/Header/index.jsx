@@ -95,7 +95,7 @@ export default function Header(props) {
                   Account
               </a>
           </div>
-          <button className="snipcart-checkout">
+          <button className="snipcart-checkout" aria-label="Shopping Cart">
               <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
           </button>
           <div className="snipcart-summary">
