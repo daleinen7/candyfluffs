@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
-import logo from './logo.png';
+import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faTumblr } from '@fortawesome/free-brands-svg-icons';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
@@ -83,7 +83,7 @@ export default function Header(props) {
         </div>
         <div className="logo-area">
           <div className="logo">
-            <h1><Link to='/'><img src={logo} alt="Candy Fluffs Logo" style={{ width: "300px" }} /></Link></h1>
+            <h1><Link to='/'><StaticImage src='./logo.jpg' alt='Candy Fluffs'style={{maxWidth: 300}}/></Link></h1>
           </div>
           <div className="subheading">
             {props.heading} (ㆁᴗㆁ✿)
