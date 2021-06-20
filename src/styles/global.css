@@ -240,7 +240,7 @@ html::-webkit-scrollbar-thumb {
   /* 960px is the cut off before the layout gets weird*/
   .product-item {
     width: 300px;
-    height: 300px;
+    height: 400px;
     margin: 20px;
   }
   .product-square {
@@ -250,29 +250,30 @@ html::-webkit-scrollbar-thumb {
   .text {
     font-size: 0.75em !important;
     padding-top: 0px !important;
-    text-align: justify;
+    text-align: left!important;
     opacity: 1;
     position: relative;
-    background-color: white;
+    background-color: var(--background);
     width: fit-content;
     height: fit-content;
-    top: 200px;
+    top: 300px;
   }
 }
-@media (max-width: 680px) {
+@media (max-width: 450px) { /* better for phones*/
   .product-item {
     width: 150px;
-    height: 150px;
+    height: 250px;
     margin: 10px;
   }
   .product-square {
-    height: 150px;
     width: 150px;
+    height: 150px;
   }
   .text {
     font-size: 0.75em !important;
     padding-top: 0px !important;
-    top: 100px;
+    top: 150px;
+   
   }
 }
 .text {

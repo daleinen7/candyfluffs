@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faTumblr } from '@fortawesome/free-brands-svg-icons';
-import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingBag, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import styled from 'styled-components';
 
@@ -23,7 +23,7 @@ const StyledDiv = styled.div`
     }
   }
 
-  button.snipcart-checkout{
+  button.snipcart-checkout, button.snipcart-user-email {
     background: transparent;
     border: none;
     cursor: pointer;
@@ -91,15 +91,14 @@ export default function Header(props) {
         </div>
         <div className="contact-links hidden">
           <div className="snipcart-summary">
-              <a href="#" className="snipcart-user-email snipcart-user-profile">
-                  Account
-              </a>
+              <button aria-label="User Profile" className="snipcart-user-email snipcart-user-profile">
+              <FontAwesomeIcon icon={faUser} size="lg"/>
+              </button >
           </div>
           <button className="snipcart-checkout" aria-label="Shopping Cart">
               <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
           </button>
-          <div className="snipcart-summary">
-            <span className="snipcart-total-price">${cartTotal ? cartTotal.total: "0.00"}</span>
+          <div className="snipcart-summary">  
             (<span className="snipcart-total-items">{cartCount}</span>)
           </div>
         </div>
