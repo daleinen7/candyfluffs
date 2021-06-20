@@ -20,7 +20,7 @@ export default function Events({data}) {
     <Layout heading = {"Catch me outside! "}>
       <StyledDiv>
         {data.allDatoCmsLiveEvent.nodes.map(liveEvent => {
-         const startDate=moment(liveEvent.startDate).utcOffset(1).format( "dddd, MMMM Do YYYY, h:mm a");
+         const startDate=moment(liveEvent.startDate).format( "dddd, MMMM Do YYYY, h:mm a");
          const endDate=moment(liveEvent.endDate).format( "dddd, MMMM Do YYYY, h:mm a");
      
           return (

@@ -20,10 +20,10 @@ const StyledDiv = styled.div`
 
 export default function About() {
 	return (
-		<Layout heading = {"I'm just a girl who likes to draw manga"} >
+		<Layout heading = {"Just a girl who likes to draw manga"} >
       <StyledDiv>
-        {/* <StaticImage style={{width:"600px", margin: "4rem 0", 'objectFit': 'contain'}} src={`../images/cjoy.png`} alt="C Joy"/> */}
-              <StaticImage layout="constrained"  aspectRatio={1} style={{maxWidth:600, margin: "4rem 0", padding:"1rem", objectFit: 'contain'}} src="../images/cjoy.png" alt="C Joy"/>
+
+              <StaticImage layout="fullWidth"  aspectRatio={1} style={{maxWidth:425, margin: "4rem 0", padding:"1rem"}} src="../images/cjoy.png" alt="C Joy"/>
 
 
         <p>Hello my lovelies~ </p>

@@ -11,10 +11,14 @@ const StyledDiv = styled.div`
     @media(max-width: 850px) {
       flex-direction: column;
       align-items: center;
+      margin:2rem;
     }
   }
   .links {
     margin-left: 4rem;
+    @media(max-width: 850px) {
+      margin:0rem;
+    }
     ul {
       list-style-type: none;
       padding-left: 0;
