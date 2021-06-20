@@ -7,10 +7,11 @@ import Footer from '../Footer';
 export default function Layout(props) {
   return(
     <div className="container">
-      <Helmet>
+      <Helmet htmlAttributes={{lang: 'en',}}>
         <meta charSet="utf-8" />
         <title>Candy Fluffs</title>
         <link rel="canonical" href="https://candyfluffs.com" />
+        
       </Helmet>
       <Header heading={props.heading} />
       <NavMenu/>

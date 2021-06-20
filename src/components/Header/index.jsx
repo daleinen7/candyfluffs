@@ -77,9 +77,9 @@ export default function Header(props) {
     <StyledDiv>
       <div className="header">
         <div className="social-links hidden">
-          <a href="https://candy-fluffs.tumblr.com/"><FontAwesomeIcon icon={faTumblr} size="lg"/></a>
-          <a href="http://instagram.com/candy_fluffs"><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
-          <a href="http://twitter.com/candy_fluffs"><FontAwesomeIcon icon={faTwitter} size="lg"/></a> 
+          <a href="https://candy-fluffs.tumblr.com/" aria-label="Candy Fluffs Tumblr"><FontAwesomeIcon icon={faTumblr} size="lg"/></a>
+          <a href="http://instagram.com/candy_fluffs" aria-label="Candy Fluffs Instagram"><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
+          <a href="http://twitter.com/candy_fluffs" aria-label="Candy Fluffs Twitter"><FontAwesomeIcon icon={faTwitter} size="lg"/></a> 
         </div>
         <div className="logo-area">
           <div className="logo">
