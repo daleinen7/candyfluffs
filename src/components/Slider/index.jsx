@@ -23,10 +23,18 @@ const StyledDiv = styled.div`
       height: 10px;
      
     }
-  }
+  @media (max-width: 450px){
+    .alice-carousel__dots-item{
+      width: 0px;
+      height: 0px;
+     
+    }
+
+
 `;
 
 export default function Slider(props) {
+  
   return(
     <StaticQuery
       query={graphql`
