@@ -99,7 +99,7 @@ export default function Header(props) {
               <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
           </button>
           <div className="snipcart-summary">  
-            (<span className="snipcart-total-items">{cartCount}</span>)
+            <span className="snipcart-total-items">{cartCount}</span>
           </div>
         </div>
       </div>
