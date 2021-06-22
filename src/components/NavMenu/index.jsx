@@ -42,7 +42,7 @@ const Nav = styled("nav")`
     bottom: 0; 
     position: fixed;
     background: var(--background);
-    z-index: 1; 
+    z-index: 2; 
   }
 
   button.snipcart-checkout{
