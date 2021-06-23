@@ -4,26 +4,27 @@ import Layout from "../../components/Layout";
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-const StyledDiv = styled.div`
- 
-  section { 
-    display:flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-top: 4rem;
+const StyledDiv = styled.section`
+
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 4rem;
 
   @media(max-width: 830px) {
     flex-direction: column;
     align-items: center;
-    }
   }
+
   
   .images-section {
     display: flex;
     flex-direction: column;
-    @media(max-width: 430px) {
-      width: 80%;
-      }
+    align-items: center;
+    width: 600px;
+    @media(max-width: 830px) {
+      width: 100%;
+    }
   }
 
   .img-array {
@@ -34,7 +35,8 @@ const StyledDiv = styled.div`
     overflow-x: scroll;
     @media(max-width: 430px) {
       width: 300px;
-      }
+    }
+
     .preview {
       margin: 1rem 1rem 1rem .1rem;
       width: 110px;
@@ -67,7 +69,7 @@ const StyledDiv = styled.div`
     @media(max-width: 830px) {
       width: 90%;
       margin: 3rem;
-      }
+    }
     .selected {
       /* visibility: visible; */
       display: inherit;
@@ -168,10 +170,10 @@ export default function Product({ data }) {
 	return(
     <Layout heading={`${data.datoCmsProduct.title}`}>
       <StyledDiv>
-        <section>
         <div className="images-section">
-          <Img style={{maxWidth:600}} fluid={{...data.datoCmsProduct.image[displayImg].fluid,
-    aspectRatio: 1}} />
+          <Img 
+            style={{maxWidth:600}} 
+            fluid={{...data.datoCmsProduct.image[displayImg].fluid, aspectRatio: 1}} />
           {previewImgs}
         </div>
         <div className="details">
@@ -222,7 +224,6 @@ export default function Product({ data }) {
           }
           
         </div>
-        </section>
       </StyledDiv>
     </Layout>
   )
