@@ -78,11 +78,11 @@ const StyledDiv = styled.div`
       font-size: 3rem;
       color: var(--highlight);
       @media(max-width: 830px) {
-        position: absolute !important;
-        height: 1px; width: 1px; 
-        overflow: hidden;
-        clip: rect(1px 1px 1px 1px);
-        clip: rect(1px, 1px, 1px, 1px);
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        font-weight:400;
+        color: black;
       }
     }
 

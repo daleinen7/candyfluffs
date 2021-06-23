@@ -81,11 +81,12 @@ const StyledDiv = styled.div`
   
   .submitButton {
     margin-top: 4rem;
-    background-color: var(--background);
+    background-color: transparent;
     border: 3px solid #5C5C5C;
     color: #5C5C5C;
     width: 200px;
-    height: 50px; 
+    padding: 20px;
+ 
     &:hover{
       cursor:pointer;
       }
