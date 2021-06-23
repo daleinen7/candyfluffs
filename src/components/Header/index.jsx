@@ -13,6 +13,7 @@ const StyledDiv = styled.div`
     a {
       color: var(--form-gray);
       margin-right: 20px;
+      font-size: 1.15rem;
       &:hover {color: var(--highlight);}
     }
   }
@@ -24,16 +25,34 @@ const StyledDiv = styled.div`
   }
 
   button.snipcart-checkout, button.snipcart-user-email {
+    font-size: 1.15rem;
     background: transparent;
     border: none;
     cursor: pointer;
     color: var(--form-gray);
     transition: transform .2s;
+    .snipcart-total-items{
+      color: var(--form-gray);
+      font-weight: bold;
+      position: relative;
+      top: 10px;
+      left: 15px;
+      z-index: 1;   
+      border: 1px solid var(--faded-highlight);
+      border-radius: 50%; 
+      background-color: white;
+      padding: 1px 6px;
+    }
     &:hover {
       transform: scale(1.2);
       color: var(--highlight);
+      .snipcart-total-items{
+        color: var(--highlight);
+      }
     }
   }
+
+
 
   .snipcart-summary {
     color: var(--gray);
@@ -96,11 +115,11 @@ export default function Header(props) {
               </button >
           </div>
           <button className="snipcart-checkout" aria-label="Shopping Cart">
-              <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
-          </button>
           <div className="snipcart-summary">  
             <span className="snipcart-total-items">{cartCount}</span>
           </div>
+              <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
+          </button>
         </div>
       </div>
     </StyledDiv>
