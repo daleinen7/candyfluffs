@@ -30,6 +30,7 @@ const StyledDiv = styled.div`
     display: flex;
     margin-top: 2rem;
     width: 550px;
+    height: 190px;
     overflow-x: scroll;
     @media(max-width: 430px) {
       width: 300px;
