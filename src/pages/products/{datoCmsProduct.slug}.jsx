@@ -77,6 +77,13 @@ const StyledDiv = styled.div`
       margin-bottom: 0;
       font-size: 3rem;
       color: var(--highlight);
+      @media(max-width: 830px) {
+        position: absolute !important;
+        height: 1px; width: 1px; 
+        overflow: hidden;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+      }
     }
 
     h3 {
