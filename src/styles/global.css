@@ -257,6 +257,13 @@ html::-webkit-scrollbar-thumb {
     width: fit-content;
     height: fit-content;
     top: 300px;
+    
+  }
+  h2{
+    font-weight: 400;
+  }
+  h3{
+    font-weight: 400;
   }
 }
 @media (max-width: 450px) { /* better for phones*/
@@ -269,12 +276,13 @@ html::-webkit-scrollbar-thumb {
     width: 150px;
     height: 150px;
   }
-  .text {
+  .text{
     font-size: 0.75em !important;
     padding-top: 0px !important;
     top: 150px;
-   
+    
   }
+
 }
 .text {
   color: #333;
@@ -282,6 +290,7 @@ html::-webkit-scrollbar-thumb {
   position: absolute;
   padding-top: 37%;
   text-align: center;
+  
 }
 
 .footer {

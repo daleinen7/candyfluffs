@@ -77,6 +77,13 @@ const StyledDiv = styled.div`
       margin-bottom: 0;
       font-size: 3rem;
       color: var(--highlight);
+      @media(max-width: 830px) {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        font-weight:400;
+        color: black;
+      }
     }
 
     h3 {

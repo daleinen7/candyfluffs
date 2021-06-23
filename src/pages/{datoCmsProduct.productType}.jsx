@@ -9,8 +9,8 @@ export default function Product({ data }) {
 
   let fandomList = []
   data.allDatoCmsProduct.edges.forEach(({node}) => {
-    if (!fandomList.includes(node.fandoms.replace(/\s/g, '-').toLowerCase())) {
-      fandomList.push(node.fandoms.replace(/\s/g, '-').toLowerCase())
+    if (!fandomList.includes(node.fandoms.replace(/\s/g, ' ').toLowerCase())) {
+      fandomList.push(node.fandoms.replace(/\s/g, ' ').toLowerCase())
     }
   })
 

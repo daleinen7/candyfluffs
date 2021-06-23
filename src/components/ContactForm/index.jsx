@@ -37,6 +37,7 @@ const StyledDiv = styled.div`
     @media(max-width: 680px) {
       align-items: center;
       flex-direction: column;
+      width:content-fit;
     }
   }
 
@@ -50,7 +51,7 @@ const StyledDiv = styled.div`
     color: #000;
     border: 0px;
     @media(max-width: 680px) {
-      width: 100%;
+      margin: 1rem 0;
     }
   }
 
