@@ -172,7 +172,7 @@ export default function Product({ data }) {
       <StyledDiv>
         <div className="images-section">
           <Img 
-            style={{maxWidth:600}} 
+            style={{maxWidth:600, height: "auto"}}
             fluid={{...data.datoCmsProduct.image[displayImg].fluid, aspectRatio: 1}} />
           {previewImgs}
         </div>
