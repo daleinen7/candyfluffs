@@ -15,6 +15,7 @@ module.exports = {
     description: "Just a girl who likes to draw manga",
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`, 
     `gatsby-transformer-sharp`, 
