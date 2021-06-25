@@ -9,8 +9,12 @@ export default function Product({ data }) {
 
   let fandomList = []
   data.allDatoCmsProduct.edges.forEach(({node}) => {
-    if (!fandomList.includes(node.fandoms.replace(/\s/g, ' ').toLowerCase())) {
-      fandomList.push(node.fandoms.replace(/\s/g, ' ').toLowerCase())
+    // Below line makes a list in slug form of fandoms
+    // if (!fandomList.includes(node.fandoms.replace(/\s/g, '-').toLowerCase())) {
+    //   fandomList.push(node.fandoms.replace(/\s/g, '-').toLowerCase())
+    // }
+    if (!fandomList.includes(node.fandoms)) {
+      fandomList.push(node.fandoms);
     }
   })
 
@@ -20,7 +24,7 @@ export default function Product({ data }) {
       <div className="fandom-dropdown">
         <DropDown
           fandomList = {fandomList}
-          productType = {data.allDatoCmsProduct.edges[0].node.productType.toLowerCase()}
+          productType = {data.allDatoCmsProduct.edges[0].node.productType}
         />
       </div>
 

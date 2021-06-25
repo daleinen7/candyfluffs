@@ -6,7 +6,9 @@ import GridSquare from '../components/GridSquare';
 export default function productTypeFilter({pageContext}) {
 
   let fandomList = pageContext.fandomList.map(fandom => {
-    return fandom.replace(/\s/g, '-').toLowerCase();
+    // Below line will make fandom a slug
+    // return fandom.replace(/\s/g, '-').toLowerCase();
+    return fandom;
   })
   console.log(fandomList);
   return (
@@ -15,7 +17,7 @@ export default function productTypeFilter({pageContext}) {
       <div className="fandom-dropdown">
         <DropDown
           fandomList = {fandomList}
-          productType = {pageContext.productType.toLowerCase()}
+          productType = {pageContext.productType}
         />
       </div>
 
