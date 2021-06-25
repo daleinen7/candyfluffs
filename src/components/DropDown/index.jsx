@@ -63,6 +63,10 @@ export default function DropDown(props) {
 
   };
 
+  const slugify = str => {
+    return str.replace(/\s/g, '-').toLowerCase()
+  }
+
   return(
     <DropDownContainer>
       <DropDownHeader onClick={toggling}>
@@ -73,7 +77,7 @@ export default function DropDown(props) {
           <DropDownList aria-expanded={isOpen}>
             {props.fandomList.map((option, idx) => (
               <ListItem onClick={onOptionClicked(option)} key={idx}>
-                <Link to={`/${props.productType}/${option}`}>{option}</Link>
+                <Link to={`/${props.productType.toLowerCase()}/${slugify(option)}`}>{option}</Link>
               </ListItem>
             ))}
           </DropDownList>
