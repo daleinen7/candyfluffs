@@ -18,7 +18,8 @@ export default function Product({ data }) {
     <Layout heading={`${data.allDatoCmsProduct.edges[0].node.productType}s`}>
 
       <div className="fandom-dropdown">
-        <DropDown
+        <DropDown 
+          aria-label="Filter availible fandom options"
           fandomList = {fandomList}
           productType = {data.allDatoCmsProduct.edges[0].node.productType.toLowerCase()}
         />
