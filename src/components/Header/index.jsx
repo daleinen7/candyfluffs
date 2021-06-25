@@ -9,6 +9,10 @@ import styled from 'styled-components';
 
 const StyledDiv = styled.div`
 
+  .subheading {
+    color: var(--turq);
+  }
+
   .social-links {
     a {
       color: var(--form-gray);
@@ -115,10 +119,10 @@ export default function Header(props) {
               </button >
           </div>
           <button className="snipcart-checkout" aria-label="Shopping Cart">
-          <div className="snipcart-summary">  
-            <span className="snipcart-total-items">{cartCount}</span>
-          </div>
-              <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
+            <div className="snipcart-summary">  
+              <span className="snipcart-total-items">{cartCount}</span>
+            </div>
+            <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
           </button>
         </div>
       </div>
