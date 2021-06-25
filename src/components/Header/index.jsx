@@ -7,7 +7,7 @@ import { faShoppingBag, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import styled from 'styled-components';
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.header`
 
   .subheading {
     color: var(--dark-highlight);
@@ -97,8 +97,7 @@ export default function Header(props) {
     }
   }, [])
   return (
-    <StyledDiv>
-      <div className="header">
+    <StyledDiv className="header">
         <div className="social-links hidden">
           <a href="https://candy-fluffs.tumblr.com/" aria-label="Candy Fluffs Tumblr"><FontAwesomeIcon icon={faTumblr} size="lg"/></a>
           <a href="http://instagram.com/candy_fluffs" aria-label="Candy Fluffs Instagram"><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
@@ -119,13 +118,12 @@ export default function Header(props) {
               </button >
           </div>
           <button aria-label="Go to cart" className="snipcart-checkout">
-          <div className="snipcart-summary">  
-            <span className="snipcart-total-items">{cartCount}</span>
-          </div>
-              <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
+            <div className="snipcart-summary">  
+              <span className="snipcart-total-items">{cartCount}</span>
+            </div>
+            <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
           </button>
         </div>
-      </div>
     </StyledDiv>
   )
 }
