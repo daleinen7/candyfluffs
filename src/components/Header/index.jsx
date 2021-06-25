@@ -9,6 +9,10 @@ import styled from 'styled-components';
 
 const StyledDiv = styled.div`
 
+  .subheading {
+    color: var(--dark-highlight);
+  }
+
   .social-links {
     a {
       color: var(--form-gray);
@@ -114,7 +118,7 @@ export default function Header(props) {
               <FontAwesomeIcon icon={faUser} size="lg"/>
               </button >
           </div>
-          <button aria-label="Go to cart" className="snipcart-checkout" aria-label="Shopping Cart">
+          <button aria-label="Go to cart" className="snipcart-checkout">
           <div className="snipcart-summary">  
             <span className="snipcart-total-items">{cartCount}</span>
           </div>

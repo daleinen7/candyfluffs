@@ -10,7 +10,9 @@
 
 :root {
   --highlight: #f58f89;
+  --dark-highlight: #d8625c;
   --background: #fffefd;
+  --turq: #019d8d;
   --gray: #5c5c5c;
   --form-gray: #c4c4c4;
   --faded-highlight: #ffe2d6;
