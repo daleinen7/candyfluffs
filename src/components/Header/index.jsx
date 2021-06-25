@@ -118,11 +118,11 @@ export default function Header(props) {
               <FontAwesomeIcon icon={faUser} size="lg"/>
               </button >
           </div>
-          <button className="snipcart-checkout" aria-label="Shopping Cart">
-            <div className="snipcart-summary">  
-              <span className="snipcart-total-items">{cartCount}</span>
-            </div>
-            <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
+          <button aria-label="Go to cart" className="snipcart-checkout">
+          <div className="snipcart-summary">  
+            <span className="snipcart-total-items">{cartCount}</span>
+          </div>
+              <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
           </button>
         </div>
       </div>
