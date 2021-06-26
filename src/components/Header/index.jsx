@@ -10,7 +10,7 @@ import styled from 'styled-components';
 const StyledDiv = styled.header`
 
   .subheading {
-    color: var(--dark-highlight);
+    color: var(--highlight);
   }
 
   .social-links {

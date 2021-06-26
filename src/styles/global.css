@@ -240,6 +240,9 @@ html::-webkit-scrollbar-thumb {
 
 @media (max-width: 960px) {
   /* 960px is the cut off before the layout gets weird*/
+  .product-grid {
+  width:100%;
+  }
   .product-item {
     width: 300px;
     height: 400px;

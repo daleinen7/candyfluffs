@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useMediaQuery} from 'react-responsive';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
@@ -46,16 +46,33 @@ const Nav = styled("nav")`
   }
 
   button.snipcart-checkout{
-    font-size: 1.4em;
-    margin-right: 0.4em;
+    font-size: 1.2em;
+    margin: 0 0.4em 0.4em 0;
     background: transparent;
     border: none;
     cursor: pointer;
     color: var(--form-gray);
     transition: transform .2s;
+
+    .snipcart-total-items{
+      color: var(--form-gray);
+      font-size: 1rem;
+      font-weight: bold;
+      position: relative;
+      top: 10px;
+      right: 13px;
+      z-index: 1;   
+      border: 1px solid var(--faded-highlight);
+      border-radius: 50%; 
+      background-color: white;
+      padding: 1px 6px;
+    }
     &:hover {
       transform: scale(1.2);
       color: var(--highlight);
+      .snipcart-total-items{
+        color: var(--highlight);
+      }
     }
   }
 
@@ -110,6 +127,36 @@ export default function NavMenu() {
   const isMobile = useMediaQuery({query: `(max-width: 830px)`});
 
   const toggling = () => setIsOpen(!isOpen);
+
+  const [cartCount, setCartCount] = useState('');
+  const [cartTotal, setCartTotal] = useState('');
+  
+  useEffect(()=> {
+    if (window.Snipcart) {
+      //this allows it to work when switching pages
+      var count = window.Snipcart.api.items.count();
+      var cart = window.Snipcart.api.cart.get();
+
+      setCartCount(count)
+      setCartTotal(cart);
+
+      //this allows it to work when you add or change items
+      window.Snipcart.subscribe('cart.closed', () => {
+          var count = window.Snipcart.api.items.count();
+          var cart = window.Snipcart.api.cart.get();
+          setCartCount(count)
+          setCartTotal(cart)
+      });
+
+      //this allows it to work on refreshing the page
+      window.Snipcart.subscribe('cart.ready', (data) => {
+          var count = window.Snipcart.api.items.count();
+          var cart = window.Snipcart.api.cart.get();
+          setCartCount(count)
+          setCartTotal(cart)
+      })
+    }
+  }, [])
   
   return(
     <Nav aria-label='Main'>
@@ -156,9 +203,12 @@ export default function NavMenu() {
       <div className="mobile-menu">
         <Hamburger onClick={toggling}><img src={hamburgerIcon} alt="hamburger menu"/></Hamburger>
         {isMobile &&
-          <button className="snipcart-checkout">
-            <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
-          </button>
+           <button aria-label="Go to cart" className="snipcart-checkout">
+           <div className="snipcart-summary">  
+             <span className="snipcart-total-items">{cartCount}</span>
+           </div>
+           <FontAwesomeIcon icon={faShoppingBag} size="lg"/>
+         </button>
         }
       </div>
     </Nav>
