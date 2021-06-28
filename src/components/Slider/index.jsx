@@ -4,6 +4,7 @@ import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import styled from 'styled-components';
 
+
 const StyledDiv = styled.div`
   margin: 0 auto;
   .alice-carousel__dots-item.__active{
@@ -56,6 +57,7 @@ export default function Slider(props) {
           <AliceCarousel
             autoPlay autoPlayInterval="3000"
             disableButtonsControls
+            infinite
             items={data.allDatoCmsBanner.nodes.map((node, idx) => {
               return (
                 <img src={node.banner[0].fluid.src} alt={node.banner[0].title} className="sliderimg" key={idx}/>

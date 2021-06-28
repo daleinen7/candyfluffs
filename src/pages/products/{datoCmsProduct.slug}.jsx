@@ -107,12 +107,16 @@ const StyledDiv = styled.section`
 
     select {
       background-color: transparent;
-      border: 3px solid var(--gray);
+      border: 2px solid var(--gray);
       width: 300px; 
       padding: 20px;
       margin: 2rem 0; 
+      color: var(--gray);
+      font-weight: 700;
+      transition: font-weight .2s;
       &:hover{
         cursor:pointer;
+        font-weight: 900;
       }
     }
     select > option {
@@ -131,10 +135,16 @@ const StyledDiv = styled.section`
       width: fit-content;
       background: var(--background);
       padding: 20px 30px;
+      font-weight: 700;
       margin-top: 2rem;
+      color: var(--gray);
+      transition: font-weight .2s, border .2s;
       &:hover {
         cursor: pointer;
         border: 3px solid var(--highlight);
+        color: var(--highlight);
+        font-weight: 900;
+        padding: px 30px;
       }
     }
   }
