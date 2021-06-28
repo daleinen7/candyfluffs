@@ -10,7 +10,7 @@ export default function Layout(props) {
       <Helmet htmlAttributes={{lang: 'en',}}>
         <meta charSet="utf-8" />
         <title>Candy Fluffs</title>
-        <meta name="description" content="just a girl who likes drawing" />
+        <meta name="description" content="Shop all of Candyfluffs and 2Heros art and merchandise" />
         <link rel="canonical" href="https://candyfluffs.com" />
       </Helmet>
       <Header heading={props.heading} />
