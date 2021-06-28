@@ -8,11 +8,10 @@ import { faShoppingBag, faUser } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 const StyledDiv = styled.header`
-
   .subheading {
     color: var(--highlight);
+    word-break: keep-all;
   }
-
   .social-links {
     a {
       color: var(--form-gray);
