@@ -8,23 +8,25 @@ const StyledDiv = styled.div`
   align-items: center;
   width: 600px;
   margin: 0 auto; 
+  margin: 0 auto; 
+  @media(max-width: 850px) {
+    width:450px;  
+  }
+  @media(max-width: 450px) {
+    width:250px;  
+  }
 `
 
 export default function About() {
 	return (
-		<Layout heading = {"Success!"} >
+		<Layout heading = {"NOT FOUND?!? Σ(‘◉⌓◉’)"} >
       <StyledDiv>
-        <span>
+        <h1>404</h1>
 
-        <h2>Message</h2>
-        <h1>Sent!</h1>
-        </span>
-        <p id="icon">
-        (((o(*ﾟ▽ﾟ*)o)))♡
-        </p>
-        <p>
-        I’ll get back to you soon
-        </p>
+        <p>NOT FOUND?!? Σ(‘◉⌓◉’)</p>
+
+        <p><a href="/"> Let’s go back home</a></p>
+
       </StyledDiv>
       
     </Layout>
