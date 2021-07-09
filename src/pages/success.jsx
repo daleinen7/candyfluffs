@@ -20,7 +20,7 @@ const StyledDiv = styled.div`
   h1{
     font-size: 8em;
     text-transform: uppercase;
-    color: var(--gray);
+    color: var(--highlight);
     margin:0; 
   } 
   p{
@@ -29,6 +29,19 @@ const StyledDiv = styled.div`
     span{
       color: var(--gray);
     }
+  }
+  @media(max-width: 450px) {
+    width:100%;
+    h2{
+      font-size: 2.5em;
+      letter-spacing: 22px;
+    } 
+    h1{
+      font-size: 7em;
+    } 
+    p{
+      font-size 1.5em;
+      }
   }
 `
 

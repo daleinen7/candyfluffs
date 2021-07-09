@@ -41,7 +41,16 @@ const StyledDiv = styled.div`
         }
       }
     }
-    p{
+    button{
+      margin-top: 4rem;
+      background-color: transparent;
+      border: 3px solid var(--gray);
+      padding: 20px;
+      
+      &:hover{
+        cursor:pointer;
+        border: 3px solid var(--highlight);
+        }
       a{
         padding:.5em;
         font-size: 1.5em;
@@ -57,10 +66,41 @@ const StyledDiv = styled.div`
   }
   @media(max-width: 850px) {
     width:450px;  
+    .container{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+
+    }
+    span button{
+      margin-top: 0;
+      margin-bottom:3em;
+      a{
+        padding:0em;
+        font-size: 1.5em;
+      }
+    }
   }
   @media(max-width: 450px) {
-    width:250px;  
-  }
+    width:350px;  
+    
+      span .social-links{
+        font-size: 2em;
+        a{
+          padding:1em;
+        }
+      }
+    
+      span button{
+        margin-top: 0;
+        margin-bottom:3em;
+        a{
+          padding:0em;
+          font-size: .85em;
+          font-weight:bold;
+        }
+      }
+    }
 `
 
 export default function About() {
@@ -86,7 +126,7 @@ export default function About() {
             <a href="http://instagram.com/candy_fluffs" aria-label="Candy Fluffs Instagram"><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
             <a href="http://twitter.com/candy_fluffs" aria-label="Candy Fluffs Twitter"><FontAwesomeIcon icon={faTwitter} size="lg"/></a> 
           </div>
-          <p><a href="http://eepurl.com/duTC3L">be the first to know when we’re live</a></p>
+          <button><a href="http://eepurl.com/duTC3L">be the first to know when we’re live</a></button>
         </span>
         </div>
       </StyledDiv>
