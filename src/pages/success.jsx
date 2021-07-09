@@ -7,20 +7,41 @@ const StyledDiv = styled.div`
   flex-direction: column;
   align-items: center;
   width: 600px;
-  margin: 0 auto; 
+  margin: 0 auto;
+  h2{
+    font-size: 3em;
+    letter-spacing: 22px;
+    margin-bottom:0;
+    margin-top: 3em;
+    text-align: justify;
+    text-transform: uppercase;
+    color: var(--gray);
+  } 
+  h1{
+    font-size: 8em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin:0; 
+  } 
+  p{
+    color:var(--highlight);
+    font-size 2em;
+    span{
+      color: var(--gray);
+    }
+  }
 `
 
 export default function About() {
 	return (
 		<Layout heading = {"Success!"} >
       <StyledDiv>
-        <span>
-
-        <h2>Message</h2>
-        <h1>Sent!</h1>
-        </span>
-        <p id="icon">
-        (((o(*ﾟ▽ﾟ*)o)))♡
+        <div>
+          <h2>Message</h2>
+          <h1>Sent!</h1>
+        </div>
+        <p>
+        <span>(((o(</span> *<span>ﾟ▽ﾟ</span>*<span>)o)))</span>♡
         </p>
         <p>
         I’ll get back to you soon
