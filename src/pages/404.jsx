@@ -9,17 +9,40 @@ const StyledDiv = styled.div`
   width: 600px;
   margin: 0 auto; 
   margin: 0 auto; 
+  h1{
+    font-size:8em;
+    color: var(--gray);
+    margin-top:1em;
+    margin-bottom:0;
+  }
+  p{
+    font-size: 2.5em;
+    color: var(--gray);
+    a{
+     
+      text-decoration: none;
+      color: var(--highlight);
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+
   @media(max-width: 850px) {
     width:450px;  
   }
   @media(max-width: 450px) {
-    width:250px;  
+    width:350px;  
+    p{
+      font-size: 1.5em;
+      color: var(--gray);
+    }
   }
 `
 
 export default function About() {
 	return (
-		<Layout heading = {"NOT FOUND?!? Σ(‘◉⌓◉’)"} >
+		<Layout heading = {"NOT FOUND?!?"} >
       <StyledDiv>
         <h1>404</h1>
 
