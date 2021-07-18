@@ -9,7 +9,6 @@ const StyledDiv = styled.div`
 
   align-items: center;
   width: 100%;
-
   @media(max-width: 1100px) {
     width: 90%;
   
@@ -41,49 +40,13 @@ const StyledDiv = styled.div`
     }
   }
 
-  input[type=text] {
-    margin: 1rem;
-    padding: 12px 20px;
-    height: 50px;
-    width: 200px;
-    box-sizing: border-box;
-    background-color: #C4C4C4;
-    color: #000;
-    border: 0px;
-    @media(max-width: 680px) {
-      margin: 1rem 0;
-    }
-  }
 
-  input[type=text]:focus {
-   border: 3px solid #555;
-  }
   
-  .submitButton {
-    margin-top: 1rem;
-    background-color: var(--background);
-    border: 3px solid #5C5C5C;
-    color: #5C5C5C;
-    width: 200px;
-    height: 50px; 
-    &:hover{
-    cursor:pointer;
-    }
-    @media(max-width: 680px) {
-      width: 100%;
-    }
-  }
-
   small {
     text-align: center; 
   }
 
-  label {
-    color: #000;
-    padding-right: 10px;
-    display: none;
-    visibility: hidden; 
-  }
+
 `;
 
 export default function ContactForm() {
@@ -92,18 +55,35 @@ export default function ContactForm() {
     <StyledDiv>
       <h2 id="contactH2">Candy Fluffs Updates!</h2>
       <p>Sign up to get updates about new products and when I’ll be at anime conventions!</p>
-      <form action="/success" method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" >
-        <label htmlFor="firstName">First Name</label>
-        <input type="text" name="firstName" placeholder="First Name"/>
-        <label htmlFor="lastName">Last Name</label>
-        <input type="text" name="lastName" placeholder="Last Name"/>
-        <label htmlFor="email">Email</label>
-        <input type="text" name="email" placeholder="E-mail address"/>
-        <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" placeholder="contact" />
-        <input className="submitButton" type="submit" value="SIGN UP"/>
-      </form>
-      <small>We never share any information with 3rd parties.</small>
+<div id="mc_embed_signup">
+<form action="https://candyfluffs.us16.list-manage.com/subscribe/post?u=f0ccd4aae40398b03156934fd&amp;id=1e5c516db8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	  <input style={{  marginRight: "1rem", padding: "12px 20px", height: "50px", width: "300px", boxSizing: "border-box", backgroundColor: "#c4c4c4", color: "#000", border: "0px", verticalAlign:" center"}} type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="EMAIL" required/>
+   
+    <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true"><input type="text" name="b_f0ccd4aae40398b03156934fd_1e5c516db8" tabindex="-1" value=""/></div>
+    <div className="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"/></div>
+    </div>
+</form>
+</div>
+<small>We never share any information with 3rd parties.</small>
     </StyledDiv>
   )
+  // return(
+  //   <StyledDiv>
+  //     <h2 id="contactH2">Candy Fluffs Updates!</h2>
+  //     <p>Sign up to get updates about new products and when I’ll be at anime conventions!</p>
+  //     <form action="/success" method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" >
+  //       <label htmlFor="firstName">First Name</label>
+  //       <input type="text" name="firstName" placeholder="First Name"/>
+  //       <label htmlFor="lastName">Last Name</label>
+  //       <input type="text" name="lastName" placeholder="Last Name"/>
+  //       <label htmlFor="email">Email</label>
+  //       <input type="text" name="email" placeholder="E-mail address"/>
+  //       <input type="hidden" name="bot-field" />
+  //       <input type="hidden" name="form-name" placeholder="contact" />
+  //       <input className="submitButton" type="submit" value="SIGN UP"/>
+  //     </form>
+  //     <small>We never share any information with 3rd parties.</small>
+  //   </StyledDiv>
+  // )
 }
