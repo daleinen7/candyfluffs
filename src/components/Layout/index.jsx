@@ -12,6 +12,7 @@ export default function Layout(props) {
         <title>Candy Fluffs</title>
         <meta name="description" content="Shop all of Candyfluffs and 2Heros art and merchandise" />
         <link rel="canonical" href="https://candyfluffs.com" />
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css"></link>
       </Helmet>
       <Header heading={props.heading} />
       <NavMenu/>

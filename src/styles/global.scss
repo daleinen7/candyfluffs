@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 *,
 *:after,
 *:before {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -15,7 +17,7 @@
   --form-gray: #c4c4c4;
   --faded-highlight: #ffe2d6;
 }
-
+// MAILCHIMP
 #mc_embed_signup {
   background: #fff !important;
   clear: left !important;
@@ -29,121 +31,97 @@ input.button {
   color: #5c5c5c !important;
   width: 200px !important;
   height: 50px !important;
-}
-
-input.button:hover {
-  cursor: pointer !important;
-}
-
-input.button inputc {
-  color: #000 !important;
-  padding-right: 10px !important;
-  display: none !important;
-  visibility: hidden !important;
-}
-
-input.button input#mce-EMAIL :focus {
-  border: 3px solid #555 !important;
-}
-
-input.button #mce-EMAIL {
-  margin: 1rem !important;
-  padding: 12px 20px !important;
-  height: 50px !important;
-  width: 200px !important;
-  -webkit-box-sizing: border-box !important;
-          box-sizing: border-box !important;
-  background-color: #c4c4c4 !important;
-  color: #000 !important;
-  border: 0px !important;
-  vertical-align: center !important;
-}
-
-@media (max-width: 680px) {
-  input.button #mce-EMAIL {
-    margin: 1rem 0 !important;
+  &:hover {
+    cursor: pointer !important;
   }
-}
-
-@media (max-width: 680px) {
-  input.button {
+  input#mce-EMAIL {
+    color: #000 !important;
+    padding-right: 10px !important;
+    display: none !important;
+    visibility: hidden !important;
+  }
+  input#mce-EMAIL :focus {
+    border: 3px solid #555 !important;
+  }
+  input.email {
+    margin: 1rem !important;
+    padding: 12px 20px !important;
+    height: 50px !important;
+    width: 200px !important;
+    box-sizing: border-box !important;
+    background-color: #c4c4c4 !important;
+    color: #000 !important;
+    border: 0px !important;
+    vertical-align: center !important;
+    @media (max-width: 680px) {
+      margin: 1rem 0 !important;
+    }
+  }
+  @media (max-width: 680px) {
     width: 100% !important;
   }
 }
-
+// SNIPCART
 .snip-layout .snip-layout__main-container {
   border-radius: 10px !important;
   border: 10px solid white !important;
 }
-
 .snip-layout .snip-header {
   color: var(--highlight) !important;
   background: var(--background) !important;
   border-bottom: 1px solid var(--highlight) !important;
 }
-
 .snip-layout .snip-header__total {
   background: var(--faded-highlight) !important;
   color: var(--highlight) !important;
 }
-
 .snip-layout .snip-header__total-label {
   color: var(--gray) !important;
 }
-
 .snip-layout .snip-footer {
   background: var(--background) !important;
   border-top: 1px solid var(--highlight) !important;
 }
-
 .snip-layout .snip-btn--highlight {
   background: var(--highlight) !important;
   color: var(--background) !important;
 }
-
 .snip-layout .snip-btn--highlight:hover {
   background: var(--faded-highlight) !important;
   color: var(--highlight) !important;
 }
-
 .snip-layout a,
 .snip-layout button {
   color: var(--highlight) !important;
 }
-
 .snip-layout .snip-ico--close:before {
   color: #f33e4f !important;
 }
-
 .snip-layout .snip-btn {
   background: var(--highlight) !important;
   color: var(--background) !important;
 }
-
 .snip-layout .snip-btn:hover {
   background: var(--faded-highlight) !important;
   color: var(--highlight) !important;
 }
-
 .snip-layout .snip-quantity-trigger__btn--add:before {
   background-color: white !important;
   border: 1px solid var(--highlight) !important;
   border-radius: 50% !important;
   line-height: 16px !important;
 }
-
 .snip-layout .snip-quantity-trigger__btn:hover {
   background: var(--highlight) !important;
+
   border: 1px solid var(--faded-highlight) !important;
 }
-
 .snip-layout .snip-quantity-trigger__btn--minus:before {
   background: white !important;
   border: 1px solid var(--highlight) !important;
   border-radius: 50% !important;
   line-height: 12px !important;
 }
-
 html,
 body {
   background-color: var(--background);
@@ -154,7 +132,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 @media (max-width: 830px) {
   html,
   body {
@@ -176,21 +153,13 @@ html::-webkit-scrollbar-thumb {
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .logo-area {
@@ -207,55 +176,35 @@ html::-webkit-scrollbar-thumb {
 }
 
 .social-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: center;
+  align-items: flex-end;
   width: 25%;
 }
 
 .social-links a {
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .social-links a:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .contact-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: center;
+  align-items: flex-end;
   width: 25%;
 }
 
 .contact-links a {
   color: grey;
   text-decoration: none;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .contact-links a:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .slider {
@@ -273,40 +222,25 @@ html::-webkit-scrollbar-thumb {
 }
 
 .sliderimg {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
 .fandom-dropdown {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   min-height: 100px;
 }
 
 .product-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
 
@@ -327,8 +261,7 @@ html::-webkit-scrollbar-thumb {
   position: relative;
   height: 400px;
   width: 400px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 2px;
 }
 
@@ -341,7 +274,6 @@ html::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   opacity: 0;
-  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   background-color: white;
 }
@@ -349,19 +281,18 @@ html::-webkit-scrollbar-thumb {
 .overlay:hover {
   opacity: 0.85;
 }
-
 @media (max-width: 1439px) {
   .product-item {
     width: 300px;
     height: 300px;
     margin: 10px;
   }
+
   .product-square {
     height: 300px;
     width: 300px;
   }
 }
-
 @media (max-width: 960px) {
   /* 960px is the cut off before the layout gets weird*/
   .product-grid {
@@ -383,11 +314,7 @@ html::-webkit-scrollbar-thumb {
     opacity: 1;
     position: relative;
     background-color: var(--background);
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
     top: 300px;
   }
@@ -398,7 +325,6 @@ html::-webkit-scrollbar-thumb {
     font-weight: 400;
   }
 }
-
 @media (max-width: 450px) {
   /* better for phones*/
   .product-item {
@@ -416,7 +342,6 @@ html::-webkit-scrollbar-thumb {
     top: 150px;
   }
 }
-
 .text {
   color: #333;
   font-size: 1em;
@@ -429,4 +354,3 @@ html::-webkit-scrollbar-thumb {
   width: 100%;
   margin: 0;
 }
-/*# sourceMappingURL=global.css.map */
