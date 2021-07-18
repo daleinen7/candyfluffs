@@ -155,12 +155,7 @@ body {
   padding: 0;
 }
 
-@media (max-width: 830px) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
-}
+
 
 html::-webkit-scrollbar {
   width: 10px;
@@ -192,6 +187,7 @@ html::-webkit-scrollbar-thumb {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
+
 
 .logo-area {
   text-align: center;
